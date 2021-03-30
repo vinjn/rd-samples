@@ -1,0 +1,55 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Main_Shadowmap / ShadowLoopNewBatcher.Draw
+# analysis
+```
+Mali Offline Compiler v7.3.0 (Build 002baf)
+Copyright 2007-2020 Arm Limited, all rights reserved
+Configuration
+=============
+Hardware: Mali-G78 r1p1
+Architecture: Valhall
+Driver: r25p0-00rel0
+Shader type: OpenGL ES Fragment
+Main shader
+===========
+Work registers: 18
+Uniform registers: 0
+Stack spilling: false
+16-bit arithmetic: N/A
+                              FMA     CVT     SFU      LS       V       T    Bound
+Total instruction cycles:    0.00    0.06    0.00    0.00    0.00    0.00      CVT
+Shortest path cycles:        0.00    0.03    0.00    0.00    0.00    0.00      CVT
+Longest path cycles:         0.00    0.06    0.00    0.00    0.00    0.00      CVT
+FMA = Arith FMA, CVT = Arith CVT, SFU = Arith SFU,
+LS = Load/Store, V = Varying, T = Texture
+Shader properties
+=================
+Has uniform computation: false
+Has side-effects: false
+Modifies coverage: false
+Uses late ZS test: false
+Uses late ZS update: false
+Reads color buffer: false
+Note: This tool shows only the shader-visible property state.
+API configuration may also impact the value of some properties.
+ 
+```
+# shader
+```glsl
+#version 320 es
+
+precision highp float;
+precision highp int;
+layout(location = 0) out highp vec4 SV_TARGET0;
+void main()
+{
+    SV_TARGET0 = vec4(0.0, 0.0, 0.0, 0.0);
+    return;
+}
+```
+
+

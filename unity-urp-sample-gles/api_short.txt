@@ -1,0 +1,345 @@
+0001 WaitForRenderJobs
+0002 CustomRenderTextures.Update
+0002 ReflectionProbes.Update
+0002 WaitForRenderJobs
+0002 UIR.DrawChain
+    0002 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>, Depth = <0.990000>, Stencil = <0x00>)
+    0003 UIR.ImmediateRenderer
+        0003 GUITexture.Draw
+            0003 glDrawElementsBaseVertex(6)
+        0004 GUITexture.Draw
+            0004 glDrawElementsBaseVertex(6)
+        0005 GUITexture.Draw
+            0005 glDrawElementsBaseVertex(6)
+        0006 GUITexture.Draw
+            0006 glDrawElementsBaseVertex(6)
+        0007 GUITexture.Draw
+            0007 glDrawElementsBaseVertex(6)
+        0008 glDrawElementsBaseVertex(30)
+        0009 GUITexture.Draw
+            0009 glDrawElementsBaseVertex(6)
+        0010 GUITexture.Draw
+            0010 glDrawElementsBaseVertex(6)
+        0011 GUITexture.Draw
+            0011 glDrawElementsBaseVertex(6)
+        0012 glDrawElementsBaseVertex(24)
+        0013 GUITexture.Draw
+            0013 glDrawElementsBaseVertex(6)
+        0014 GUITexture.Draw
+            0014 glDrawElementsBaseVertex(6)
+        0015 GUITexture.Draw
+            0015 glDrawElementsBaseVertex(6)
+        0016 GUITexture.Draw
+            0016 glDrawElementsBaseVertex(6)
+        0017 GUITexture.Draw
+            0017 glDrawElementsBaseVertex(6)
+        0018 GUITexture.Draw
+            0018 glDrawElementsBaseVertex(6)
+        0019 glDrawElementsBaseVertex(48)
+        0020 GUITexture.Draw
+            0020 glDrawElementsBaseVertex(6)
+        0021 GUITexture.Draw
+            0021 glDrawElementsBaseVertex(6)
+        0022 GUITexture.Draw
+            0022 glDrawElementsBaseVertex(6)
+        0023 glDrawElementsBaseVertex(60)
+        0024 GUITexture.Draw
+            0024 glDrawElementsBaseVertex(6)
+        0025 glDrawElementsBaseVertex(30)
+        0026 GUITexture.Draw
+            0026 glDrawElementsBaseVertex(6)
+        0027 GUITexture.Draw
+            0027 glDrawElementsBaseVertex(6)
+        0028 GUITexture.Draw
+            0028 glDrawElementsBaseVertex(6)
+        0029 glDrawElementsBaseVertex(12)
+        0030 GUITexture.Draw
+            0030 glDrawElementsBaseVertex(6)
+        0031 GUITexture.Draw
+            0031 glDrawElementsBaseVertex(6)
+        0032 GUITexture.Draw
+            0032 glDrawElementsBaseVertex(6)
+        0033 GUITexture.Draw
+            0033 glDrawElementsBaseVertex(6)
+        0034 glDrawElementsBaseVertex(84)
+        0035 GUITexture.Draw
+            0035 glDrawElementsBaseVertex(6)
+        0036 GUITexture.Draw
+            0036 glDrawElementsBaseVertex(6)
+        0037 glDrawElementsBaseVertex(54)
+        0038 GUITexture.Draw
+            0038 glDrawElementsBaseVertex(6)
+        0039 GUITexture.Draw
+            0039 glDrawElementsBaseVertex(6)
+        0040 glDrawElementsBaseVertex(30)
+        0041 GUITexture.Draw
+            0041 glDrawElementsBaseVertex(6)
+        0042 GUITexture.Draw
+            0042 glDrawElementsBaseVertex(6)
+        0043 glDrawElementsBaseVertex(36)
+        0044 GUITexture.Draw
+            0044 glDrawElementsBaseVertex(6)
+        0045 GUITexture.Draw
+            0045 glDrawElementsBaseVertex(54)
+        e1235 glBindFramebuffer
+        0046 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>, Depth = <1.000000>, Stencil = <0x00>)
+        0047 Camera.Render
+        0048 Render Camera
+            0048 Render Camera
+            0048 Create Camera Texture
+                0048 RenderTexture.ResolveAA
+                    e1277 glBindFramebuffer
+                    e1288 glBindFramebuffer
+            0050 Clear Render State
+            0050 Setup Light Constants
+            0050 Set RenderTarget
+                e1330 glBindFramebuffer
+            0051 Render Main Shadowmap
+                0051 Render Main Shadowmap
+                0052 ShadowLoopNewBatcher.Draw
+                    0052 glDrawElements(1152)
+                    0053 glDrawElements(1584)
+                    0054 glDrawElements(1911)
+                    0055 glDrawElements(4212)
+                    0056 glDrawElements(420)
+                    0057 glDrawElements(1956)
+                    0058 glDrawElements(7200)
+                    0059 glDrawElements(3660)
+                    0060 glDrawElements(5064)
+                    0061 glDrawElements(264)
+                    0062 glDrawElements(1296)
+                    0063 glDrawElements(20424)
+                    0064 glDrawElements(348)
+                    0065 glDrawElements(18)
+                    0066 glDrawElements(114)
+                    0067 glDrawElements(3816)
+                    0068 glDrawElements(924)
+                    0069 glDrawElements(2640)
+                    0070 glDrawElements(132)
+                    0071 glDrawElements(528)
+                    0072 glDrawElements(120)
+                    0073 glDrawElements(1860)
+                    0074 glDrawElements(552)
+                    0075 glDrawElements(444)
+                    0076 glDrawElements(3450)
+                    0077 glDrawElements(2292)
+                    0078 glDrawElements(10338)
+                    0079 glDrawElements(192)
+                    0080 glDrawElements(384)
+                    0081 glDrawElements(1620)
+                    0082 glDrawElements(4284)
+                    0083 glDrawElements(1344)
+                    0084 glDrawElements(2160)
+                    0085 glDrawElements(1998)
+                    0086 glDrawElements(528)
+                    0087 glDrawElements(36)
+                0088 Render Main Shadowmap
+                0089 Render Main Shadowmap
+                0090 ShadowLoopNewBatcher.Draw
+                    0090 glDrawElements(420)
+                    0091 glDrawElements(264)
+                    0092 glDrawElements(18)
+                    0093 glDrawElements(114)
+                    0094 glDrawElements(3816)
+                    0095 glDrawElements(924)
+                    0096 glDrawElements(2640)
+                    0097 glDrawElements(120)
+                    0098 glDrawElements(3450)
+                    0099 glDrawElements(2292)
+                    0100 glDrawElements(192)
+                0101 Render Main Shadowmap
+                0102 Render Main Shadowmap
+            0102 Set RenderTarget
+                e1923 glBindFramebuffer
+                e1927 glBindFramebuffer
+            0103 Render Additional Shadows
+                0103 Render Additional Shadows
+                0104 ShadowLoopNewBatcher.Draw
+                    0104 glDrawElements(1152)
+                    0105 glDrawElements(1911)
+                    0106 glDrawElements(420)
+                    0107 glDrawElements(1956)
+                    0108 glDrawElements(7200)
+                    0109 glDrawElements(3660)
+                    0110 glDrawElements(5064)
+                    0111 glDrawElements(264)
+                    0112 glDrawElements(1296)
+                    0113 glDrawElements(20424)
+                    0114 glDrawElements(348)
+                    0115 glDrawElements(18)
+                    0116 glDrawElements(114)
+                    0117 glDrawElements(3816)
+                    0118 glDrawElements(924)
+                    0119 glDrawElements(2640)
+                    0120 glDrawElements(132)
+                    0121 glDrawElements(528)
+                    0122 glDrawElements(120)
+                    0123 glDrawElements(552)
+                    0124 glDrawElements(3450)
+                    0125 glDrawElements(2292)
+                    0126 glDrawElements(10338)
+                    0127 glDrawElements(192)
+                    0128 glDrawElements(384)
+                    0129 glDrawElements(4284)
+                    0130 glDrawElements(1344)
+                    0131 glDrawElements(2160)
+                    0132 glDrawElements(1998)
+                    0133 glDrawElements(528)
+                    0134 glDrawElements(36)
+                0135 Render Additional Shadows
+                0136 Render Additional Shadows
+            0136 Clear Render State
+            0136 Set RenderTarget
+            0136 Color Grading LUT
+                e2327 glBindFramebuffer
+                e2330 glBindFramebuffer
+                0136 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                0137 glDrawElementsBaseVertex(6)
+            0138 Set RenderTarget
+                e2373 glBindFramebuffer
+            0139 Render Opaques
+                0139 Render Opaques
+                0139 RenderLoopNewBatcher.Draw
+                    0139 glDrawElements(2160)
+                    0140 glDrawElements(1152)
+                    0141 glDrawElements(4212)
+                    0142 glDrawElements(10338)
+                    0143 glDrawElements(5064)
+                    0144 glDrawElements(3660)
+                    0145 glDrawElements(7200)
+                    0146 glDrawElements(1956)
+                    0147 glDrawElements(348)
+                    0148 glDrawElements(132)
+                    0149 glDrawElements(3816)
+                    0150 glDrawElements(384)
+                    0151 glDrawElements(1344)
+                    0152 glDrawElements(20424)
+                    0153 glDrawElements(552)
+                    0154 glDrawElements(1584)
+                    0155 glDrawElements(444)
+                    0156 glDrawElements(528)
+                    0157 glDrawElements(4284)
+                    0158 glDrawElements(1620)
+                    0159 glDrawElements(1296)
+                    0160 glDrawElements(1860)
+                    0161 glDrawElements(264)
+                    0162 glDrawElements(2640)
+                    0163 glDrawElements(924)
+                    0164 glDrawElements(420)
+                    0165 glDrawElements(192)
+                    0166 glDrawElements(18)
+                    0167 glDrawElements(114)
+                    0168 glDrawElements(1911)
+                    0169 glDrawElements(528)
+                    0170 glDrawElements(36)
+                    0171 glDrawElements(120)
+                    0172 glDrawElements(1998)
+                    0173 glDrawElements(2292)
+                    0174 glDrawElements(3450)
+                0175 Render Opaques
+            0175 Camera.RenderSkybox
+                0175 glDrawArrays(5040)
+            0176 Render Transparents
+                0176 Render Transparents
+                0176 RenderLoopNewBatcher.Draw
+                    0176 glDrawElements(726)
+                    0177 glDrawElements(144)
+                0178 Render Transparents
+            0178 Set RenderTarget
+                0178 RenderTexture.ResolveAA
+                    e3406 glBindFramebuffer
+                e3417 glBindFramebuffer
+                0180 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+            0182 Render PostProcessing Effects
+                0182 UberPostProcess
+                    0182 Bloom
+                        0182 RenderTexture.ResolveAA
+                        e3464 glBindFramebuffer
+                        0184 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0185 RenderTexture.ResolveAA
+                        e3504 glBindFramebuffer
+                        0187 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0188 RenderTexture.ResolveAA
+                        0190 glDrawElementsBaseVertex(6)
+                        e3565 glBindFramebuffer
+                        e3568 glBindFramebuffer
+                        0191 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        e3596 glBindFramebuffer
+                        0192 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0193 glDrawElementsBaseVertex(6)
+                        e3621 glBindFramebuffer
+                        0194 glDrawElementsBaseVertex(6)
+                        e3646 glBindFramebuffer
+                        e3649 glBindFramebuffer
+                        0195 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        e3677 glBindFramebuffer
+                        0196 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0197 glDrawElementsBaseVertex(6)
+                        e3702 glBindFramebuffer
+                        0198 glDrawElementsBaseVertex(6)
+                        e3727 glBindFramebuffer
+                        e3730 glBindFramebuffer
+                        0199 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        e3758 glBindFramebuffer
+                        0200 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0201 glDrawElementsBaseVertex(6)
+                        e3783 glBindFramebuffer
+                        0202 glDrawElementsBaseVertex(6)
+                        e3808 glBindFramebuffer
+                        e3811 glBindFramebuffer
+                        0203 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        e3839 glBindFramebuffer
+                        0204 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0205 glDrawElementsBaseVertex(6)
+                        e3864 glBindFramebuffer
+                        0206 glDrawElementsBaseVertex(6)
+                        e3889 glBindFramebuffer
+                        e3892 glBindFramebuffer
+                        0207 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        e3920 glBindFramebuffer
+                        0208 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0209 glDrawElementsBaseVertex(6)
+                        e3945 glBindFramebuffer
+                        0210 glDrawElementsBaseVertex(6)
+                        e3970 glBindFramebuffer
+                        e3973 glBindFramebuffer
+                        0211 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        e4001 glBindFramebuffer
+                        0212 glClear(Color = <0.000000, 0.000000, 0.000000, 0.000000>)
+                        0213 glDrawElementsBaseVertex(6)
+                        e4026 glBindFramebuffer
+                        0214 glDrawElementsBaseVertex(6)
+                        e4032 glBindFramebuffer
+                        e4035 glBindFramebuffer
+                        0215 glDrawElementsBaseVertex(6)
+                        e4054 glBindFramebuffer
+                        e4057 glBindFramebuffer
+                        0216 glDrawElementsBaseVertex(6)
+                        e4075 glBindFramebuffer
+                        e4078 glBindFramebuffer
+                        0217 glDrawElementsBaseVertex(6)
+                        e4096 glBindFramebuffer
+                        e4099 glBindFramebuffer
+                        0218 glDrawElementsBaseVertex(6)
+                        e4117 glBindFramebuffer
+                        e4120 glBindFramebuffer
+                        0219 glDrawElementsBaseVertex(6)
+                        e4138 glBindFramebuffer
+                        e4141 glBindFramebuffer
+                        0220 glDrawElementsBaseVertex(6)
+                    e4170 glBindFramebuffer
+                    0221 glDrawElements(6)
+            0222 Render Final PostProcessing Pass
+                e4183 glBindFramebuffer
+                0222 glDrawElements(6)
+            0223 Release Resources
+            0223 Render Camera
+        0223 UGUI.Rendering.RenderOverlays
+        0223 GUI.Repaint
+        0224 PlayerEndOfFrame
+        0225 WaitForRenderJobs
+        0225 GUITexture.Draw
+            e4203 glBindFramebuffer
+            0225 glDrawElementsBaseVertex(6)
+e4241 glBindFramebuffer
+0227 glDrawElementsBaseVertex(6)

@@ -1,0 +1,75 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ UIR.DrawChain / UIR.ImmediateRenderer
+# analysis
+```
+Mali Offline Compiler v7.3.0 (Build 002baf)
+Copyright 2007-2020 Arm Limited, all rights reserved
+Configuration
+=============
+Hardware: Mali-G78 r1p1
+Architecture: Valhall
+Driver: r25p0-00rel0
+Shader type: OpenGL ES Fragment
+Main shader
+===========
+Work registers: 19
+Uniform registers: 6
+Stack spilling: false
+16-bit arithmetic: 100%
+                              FMA     CVT     SFU      LS       V       T    Bound
+Total instruction cycles:    0.03    0.05    0.00    0.00    0.75    0.50        V
+Shortest path cycles:        0.03    0.02    0.00    0.00    0.75    0.50        V
+Longest path cycles:         0.03    0.05    0.00    0.00    0.75    0.50        V
+FMA = Arith FMA, CVT = Arith CVT, SFU = Arith SFU,
+LS = Load/Store, V = Varying, T = Texture
+Shader properties
+=================
+Has uniform computation: false
+Has side-effects: false
+Modifies coverage: false
+Uses late ZS test: false
+Uses late ZS update: false
+Reads color buffer: false
+Note: This tool shows only the shader-visible property state.
+API configuration may also impact the value of some properties.
+ 
+```
+# shader
+```glsl
+#version 320 es
+
+precision highp float;
+precision highp int;
+#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+#if UNITY_SUPPORTS_UNIFORM_LOCATION
+#define UNITY_LOCATION(x) layout(location = x)
+#define UNITY_BINDING(x) layout(binding = x, std140)
+#else
+#define UNITY_LOCATION(x)
+#define UNITY_BINDING(x) layout(std140)
+#endif
+UNITY_LOCATION(0) uniform mediump sampler2D _MainTex;
+UNITY_LOCATION(1) uniform mediump sampler2D _GUIClipTexture;
+in mediump vec4 vs_COLOR0;
+in highp vec2 vs_TEXCOORD0;
+in highp vec2 vs_TEXCOORD1;
+layout(location = 0) out mediump vec4 SV_Target0;
+mediump float u_xlat16_0;
+mediump float u_xlat16_1;
+void main()
+{
+    u_xlat16_0 = texture(_MainTex, vs_TEXCOORD0.xy).w;
+    u_xlat16_1 = texture(_GUIClipTexture, vs_TEXCOORD1.xy).w;
+    u_xlat16_0 = u_xlat16_1 * u_xlat16_0;
+    u_xlat16_0 = u_xlat16_0 * vs_COLOR0.w;
+    SV_Target0.w = u_xlat16_0;
+    SV_Target0.xyz = vs_COLOR0.xyz;
+    return;
+}
+```
+
+

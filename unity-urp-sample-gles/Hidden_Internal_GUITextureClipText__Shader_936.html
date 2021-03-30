@@ -1,0 +1,102 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ UIR.DrawChain / UIR.ImmediateRenderer
+# analysis
+```
+Mali Offline Compiler v7.3.0 (Build 002baf)
+Copyright 2007-2020 Arm Limited, all rights reserved
+Configuration
+=============
+Hardware: Mali-G78 r1p1
+Architecture: Valhall
+Driver: r25p0-00rel0
+Shader type: OpenGL ES Vertex
+Main shader
+===========
+Position variant
+----------------
+Work registers: 19
+Uniform registers: 68
+Stack spilling: false
+16-bit arithmetic: 0%
+                              FMA     CVT     SFU      LS       T    Bound
+Total instruction cycles:    0.50    0.00    0.00    3.00    0.00       LS
+Shortest path cycles:        0.50    0.00    0.00    3.00    0.00       LS
+Longest path cycles:         0.50    0.00    0.00    3.00    0.00       LS
+FMA = Arith FMA, CVT = Arith CVT, SFU = Arith SFU, LS = Load/Store, T = Texture
+Varying variant
+---------------
+Work registers: 15
+Uniform registers: 68
+Stack spilling: false
+16-bit arithmetic: 6%
+                              FMA     CVT     SFU      LS       T    Bound
+Total instruction cycles:    0.50    0.00    0.00    6.00    0.00       LS
+Shortest path cycles:        0.50    0.00    0.00    6.00    0.00       LS
+Longest path cycles:         0.50    0.00    0.00    6.00    0.00       LS
+FMA = Arith FMA, CVT = Arith CVT, SFU = Arith SFU, LS = Load/Store, T = Texture
+Shader properties
+=================
+Has uniform computation: false
+ 
+```
+# shader
+```glsl
+#version 320 es
+
+#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+#define UNITY_UNIFORM
+#else
+#define UNITY_UNIFORM uniform
+#endif
+#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+#if UNITY_SUPPORTS_UNIFORM_LOCATION
+#define UNITY_LOCATION(x) layout(location = x)
+#define UNITY_BINDING(x) layout(binding = x, std140)
+#else
+#define UNITY_LOCATION(x)
+#define UNITY_BINDING(x) layout(std140)
+#endif
+uniform 	vec4 hlslcc_mtx4x4unity_ObjectToWorld[4];
+uniform 	vec4 hlslcc_mtx4x4unity_MatrixV[4];
+uniform 	vec4 hlslcc_mtx4x4unity_MatrixVP[4];
+uniform 	vec4 _MainTex_ST;
+uniform 	mediump vec4 _Color;
+uniform 	vec4 hlslcc_mtx4x4unity_GUIClipTextureMatrix[4];
+in highp vec4 in_POSITION0;
+in mediump vec4 in_COLOR0;
+in highp vec2 in_TEXCOORD0;
+out mediump vec4 vs_COLOR0;
+out highp vec2 vs_TEXCOORD0;
+out highp vec2 vs_TEXCOORD1;
+vec4 u_xlat0;
+vec4 u_xlat1;
+vec2 u_xlat2;
+void main()
+{
+    u_xlat0 = in_POSITION0.yyyy * hlslcc_mtx4x4unity_ObjectToWorld[1];
+    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[0] * in_POSITION0.xxxx + u_xlat0;
+    u_xlat0 = hlslcc_mtx4x4unity_ObjectToWorld[2] * in_POSITION0.zzzz + u_xlat0;
+    u_xlat0 = u_xlat0 + hlslcc_mtx4x4unity_ObjectToWorld[3];
+    u_xlat1 = u_xlat0.yyyy * hlslcc_mtx4x4unity_MatrixVP[1];
+    u_xlat1 = hlslcc_mtx4x4unity_MatrixVP[0] * u_xlat0.xxxx + u_xlat1;
+    u_xlat1 = hlslcc_mtx4x4unity_MatrixVP[2] * u_xlat0.zzzz + u_xlat1;
+    gl_Position = hlslcc_mtx4x4unity_MatrixVP[3] * u_xlat0.wwww + u_xlat1;
+    vs_COLOR0 = in_COLOR0 * _Color;
+    u_xlat1.xy = u_xlat0.yy * hlslcc_mtx4x4unity_MatrixV[1].xy;
+    u_xlat0.xy = hlslcc_mtx4x4unity_MatrixV[0].xy * u_xlat0.xx + u_xlat1.xy;
+    u_xlat0.xy = hlslcc_mtx4x4unity_MatrixV[2].xy * u_xlat0.zz + u_xlat0.xy;
+    u_xlat0.xy = hlslcc_mtx4x4unity_MatrixV[3].xy * u_xlat0.ww + u_xlat0.xy;
+    u_xlat2.xy = u_xlat0.yy * hlslcc_mtx4x4unity_GUIClipTextureMatrix[1].xy;
+    u_xlat0.xy = hlslcc_mtx4x4unity_GUIClipTextureMatrix[0].xy * u_xlat0.xx + u_xlat2.xy;
+    vs_TEXCOORD1.xy = u_xlat0.xy + hlslcc_mtx4x4unity_GUIClipTextureMatrix[3].xy;
+    vs_TEXCOORD0.xy = in_TEXCOORD0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+    return;
+}
+```
+
+

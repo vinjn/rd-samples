@@ -1,0 +1,48 @@
+#version 320 es
+
+precision highp float;
+precision highp int;
+#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+#define UNITY_UNIFORM
+#else
+#define UNITY_UNIFORM uniform
+#endif
+#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+#if UNITY_SUPPORTS_UNIFORM_LOCATION
+#define UNITY_LOCATION(x) layout(location = x)
+#define UNITY_BINDING(x) layout(binding = x, std140)
+#else
+#define UNITY_LOCATION(x)
+#define UNITY_BINDING(x) layout(std140)
+#endif
+uniform 	vec4 _MainTex_TexelSize;
+UNITY_LOCATION(0) uniform mediump sampler2D _MainTex;
+in highp vec2 vs_TEXCOORD0;
+layout(location = 0) out highp vec4 SV_Target0;
+vec4 u_xlat0;
+mediump vec3 u_xlat10_0;
+vec4 u_xlat1;
+mediump vec3 u_xlat16_1;
+mediump vec3 u_xlat10_1;
+mediump vec3 u_xlat16_2;
+mediump vec3 u_xlat10_2;
+void main()
+{
+    u_xlat0.x = 0.0;
+    u_xlat0.yw = _MainTex_TexelSize.yy * vec2(3.23076916, 1.38461542);
+    u_xlat1 = (-u_xlat0.xyxw) + vs_TEXCOORD0.xyxy;
+    u_xlat0 = u_xlat0.xwxy + vs_TEXCOORD0.xyxy;
+    u_xlat10_2.xyz = texture(_MainTex, u_xlat1.zw).xyz;
+    u_xlat10_1.xyz = texture(_MainTex, u_xlat1.xy).xyz;
+    u_xlat16_2.xyz = u_xlat10_2.xyz * vec3(0.31621623, 0.31621623, 0.31621623);
+    u_xlat16_1.xyz = u_xlat10_1.xyz * vec3(0.0702702701, 0.0702702701, 0.0702702701) + u_xlat16_2.xyz;
+    u_xlat10_2.xyz = texture(_MainTex, vs_TEXCOORD0.xy).xyz;
+    u_xlat16_1.xyz = u_xlat10_2.xyz * vec3(0.227027029, 0.227027029, 0.227027029) + u_xlat16_1.xyz;
+    u_xlat10_2.xyz = texture(_MainTex, u_xlat0.xy).xyz;
+    u_xlat10_0.xyz = texture(_MainTex, u_xlat0.zw).xyz;
+    u_xlat16_1.xyz = u_xlat10_2.xyz * vec3(0.31621623, 0.31621623, 0.31621623) + u_xlat16_1.xyz;
+    SV_Target0.xyz = u_xlat10_0.xyz * vec3(0.0702702701, 0.0702702701, 0.0702702701) + u_xlat16_1.xyz;
+    SV_Target0.w = 1.0;
+    return;
+}

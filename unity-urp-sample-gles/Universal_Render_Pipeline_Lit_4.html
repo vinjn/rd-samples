@@ -1,0 +1,2420 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/rdc.js" charset="utf-8"></script>
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+<script src="../src/lazysizes.js" charset="utf-8"></script>
+
+## Universal_Render_Pipeline_Lit_4
+### [D]0141 glDrawElements(4212)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1617](Universal_Render_Pipeline_Lit__Shader_1617.html) PS: [Universal_Render_Pipeline_Lit__Shader_1618](Universal_Render_Pipeline_Lit__Shader_1618.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0141_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0141_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: SafetyHat_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="SafetyHat_Albedo.png" border="2")![t2: SafetyHat_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="SafetyHat_Normal.png" border="2")![t3: SafetyHat_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="SafetyHat_MetallicOcculusionSmoothness.png" border="2")![t4: SafetyHat_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="SafetyHat_MetallicOcculusionSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: Paint1G_MetallicOcculusionRoughness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Paint1G_MetallicOcculusionRoughness.png" border="2")
+
+`event_2444 glActiveTexture`
+
+`event_2445 glBindTexture`
+
+`event_2446 glActiveTexture`
+
+`event_2447 glBindTexture`
+
+`event_2448 glActiveTexture`
+
+`event_2449 glBindTexture`
+
+`event_2450 glActiveTexture`
+
+`event_2451 glBindTexture`
+
+`event_2452 glActiveTexture`
+
+`event_2453 glBindTexture`
+
+`event_2454 glActiveTexture`
+
+`event_2455 glBindTexture`
+
+`event_2456 glActiveTexture`
+
+`event_2457 glBindTexture`
+
+`event_2458 glBindBuffer`
+
+`event_2459 glUnmapBuffer`
+
+`event_2460 glUseProgram`
+
+`event_2461 glUniform4fv`
+
+`event_2462 glUniform4fv`
+
+`event_2463 glUniform4fv`
+
+`event_2464 glUniform4fv`
+
+`event_2465 glUniform4fv`
+
+`event_2466 glUniform4fv`
+
+`event_2467 glUniform4fv`
+
+`event_2468 glBindBufferBase`
+
+`event_2469 glBindBuffer`
+
+`event_2470 glBufferSubData`
+
+`event_2471 glBindBufferBase`
+
+`event_2472 glBindTexture`
+
+`event_2473 glBindBuffer`
+
+`event_2474 glVertexAttribPointer`
+
+`event_2475 glVertexAttribPointer`
+
+`event_2476 glVertexAttribPointer`
+
+`event_2477 glVertexAttribPointer`
+
+`event_2478 glBindBufferRange`
+
+`event_2479 glBindBufferBase`
+
+`event_2480 glActiveTexture`
+
+`event_2481 glActiveTexture`
+
+`event_2482 glActiveTexture`
+
+`event_2483 glActiveTexture`
+
+`event_2484 glBindBuffer`
+
+`event_2485 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0142 glDrawElements(10338)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1617](Universal_Render_Pipeline_Lit__Shader_1617.html) PS: [Universal_Render_Pipeline_Lit__Shader_1618](Universal_Render_Pipeline_Lit__Shader_1618.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0142_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0142_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Jigsaw_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Jigsaw_Albedo.png" border="2")![t2: Jigsaw_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Jigsaw_Normal.png" border="2")![t3: Jigsaw_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Jigsaw_MetallicOcculusionSmoothness.png" border="2")![t4: Jigsaw_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Jigsaw_MetallicOcculusionSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: Paint1G_MetallicOcculusionRoughness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Paint1G_MetallicOcculusionRoughness.png" border="2")
+
+`event_2486 glBindBuffer`
+
+`event_2487 glVertexAttribPointer`
+
+`event_2488 glVertexAttribPointer`
+
+`event_2489 glVertexAttribPointer`
+
+`event_2490 glVertexAttribPointer`
+
+`event_2491 glBindBufferRange`
+
+`event_2492 glBindBufferBase`
+
+`event_2493 glActiveTexture`
+
+`event_2494 glBindTexture`
+
+`event_2495 glActiveTexture`
+
+`event_2496 glBindTexture`
+
+`event_2497 glActiveTexture`
+
+`event_2498 glBindTexture`
+
+`event_2499 glActiveTexture`
+
+`event_2500 glBindTexture`
+
+`event_2501 glBindBuffer`
+
+`event_2502 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0143 glDrawElements(5064)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0143_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0143_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: PlasticRough_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_Albedo.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t5: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2503 glActiveTexture`
+
+`event_2504 glBindTexture`
+
+`event_2505 glActiveTexture`
+
+`event_2506 glBindTexture`
+
+`event_2507 glActiveTexture`
+
+`event_2508 glBindTexture`
+
+`event_2509 glActiveTexture`
+
+`event_2510 glBindTexture`
+
+`event_2511 glActiveTexture`
+
+`event_2512 glBindTexture`
+
+`event_2513 glActiveTexture`
+
+`event_2514 glBindTexture`
+
+`event_2515 glActiveTexture`
+
+`event_2516 glBindTexture`
+
+`event_2517 glActiveTexture`
+
+`event_2518 glBindTexture`
+
+`event_2519 glBindBuffer`
+
+`event_2520 glUnmapBuffer`
+
+`event_2521 glUseProgram`
+
+`event_2522 glUniform4fv`
+
+`event_2523 glUniform4fv`
+
+`event_2524 glUniform4fv`
+
+`event_2525 glUniform4fv`
+
+`event_2526 glUniform4fv`
+
+`event_2527 glUniform4fv`
+
+`event_2528 glUniform4fv`
+
+`event_2529 glUniform4fv`
+
+`event_2530 glBindBufferBase`
+
+`event_2531 glBindBuffer`
+
+`event_2532 glBufferSubData`
+
+`event_2533 glBindBufferBase`
+
+`event_2534 glActiveTexture`
+
+`event_2535 glBindTexture`
+
+`event_2536 glActiveTexture`
+
+`event_2537 glBindTexture`
+
+`event_2538 glBindBuffer`
+
+`event_2539 glVertexAttribPointer`
+
+`event_2540 glVertexAttribPointer`
+
+`event_2541 glVertexAttribPointer`
+
+`event_2542 glVertexAttribPointer`
+
+`event_2543 glEnableVertexAttribArray`
+
+`event_2544 glVertexAttribPointer`
+
+`event_2545 glBindBufferRange`
+
+`event_2546 glBindBufferBase`
+
+`event_2547 glActiveTexture`
+
+`event_2548 glActiveTexture`
+
+`event_2549 glActiveTexture`
+
+`event_2550 glActiveTexture`
+
+`event_2551 glBindBuffer`
+
+`event_2552 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0144 glDrawElements(3660)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0144_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0144_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: PlasticRough_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_Albedo.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t5: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2553 glActiveTexture`
+
+`event_2554 glBindBuffer`
+
+`event_2555 glVertexAttribPointer`
+
+`event_2556 glVertexAttribPointer`
+
+`event_2557 glVertexAttribPointer`
+
+`event_2558 glVertexAttribPointer`
+
+`event_2559 glVertexAttribPointer`
+
+`event_2560 glBindBufferRange`
+
+`event_2561 glBindBuffer`
+
+`event_2562 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0145 glDrawElements(7200)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0145_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0145_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: PlasticRough_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_Albedo.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t5: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2563 glBindBuffer`
+
+`event_2564 glVertexAttribPointer`
+
+`event_2565 glVertexAttribPointer`
+
+`event_2566 glVertexAttribPointer`
+
+`event_2567 glVertexAttribPointer`
+
+`event_2568 glVertexAttribPointer`
+
+`event_2569 glBindBufferRange`
+
+`event_2570 glBindBuffer`
+
+`event_2571 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0146 glDrawElements(1956)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0146_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0146_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: PlasticRough_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_Albedo.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t5: PlasticRough_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2572 glBindBuffer`
+
+`event_2573 glVertexAttribPointer`
+
+`event_2574 glVertexAttribPointer`
+
+`event_2575 glVertexAttribPointer`
+
+`event_2576 glVertexAttribPointer`
+
+`event_2577 glVertexAttribPointer`
+
+`event_2578 glBindBufferRange`
+
+`event_2579 glBindBuffer`
+
+`event_2580 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0147 glDrawElements(348)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0147_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0147_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: PlasticRidges_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRidges_Albedo.png" border="2")![t3: PlasticRidges_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="PlasticRidges_Normal.png" border="2")![t4: PlasticRidges_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRidges_MetallicOcculusionSmoothness.png" border="2")![t5: PlasticRidges_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRidges_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2581 glBindBuffer`
+
+`event_2582 glVertexAttribPointer`
+
+`event_2583 glVertexAttribPointer`
+
+`event_2584 glVertexAttribPointer`
+
+`event_2585 glVertexAttribPointer`
+
+`event_2586 glVertexAttribPointer`
+
+`event_2587 glBindBufferRange`
+
+`event_2588 glBindBufferBase`
+
+`event_2589 glActiveTexture`
+
+`event_2590 glBindTexture`
+
+`event_2591 glActiveTexture`
+
+`event_2592 glBindTexture`
+
+`event_2593 glActiveTexture`
+
+`event_2594 glBindTexture`
+
+`event_2595 glActiveTexture`
+
+`event_2596 glBindTexture`
+
+`event_2597 glBindBuffer`
+
+`event_2598 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0148 glDrawElements(132)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0148_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0148_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plywood_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_Albedo.png" border="2")![t3: Plywood_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plywood_Normal.png" border="2")![t4: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t5: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2599 glActiveTexture`
+
+`event_2600 glBindBuffer`
+
+`event_2601 glVertexAttribPointer`
+
+`event_2602 glVertexAttribPointer`
+
+`event_2603 glVertexAttribPointer`
+
+`event_2604 glVertexAttribPointer`
+
+`event_2605 glVertexAttribPointer`
+
+`event_2606 glBindBufferRange`
+
+`event_2607 glBindBufferBase`
+
+`event_2608 glActiveTexture`
+
+`event_2609 glBindTexture`
+
+`event_2610 glActiveTexture`
+
+`event_2611 glBindTexture`
+
+`event_2612 glActiveTexture`
+
+`event_2613 glBindTexture`
+
+`event_2614 glActiveTexture`
+
+`event_2615 glBindTexture`
+
+`event_2616 glBindBuffer`
+
+`event_2617 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0149 glDrawElements(3816)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0149_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0149_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plywood_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_Albedo.png" border="2")![t3: Plywood_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plywood_Normal.png" border="2")![t4: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t5: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2618 glActiveTexture`
+
+`event_2619 glActiveTexture`
+
+`event_2620 glBindBuffer`
+
+`event_2621 glVertexAttribPointer`
+
+`event_2622 glVertexAttribPointer`
+
+`event_2623 glVertexAttribPointer`
+
+`event_2624 glVertexAttribPointer`
+
+`event_2625 glVertexAttribPointer`
+
+`event_2626 glBindBufferRange`
+
+`event_2627 glBindBuffer`
+
+`event_2628 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0150 glDrawElements(384)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1293](Universal_Render_Pipeline_Lit__Shader_1293.html) PS: [Universal_Render_Pipeline_Lit__Shader_1294](Universal_Render_Pipeline_Lit__Shader_1294.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0150_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0150_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Metal_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_Albedo.png" border="2")![t3: Metal_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Metal_Normal.png" border="2")![t4: Metal_MetallicSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_MetallicSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2629 glActiveTexture`
+
+`event_2630 glBindTexture`
+
+`event_2631 glActiveTexture`
+
+`event_2632 glBindTexture`
+
+`event_2633 glActiveTexture`
+
+`event_2634 glBindTexture`
+
+`event_2635 glActiveTexture`
+
+`event_2636 glBindTexture`
+
+`event_2637 glActiveTexture`
+
+`event_2638 glBindTexture`
+
+`event_2639 glActiveTexture`
+
+`event_2640 glBindTexture`
+
+`event_2641 glActiveTexture`
+
+`event_2642 glBindTexture`
+
+`event_2643 glBindBuffer`
+
+`event_2644 glUnmapBuffer`
+
+`event_2645 glUseProgram`
+
+`event_2646 glUniform4fv`
+
+`event_2647 glUniform4fv`
+
+`event_2648 glUniform4fv`
+
+`event_2649 glUniform4fv`
+
+`event_2650 glUniform4fv`
+
+`event_2651 glUniform4fv`
+
+`event_2652 glUniform4fv`
+
+`event_2653 glUniform4fv`
+
+`event_2654 glBindBufferBase`
+
+`event_2655 glBindBuffer`
+
+`event_2656 glBufferSubData`
+
+`event_2657 glBindBufferBase`
+
+`event_2658 glActiveTexture`
+
+`event_2659 glBindTexture`
+
+`event_2660 glActiveTexture`
+
+`event_2661 glBindTexture`
+
+`event_2662 glBindBuffer`
+
+`event_2663 glVertexAttribPointer`
+
+`event_2664 glVertexAttribPointer`
+
+`event_2665 glVertexAttribPointer`
+
+`event_2666 glVertexAttribPointer`
+
+`event_2667 glVertexAttribPointer`
+
+`event_2668 glBindBufferRange`
+
+`event_2669 glBindBufferBase`
+
+`event_2670 glActiveTexture`
+
+`event_2671 glActiveTexture`
+
+`event_2672 glActiveTexture`
+
+`event_2673 glBindBuffer`
+
+`event_2674 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0151 glDrawElements(1344)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1449](Universal_Render_Pipeline_Lit__Shader_1449.html) PS: [Universal_Render_Pipeline_Lit__Shader_1450](Universal_Render_Pipeline_Lit__Shader_1450.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0151_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0151_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2675 glActiveTexture`
+
+`event_2676 glBindTexture`
+
+`event_2677 glActiveTexture`
+
+`event_2678 glBindTexture`
+
+`event_2679 glActiveTexture`
+
+`event_2680 glBindTexture`
+
+`event_2681 glActiveTexture`
+
+`event_2682 glBindTexture`
+
+`event_2683 glActiveTexture`
+
+`event_2684 glBindTexture`
+
+`event_2685 glActiveTexture`
+
+`event_2686 glBindTexture`
+
+`event_2687 glBindBuffer`
+
+`event_2688 glUnmapBuffer`
+
+`event_2689 glUseProgram`
+
+`event_2690 glUniform4fv`
+
+`event_2691 glUniform4fv`
+
+`event_2692 glUniform4fv`
+
+`event_2693 glUniform4fv`
+
+`event_2694 glUniform4fv`
+
+`event_2695 glUniform4fv`
+
+`event_2696 glUniform4fv`
+
+`event_2697 glUniform4fv`
+
+`event_2698 glBindBufferBase`
+
+`event_2699 glBindBuffer`
+
+`event_2700 glBufferSubData`
+
+`event_2701 glBindBufferBase`
+
+`event_2702 glActiveTexture`
+
+`event_2703 glBindTexture`
+
+`event_2704 glActiveTexture`
+
+`event_2705 glBindTexture`
+
+`event_2706 glBindBufferRange`
+
+`event_2707 glBindBufferBase`
+
+`event_2708 glActiveTexture`
+
+`event_2709 glActiveTexture`
+
+`event_2710 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0152 glDrawElements(20424)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1449](Universal_Render_Pipeline_Lit__Shader_1449.html) PS: [Universal_Render_Pipeline_Lit__Shader_1450](Universal_Render_Pipeline_Lit__Shader_1450.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0152_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0152_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2711 glActiveTexture`
+
+`event_2712 glBindBuffer`
+
+`event_2713 glVertexAttribPointer`
+
+`event_2714 glVertexAttribPointer`
+
+`event_2715 glVertexAttribPointer`
+
+`event_2716 glVertexAttribPointer`
+
+`event_2717 glVertexAttribPointer`
+
+`event_2718 glBindBufferRange`
+
+`event_2719 glBindBufferBase`
+
+`event_2720 glActiveTexture`
+
+`event_2721 glActiveTexture`
+
+`event_2722 glBindBuffer`
+
+`event_2723 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0153 glDrawElements(552)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1449](Universal_Render_Pipeline_Lit__Shader_1449.html) PS: [Universal_Render_Pipeline_Lit__Shader_1450](Universal_Render_Pipeline_Lit__Shader_1450.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0153_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0153_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t3: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2724 glActiveTexture`
+
+`event_2725 glBindBuffer`
+
+`event_2726 glVertexAttribPointer`
+
+`event_2727 glVertexAttribPointer`
+
+`event_2728 glVertexAttribPointer`
+
+`event_2729 glVertexAttribPointer`
+
+`event_2730 glVertexAttribPointer`
+
+`event_2731 glBindBufferRange`
+
+`event_2732 glBindBufferBase`
+
+`event_2733 glActiveTexture`
+
+`event_2734 glActiveTexture`
+
+`event_2735 glBindBuffer`
+
+`event_2736 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0154 glDrawElements(1584)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1617](Universal_Render_Pipeline_Lit__Shader_1617.html) PS: [Universal_Render_Pipeline_Lit__Shader_1618](Universal_Render_Pipeline_Lit__Shader_1618.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0154_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0154_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Hammer_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Hammer_Albedo.png" border="2")![t2: Hammer_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Hammer_Normal.png" border="2")![t3: Hammer_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Hammer_MetallicOcculusionSmoothness.png" border="2")![t4: Hammer_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Hammer_MetallicOcculusionSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2737 glActiveTexture`
+
+`event_2738 glBindTexture`
+
+`event_2739 glActiveTexture`
+
+`event_2740 glBindTexture`
+
+`event_2741 glActiveTexture`
+
+`event_2742 glBindTexture`
+
+`event_2743 glActiveTexture`
+
+`event_2744 glBindTexture`
+
+`event_2745 glActiveTexture`
+
+`event_2746 glActiveTexture`
+
+`event_2747 glBindTexture`
+
+`event_2748 glActiveTexture`
+
+`event_2749 glBindTexture`
+
+`event_2750 glBindBuffer`
+
+`event_2751 glUnmapBuffer`
+
+`event_2752 glUseProgram`
+
+`event_2753 glUniform4fv`
+
+`event_2754 glUniform4fv`
+
+`event_2755 glUniform4fv`
+
+`event_2756 glUniform4fv`
+
+`event_2757 glUniform4fv`
+
+`event_2758 glUniform4fv`
+
+`event_2759 glUniform4fv`
+
+`event_2760 glBindBufferBase`
+
+`event_2761 glBindBuffer`
+
+`event_2762 glBufferSubData`
+
+`event_2763 glBindBufferBase`
+
+`event_2764 glBindTexture`
+
+`event_2765 glBindBuffer`
+
+`event_2766 glVertexAttribPointer`
+
+`event_2767 glVertexAttribPointer`
+
+`event_2768 glVertexAttribPointer`
+
+`event_2769 glVertexAttribPointer`
+
+`event_2770 glDisableVertexAttribArray`
+
+`event_2771 glBindBufferRange`
+
+`event_2772 glBindBufferBase`
+
+`event_2773 glActiveTexture`
+
+`event_2774 glActiveTexture`
+
+`event_2775 glActiveTexture`
+
+`event_2776 glActiveTexture`
+
+`event_2777 glBindBuffer`
+
+`event_2778 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0155 glDrawElements(444)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1617](Universal_Render_Pipeline_Lit__Shader_1617.html) PS: [Universal_Render_Pipeline_Lit__Shader_1618](Universal_Render_Pipeline_Lit__Shader_1618.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0155_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0155_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: PlasticRough_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="PlasticRough_Albedo.png" border="2")![t2: Elastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Elastic_Normal.png" border="2")![t3: Elastic_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Elastic_MetallicOcculusionSmoothness.png" border="2")![t4: Elastic_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Elastic_MetallicOcculusionSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2779 glBindBuffer`
+
+`event_2780 glVertexAttribPointer`
+
+`event_2781 glVertexAttribPointer`
+
+`event_2782 glVertexAttribPointer`
+
+`event_2783 glVertexAttribPointer`
+
+`event_2784 glBindBufferRange`
+
+`event_2785 glBindBufferBase`
+
+`event_2786 glActiveTexture`
+
+`event_2787 glBindTexture`
+
+`event_2788 glActiveTexture`
+
+`event_2789 glBindTexture`
+
+`event_2790 glActiveTexture`
+
+`event_2791 glBindTexture`
+
+`event_2792 glActiveTexture`
+
+`event_2793 glBindTexture`
+
+`event_2794 glBindBuffer`
+
+`event_2795 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0156 glDrawElements(528)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1281](Universal_Render_Pipeline_Lit__Shader_1281.html) PS: [Universal_Render_Pipeline_Lit__Shader_1282](Universal_Render_Pipeline_Lit__Shader_1282.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0156_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0156_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Metal_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_Albedo.png" border="2")![t2: Metal_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Metal_Normal.png" border="2")![t3: Metal_MetallicSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_MetallicSmoothness.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2796 glActiveTexture`
+
+`event_2797 glBindTexture`
+
+`event_2798 glActiveTexture`
+
+`event_2799 glBindTexture`
+
+`event_2800 glActiveTexture`
+
+`event_2801 glBindTexture`
+
+`event_2802 glActiveTexture`
+
+`event_2803 glBindTexture`
+
+`event_2804 glActiveTexture`
+
+`event_2805 glBindTexture`
+
+`event_2806 glActiveTexture`
+
+`event_2807 glBindTexture`
+
+`event_2808 glBindBuffer`
+
+`event_2809 glUnmapBuffer`
+
+`event_2810 glUseProgram`
+
+`event_2811 glUniform4fv`
+
+`event_2812 glUniform4fv`
+
+`event_2813 glUniform4fv`
+
+`event_2814 glUniform4fv`
+
+`event_2815 glUniform4fv`
+
+`event_2816 glUniform4fv`
+
+`event_2817 glUniform4fv`
+
+`event_2818 glBindBufferBase`
+
+`event_2819 glBindBuffer`
+
+`event_2820 glBufferSubData`
+
+`event_2821 glBindBufferBase`
+
+`event_2822 glBindTexture`
+
+`event_2823 glBindBuffer`
+
+`event_2824 glVertexAttribPointer`
+
+`event_2825 glVertexAttribPointer`
+
+`event_2826 glVertexAttribPointer`
+
+`event_2827 glVertexAttribPointer`
+
+`event_2828 glBindBufferRange`
+
+`event_2829 glBindBufferBase`
+
+`event_2830 glActiveTexture`
+
+`event_2831 glActiveTexture`
+
+`event_2832 glActiveTexture`
+
+`event_2833 glBindBuffer`
+
+`event_2834 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0157 glDrawElements(4284)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1437](Universal_Render_Pipeline_Lit__Shader_1437.html) PS: [Universal_Render_Pipeline_Lit__Shader_1438](Universal_Render_Pipeline_Lit__Shader_1438.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0157_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0157_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t2: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t3: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t4: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2835 glActiveTexture`
+
+`event_2836 glBindTexture`
+
+`event_2837 glActiveTexture`
+
+`event_2838 glBindTexture`
+
+`event_2839 glActiveTexture`
+
+`event_2840 glBindTexture`
+
+`event_2841 glActiveTexture`
+
+`event_2842 glBindTexture`
+
+`event_2843 glActiveTexture`
+
+`event_2844 glBindTexture`
+
+`event_2845 glBindBuffer`
+
+`event_2846 glUnmapBuffer`
+
+`event_2847 glUseProgram`
+
+`event_2848 glUniform4fv`
+
+`event_2849 glUniform4fv`
+
+`event_2850 glUniform4fv`
+
+`event_2851 glUniform4fv`
+
+`event_2852 glUniform4fv`
+
+`event_2853 glUniform4fv`
+
+`event_2854 glUniform4fv`
+
+`event_2855 glBindBufferBase`
+
+`event_2856 glBindBuffer`
+
+`event_2857 glBufferSubData`
+
+`event_2858 glBindBufferBase`
+
+`event_2859 glBindTexture`
+
+`event_2860 glBindBufferRange`
+
+`event_2861 glBindBufferBase`
+
+`event_2862 glActiveTexture`
+
+`event_2863 glActiveTexture`
+
+`event_2864 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0158 glDrawElements(1620)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1437](Universal_Render_Pipeline_Lit__Shader_1437.html) PS: [Universal_Render_Pipeline_Lit__Shader_1438](Universal_Render_Pipeline_Lit__Shader_1438.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0158_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0158_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t2: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t3: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t4: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2865 glBindBuffer`
+
+`event_2866 glVertexAttribPointer`
+
+`event_2867 glVertexAttribPointer`
+
+`event_2868 glVertexAttribPointer`
+
+`event_2869 glVertexAttribPointer`
+
+`event_2870 glBindBufferRange`
+
+`event_2871 glBindBuffer`
+
+`event_2872 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0159 glDrawElements(1296)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1437](Universal_Render_Pipeline_Lit__Shader_1437.html) PS: [Universal_Render_Pipeline_Lit__Shader_1438](Universal_Render_Pipeline_Lit__Shader_1438.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0159_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0159_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t2: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t3: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t4: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2873 glBindBuffer`
+
+`event_2874 glVertexAttribPointer`
+
+`event_2875 glVertexAttribPointer`
+
+`event_2876 glVertexAttribPointer`
+
+`event_2877 glVertexAttribPointer`
+
+`event_2878 glBindBufferRange`
+
+`event_2879 glBindBufferBase`
+
+`event_2880 glActiveTexture`
+
+`event_2881 glActiveTexture`
+
+`event_2882 glBindBuffer`
+
+`event_2883 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0160 glDrawElements(1860)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1437](Universal_Render_Pipeline_Lit__Shader_1437.html) PS: [Universal_Render_Pipeline_Lit__Shader_1438](Universal_Render_Pipeline_Lit__Shader_1438.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0160_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0160_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t2: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t3: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t4: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2884 glBindBuffer`
+
+`event_2885 glVertexAttribPointer`
+
+`event_2886 glVertexAttribPointer`
+
+`event_2887 glVertexAttribPointer`
+
+`event_2888 glVertexAttribPointer`
+
+`event_2889 glBindBufferRange`
+
+`event_2890 glBindBufferBase`
+
+`event_2891 glActiveTexture`
+
+`event_2892 glActiveTexture`
+
+`event_2893 glBindBuffer`
+
+`event_2894 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0161 glDrawElements(264)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0161_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0161_z.png" border="2")
+
+--------
+
+![t0: Texture_887 `(32X32 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_887.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: OBS_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="OBS_Albedo.png" border="2")![t3: OBS_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="OBS_Normal.png" border="2")![t4: OBS_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="OBS_MetallicOcculusionSmoothness.png" border="2")![t5: OBS_MetallicOcculusionSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="OBS_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2895 glBindTexture`
+
+`event_2896 glActiveTexture`
+
+`event_2897 glBindTexture`
+
+`event_2898 glActiveTexture`
+
+`event_2899 glBindTexture`
+
+`event_2900 glActiveTexture`
+
+`event_2901 glBindTexture`
+
+`event_2902 glActiveTexture`
+
+`event_2903 glActiveTexture`
+
+`event_2904 glBindTexture`
+
+`event_2905 glActiveTexture`
+
+`event_2906 glBindTexture`
+
+`event_2907 glActiveTexture`
+
+`event_2908 glBindTexture`
+
+`event_2909 glBindBuffer`
+
+`event_2910 glUnmapBuffer`
+
+`event_2911 glUseProgram`
+
+`event_2912 glUniform4fv`
+
+`event_2913 glUniform4fv`
+
+`event_2914 glUniform4fv`
+
+`event_2915 glUniform4fv`
+
+`event_2916 glUniform4fv`
+
+`event_2917 glUniform4fv`
+
+`event_2918 glUniform4fv`
+
+`event_2919 glUniform4fv`
+
+`event_2920 glBindBufferBase`
+
+`event_2921 glBindBuffer`
+
+`event_2922 glBufferSubData`
+
+`event_2923 glBindBufferBase`
+
+`event_2924 glActiveTexture`
+
+`event_2925 glBindTexture`
+
+`event_2926 glActiveTexture`
+
+`event_2927 glBindTexture`
+
+`event_2928 glBindBuffer`
+
+`event_2929 glVertexAttribPointer`
+
+`event_2930 glVertexAttribPointer`
+
+`event_2931 glVertexAttribPointer`
+
+`event_2932 glVertexAttribPointer`
+
+`event_2933 glEnableVertexAttribArray`
+
+`event_2934 glVertexAttribPointer`
+
+`event_2935 glBindBufferRange`
+
+`event_2936 glBindBufferBase`
+
+`event_2937 glActiveTexture`
+
+`event_2938 glActiveTexture`
+
+`event_2939 glActiveTexture`
+
+`event_2940 glActiveTexture`
+
+`event_2941 glBindBuffer`
+
+`event_2942 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0162 glDrawElements(2640)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0162_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0162_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plywood_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_Albedo.png" border="2")![t3: Plywood_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plywood_Normal.png" border="2")![t4: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t5: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2943 glActiveTexture`
+
+`event_2944 glActiveTexture`
+
+`event_2945 glBindTexture`
+
+`event_2946 glBindBuffer`
+
+`event_2947 glVertexAttribPointer`
+
+`event_2948 glVertexAttribPointer`
+
+`event_2949 glVertexAttribPointer`
+
+`event_2950 glVertexAttribPointer`
+
+`event_2951 glVertexAttribPointer`
+
+`event_2952 glBindBufferRange`
+
+`event_2953 glBindBufferBase`
+
+`event_2954 glActiveTexture`
+
+`event_2955 glBindTexture`
+
+`event_2956 glActiveTexture`
+
+`event_2957 glBindTexture`
+
+`event_2958 glActiveTexture`
+
+`event_2959 glBindTexture`
+
+`event_2960 glActiveTexture`
+
+`event_2961 glBindTexture`
+
+`event_2962 glBindBuffer`
+
+`event_2963 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0163 glDrawElements(924)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0163_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0163_z.png" border="2")
+
+--------
+
+![t0: Texture_889 `(32X32 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_889.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Plywood_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_Albedo.png" border="2")![t3: Plywood_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plywood_Normal.png" border="2")![t4: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t5: Plywood_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plywood_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2964 glActiveTexture`
+
+`event_2965 glActiveTexture`
+
+`event_2966 glBindTexture`
+
+`event_2967 glBindBuffer`
+
+`event_2968 glVertexAttribPointer`
+
+`event_2969 glVertexAttribPointer`
+
+`event_2970 glVertexAttribPointer`
+
+`event_2971 glVertexAttribPointer`
+
+`event_2972 glVertexAttribPointer`
+
+`event_2973 glBindBufferRange`
+
+`event_2974 glBindBuffer`
+
+`event_2975 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0164 glDrawElements(420)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1629](Universal_Render_Pipeline_Lit__Shader_1629.html) PS: [Universal_Render_Pipeline_Lit__Shader_1630](Universal_Render_Pipeline_Lit__Shader_1630.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0164_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0164_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Ground_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Ground_Albedo.png" border="2")![t3: Ground_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Ground_Normal.png" border="2")![t4: Ground_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Ground_MetallicOcculusionSmoothness.png" border="2")![t5: Ground_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Ground_MetallicOcculusionSmoothness.png" border="2")![t6: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2976 glActiveTexture`
+
+`event_2977 glActiveTexture`
+
+`event_2978 glBindTexture`
+
+`event_2979 glBindBuffer`
+
+`event_2980 glVertexAttribPointer`
+
+`event_2981 glVertexAttribPointer`
+
+`event_2982 glVertexAttribPointer`
+
+`event_2983 glVertexAttribPointer`
+
+`event_2984 glVertexAttribPointer`
+
+`event_2985 glBindBufferRange`
+
+`event_2986 glBindBufferBase`
+
+`event_2987 glActiveTexture`
+
+`event_2988 glBindTexture`
+
+`event_2989 glActiveTexture`
+
+`event_2990 glBindTexture`
+
+`event_2991 glActiveTexture`
+
+`event_2992 glBindTexture`
+
+`event_2993 glActiveTexture`
+
+`event_2994 glBindTexture`
+
+`event_2995 glBindBuffer`
+
+`event_2996 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0165 glDrawElements(192)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1293](Universal_Render_Pipeline_Lit__Shader_1293.html) PS: [Universal_Render_Pipeline_Lit__Shader_1294](Universal_Render_Pipeline_Lit__Shader_1294.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0165_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0165_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Metal_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_Albedo.png" border="2")![t3: Metal_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Metal_Normal.png" border="2")![t4: Metal_MetallicSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_MetallicSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_2997 glActiveTexture`
+
+`event_2998 glBindTexture`
+
+`event_2999 glActiveTexture`
+
+`event_3000 glBindTexture`
+
+`event_3001 glActiveTexture`
+
+`event_3002 glBindTexture`
+
+`event_3003 glActiveTexture`
+
+`event_3004 glBindTexture`
+
+`event_3005 glActiveTexture`
+
+`event_3006 glBindTexture`
+
+`event_3007 glActiveTexture`
+
+`event_3008 glBindTexture`
+
+`event_3009 glActiveTexture`
+
+`event_3010 glBindTexture`
+
+`event_3011 glBindBuffer`
+
+`event_3012 glUnmapBuffer`
+
+`event_3013 glUseProgram`
+
+`event_3014 glUniform4fv`
+
+`event_3015 glUniform4fv`
+
+`event_3016 glUniform4fv`
+
+`event_3017 glUniform4fv`
+
+`event_3018 glUniform4fv`
+
+`event_3019 glUniform4fv`
+
+`event_3020 glUniform4fv`
+
+`event_3021 glUniform4fv`
+
+`event_3022 glBindBufferBase`
+
+`event_3023 glBindBuffer`
+
+`event_3024 glBufferSubData`
+
+`event_3025 glBindBufferBase`
+
+`event_3026 glActiveTexture`
+
+`event_3027 glBindTexture`
+
+`event_3028 glActiveTexture`
+
+`event_3029 glBindTexture`
+
+`event_3030 glBindBufferRange`
+
+`event_3031 glBindBufferBase`
+
+`event_3032 glActiveTexture`
+
+`event_3033 glActiveTexture`
+
+`event_3034 glActiveTexture`
+
+`event_3035 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0166 glDrawElements(18)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1449](Universal_Render_Pipeline_Lit__Shader_1449.html) PS: [Universal_Render_Pipeline_Lit__Shader_1450](Universal_Render_Pipeline_Lit__Shader_1450.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0166_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0166_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Drywall_AlbedoSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Drywall_AlbedoSmoothness.png" border="2")![t3: DrywallPainted_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="DrywallPainted_Normal.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3036 glActiveTexture`
+
+`event_3037 glBindTexture`
+
+`event_3038 glActiveTexture`
+
+`event_3039 glBindTexture`
+
+`event_3040 glActiveTexture`
+
+`event_3041 glBindTexture`
+
+`event_3042 glActiveTexture`
+
+`event_3043 glBindTexture`
+
+`event_3044 glActiveTexture`
+
+`event_3045 glBindTexture`
+
+`event_3046 glActiveTexture`
+
+`event_3047 glBindTexture`
+
+`event_3048 glBindBuffer`
+
+`event_3049 glUnmapBuffer`
+
+`event_3050 glUseProgram`
+
+`event_3051 glUniform4fv`
+
+`event_3052 glUniform4fv`
+
+`event_3053 glUniform4fv`
+
+`event_3054 glUniform4fv`
+
+`event_3055 glUniform4fv`
+
+`event_3056 glUniform4fv`
+
+`event_3057 glUniform4fv`
+
+`event_3058 glUniform4fv`
+
+`event_3059 glBindBufferBase`
+
+`event_3060 glBindBuffer`
+
+`event_3061 glBufferSubData`
+
+`event_3062 glBindBufferBase`
+
+`event_3063 glActiveTexture`
+
+`event_3064 glBindTexture`
+
+`event_3065 glActiveTexture`
+
+`event_3066 glBindTexture`
+
+`event_3067 glBindBuffer`
+
+`event_3068 glVertexAttribPointer`
+
+`event_3069 glVertexAttribPointer`
+
+`event_3070 glVertexAttribPointer`
+
+`event_3071 glVertexAttribPointer`
+
+`event_3072 glVertexAttribPointer`
+
+`event_3073 glBindBufferRange`
+
+`event_3074 glBindBufferBase`
+
+`event_3075 glActiveTexture`
+
+`event_3076 glActiveTexture`
+
+`event_3077 glBindBuffer`
+
+`event_3078 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0167 glDrawElements(114)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1449](Universal_Render_Pipeline_Lit__Shader_1449.html) PS: [Universal_Render_Pipeline_Lit__Shader_1450](Universal_Render_Pipeline_Lit__Shader_1450.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0167_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0167_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Texture_136 `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Texture_136.png" border="2")![t2: Drywall_Albedo `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Drywall_Albedo.png" border="2")![t3: Drywall_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Drywall_Normal.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3079 glActiveTexture`
+
+`event_3080 glBindBufferRange`
+
+`event_3081 glBindBufferBase`
+
+`event_3082 glActiveTexture`
+
+`event_3083 glBindTexture`
+
+`event_3084 glActiveTexture`
+
+`event_3085 glBindTexture`
+
+`event_3086 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0168 glDrawElements(1911)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1617](Universal_Render_Pipeline_Lit__Shader_1617.html) PS: [Universal_Render_Pipeline_Lit__Shader_1618](Universal_Render_Pipeline_Lit__Shader_1618.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0168_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0168_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Paintbrush_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Paintbrush_Albedo.png" border="2")![t2: Paintbrush_Normal `(512X512 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Paintbrush_Normal.png" border="2")![t3: Paintbrush_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Paintbrush_MetallicOcculusionSmoothness.png" border="2")![t4: Paintbrush_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Paintbrush_MetallicOcculusionSmoothness.png" border="2")![t5: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3087 glActiveTexture`
+
+`event_3088 glBindTexture`
+
+`event_3089 glActiveTexture`
+
+`event_3090 glBindTexture`
+
+`event_3091 glActiveTexture`
+
+`event_3092 glBindTexture`
+
+`event_3093 glActiveTexture`
+
+`event_3094 glBindTexture`
+
+`event_3095 glActiveTexture`
+
+`event_3096 glActiveTexture`
+
+`event_3097 glBindTexture`
+
+`event_3098 glActiveTexture`
+
+`event_3099 glBindTexture`
+
+`event_3100 glBindBuffer`
+
+`event_3101 glUnmapBuffer`
+
+`event_3102 glUseProgram`
+
+`event_3103 glUniform4fv`
+
+`event_3104 glUniform4fv`
+
+`event_3105 glUniform4fv`
+
+`event_3106 glUniform4fv`
+
+`event_3107 glUniform4fv`
+
+`event_3108 glUniform4fv`
+
+`event_3109 glUniform4fv`
+
+`event_3110 glBindBufferBase`
+
+`event_3111 glBindBufferBase`
+
+`event_3112 glBindTexture`
+
+`event_3113 glBindBuffer`
+
+`event_3114 glVertexAttribPointer`
+
+`event_3115 glVertexAttribPointer`
+
+`event_3116 glVertexAttribPointer`
+
+`event_3117 glVertexAttribPointer`
+
+`event_3118 glDisableVertexAttribArray`
+
+`event_3119 glBindBufferRange`
+
+`event_3120 glBindBufferBase`
+
+`event_3121 glActiveTexture`
+
+`event_3122 glActiveTexture`
+
+`event_3123 glActiveTexture`
+
+`event_3124 glActiveTexture`
+
+`event_3125 glBindBuffer`
+
+`event_3126 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0169 glDrawElements(528)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1281](Universal_Render_Pipeline_Lit__Shader_1281.html) PS: [Universal_Render_Pipeline_Lit__Shader_1282](Universal_Render_Pipeline_Lit__Shader_1282.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0169_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0169_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Metal_Albedo `(256X256 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_Albedo.png" border="2")![t2: Metal_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Metal_Normal.png" border="2")![t3: Metal_MetallicSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Metal_MetallicSmoothness.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3127 glActiveTexture`
+
+`event_3128 glBindTexture`
+
+`event_3129 glActiveTexture`
+
+`event_3130 glBindTexture`
+
+`event_3131 glActiveTexture`
+
+`event_3132 glBindTexture`
+
+`event_3133 glActiveTexture`
+
+`event_3134 glBindTexture`
+
+`event_3135 glActiveTexture`
+
+`event_3136 glBindTexture`
+
+`event_3137 glActiveTexture`
+
+`event_3138 glBindTexture`
+
+`event_3139 glBindBuffer`
+
+`event_3140 glUnmapBuffer`
+
+`event_3141 glUseProgram`
+
+`event_3142 glUniform4fv`
+
+`event_3143 glUniform4fv`
+
+`event_3144 glUniform4fv`
+
+`event_3145 glUniform4fv`
+
+`event_3146 glUniform4fv`
+
+`event_3147 glUniform4fv`
+
+`event_3148 glUniform4fv`
+
+`event_3149 glBindBufferBase`
+
+`event_3150 glBindBuffer`
+
+`event_3151 glBufferSubData`
+
+`event_3152 glBindBufferBase`
+
+`event_3153 glBindTexture`
+
+`event_3154 glBindBuffer`
+
+`event_3155 glVertexAttribPointer`
+
+`event_3156 glVertexAttribPointer`
+
+`event_3157 glVertexAttribPointer`
+
+`event_3158 glVertexAttribPointer`
+
+`event_3159 glBindBufferRange`
+
+`event_3160 glBindBufferBase`
+
+`event_3161 glActiveTexture`
+
+`event_3162 glActiveTexture`
+
+`event_3163 glActiveTexture`
+
+`event_3164 glBindBuffer`
+
+`event_3165 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0170 glDrawElements(36)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1377](Universal_Render_Pipeline_Lit__Shader_1377.html) PS: [Universal_Render_Pipeline_Lit__Shader_1378](Universal_Render_Pipeline_Lit__Shader_1378.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0170_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0170_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Paint5G_AlbedoSmoothness `(1024X1024 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Paint5G_AlbedoSmoothness.png" border="2")![t2: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t3: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3166 glActiveTexture`
+
+`event_3167 glBindTexture`
+
+`event_3168 glActiveTexture`
+
+`event_3169 glBindTexture`
+
+`event_3170 glActiveTexture`
+
+`event_3171 glBindTexture`
+
+`event_3172 glActiveTexture`
+
+`event_3173 glBindTexture`
+
+`event_3174 glBindBuffer`
+
+`event_3175 glUnmapBuffer`
+
+`event_3176 glUseProgram`
+
+`event_3177 glUniform4fv`
+
+`event_3178 glUniform4fv`
+
+`event_3179 glUniform4fv`
+
+`event_3180 glUniform4fv`
+
+`event_3181 glUniform4fv`
+
+`event_3182 glUniform4fv`
+
+`event_3183 glUniform4fv`
+
+`event_3184 glBindBufferBase`
+
+`event_3185 glBindBuffer`
+
+`event_3186 glBufferSubData`
+
+`event_3187 glBindBufferBase`
+
+`event_3188 glBindTexture`
+
+`event_3189 glVertexAttribPointer`
+
+`event_3190 glDisableVertexAttribArray`
+
+`event_3191 glBindBufferRange`
+
+`event_3192 glBindBufferBase`
+
+`event_3193 glActiveTexture`
+
+`event_3194 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0171 glDrawElements(120)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1181](Universal_Render_Pipeline_Lit__Shader_1181.html) PS: [Universal_Render_Pipeline_Lit__Shader_1182](Universal_Render_Pipeline_Lit__Shader_1182.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0171_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0171_z.png" border="2")
+
+--------
+
+![t0: Texture_889 `(32X32 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_889.png" border="2")![t1: UnityWhite `(4X4 R8G8B8A8_SRGB)`](../src/logo.png class="lazyload" data-src="UnityWhite.png" border="2")![t2: UnityWhite `(4X4 R8G8B8A8_SRGB)`](../src/logo.png class="lazyload" data-src="UnityWhite.png" border="2")![t3: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t4: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3195 glBindTexture`
+
+`event_3196 glActiveTexture`
+
+`event_3197 glBindTexture`
+
+`event_3198 glActiveTexture`
+
+`event_3199 glBindTexture`
+
+`event_3200 glActiveTexture`
+
+`event_3201 glBindTexture`
+
+`event_3202 glActiveTexture`
+
+`event_3203 glBindTexture`
+
+`event_3204 glBindBuffer`
+
+`event_3205 glUnmapBuffer`
+
+`event_3206 glUseProgram`
+
+`event_3207 glUniform4fv`
+
+`event_3208 glUniform4fv`
+
+`event_3209 glUniform4fv`
+
+`event_3210 glUniform4fv`
+
+`event_3211 glUniform4fv`
+
+`event_3212 glUniform4fv`
+
+`event_3213 glUniform4fv`
+
+`event_3214 glBindBufferBase`
+
+`event_3215 glBindBuffer`
+
+`event_3216 glBufferSubData`
+
+`event_3217 glBindBufferBase`
+
+`event_3218 glBindTexture`
+
+`event_3219 glBindBuffer`
+
+`event_3220 glVertexAttribPointer`
+
+`event_3221 glVertexAttribPointer`
+
+`event_3222 glVertexAttribPointer`
+
+`event_3223 glBindBufferRange`
+
+`event_3224 glBindBufferBase`
+
+`event_3225 glActiveTexture`
+
+`event_3226 glActiveTexture`
+
+`event_3227 glBindBuffer`
+
+`event_3228 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0172 glDrawElements(1998)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1437](Universal_Render_Pipeline_Lit__Shader_1437.html) PS: [Universal_Render_Pipeline_Lit__Shader_1438](Universal_Render_Pipeline_Lit__Shader_1438.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0172_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0172_z.png" border="2")
+
+--------
+
+![t0: Texture_888 `(64X64 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_888.png" border="2")![t1: Plastic_AlbedoSmoothness `(256X256 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="Plastic_AlbedoSmoothness.png" border="2")![t2: Plastic_Normal `(256X256 BC3_UNORM)`](../src/logo.png class="lazyload" data-src="Plastic_Normal.png" border="2")![t3: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t4: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3229 glActiveTexture`
+
+`event_3230 glBindTexture`
+
+`event_3231 glActiveTexture`
+
+`event_3232 glBindTexture`
+
+`event_3233 glActiveTexture`
+
+`event_3234 glActiveTexture`
+
+`event_3235 glActiveTexture`
+
+`event_3236 glBindTexture`
+
+`event_3237 glBindBuffer`
+
+`event_3238 glUnmapBuffer`
+
+`event_3239 glUseProgram`
+
+`event_3240 glUniform4fv`
+
+`event_3241 glUniform4fv`
+
+`event_3242 glUniform4fv`
+
+`event_3243 glUniform4fv`
+
+`event_3244 glUniform4fv`
+
+`event_3245 glUniform4fv`
+
+`event_3246 glUniform4fv`
+
+`event_3247 glBindBufferBase`
+
+`event_3248 glBindBuffer`
+
+`event_3249 glBufferSubData`
+
+`event_3250 glBindBufferBase`
+
+`event_3251 glBindTexture`
+
+`event_3252 glBindBuffer`
+
+`event_3253 glVertexAttribPointer`
+
+`event_3254 glVertexAttribPointer`
+
+`event_3255 glVertexAttribPointer`
+
+`event_3256 glEnableVertexAttribArray`
+
+`event_3257 glVertexAttribPointer`
+
+`event_3258 glBindBufferRange`
+
+`event_3259 glBindBufferBase`
+
+`event_3260 glActiveTexture`
+
+`event_3261 glActiveTexture`
+
+`event_3262 glBindBuffer`
+
+`event_3263 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0173 glDrawElements(2292)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1533](Universal_Render_Pipeline_Lit__Shader_1533.html) PS: [Universal_Render_Pipeline_Lit__Shader_1534](Universal_Render_Pipeline_Lit__Shader_1534.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0173_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0173_z.png" border="2")
+
+--------
+
+![t0: Texture_889 `(32X32 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_889.png" border="2")![t1: ConstructionLight_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="ConstructionLight_Albedo.png" border="2")![t2: ConstructionLight_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="ConstructionLight_MetallicOcculusionSmoothness.png" border="2")![t3: ConstructionLight_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="ConstructionLight_MetallicOcculusionSmoothness.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3264 glActiveTexture`
+
+`event_3265 glBindTexture`
+
+`event_3266 glActiveTexture`
+
+`event_3267 glBindTexture`
+
+`event_3268 glActiveTexture`
+
+`event_3269 glBindTexture`
+
+`event_3270 glActiveTexture`
+
+`event_3271 glActiveTexture`
+
+`event_3272 glBindTexture`
+
+`event_3273 glActiveTexture`
+
+`event_3274 glBindTexture`
+
+`event_3275 glBindBuffer`
+
+`event_3276 glUnmapBuffer`
+
+`event_3277 glUseProgram`
+
+`event_3278 glUniform4fv`
+
+`event_3279 glUniform4fv`
+
+`event_3280 glUniform4fv`
+
+`event_3281 glUniform4fv`
+
+`event_3282 glUniform4fv`
+
+`event_3283 glUniform4fv`
+
+`event_3284 glUniform4fv`
+
+`event_3285 glBindBufferBase`
+
+`event_3286 glBindBuffer`
+
+`event_3287 glBufferSubData`
+
+`event_3288 glBindBufferBase`
+
+`event_3289 glBindTexture`
+
+`event_3290 glBindBuffer`
+
+`event_3291 glVertexAttribPointer`
+
+`event_3292 glVertexAttribPointer`
+
+`event_3293 glVertexAttribPointer`
+
+`event_3294 glDisableVertexAttribArray`
+
+`event_3295 glBindBufferRange`
+
+`event_3296 glBindBufferBase`
+
+`event_3297 glActiveTexture`
+
+`event_3298 glActiveTexture`
+
+`event_3299 glActiveTexture`
+
+`event_3300 glBindBuffer`
+
+`event_3301 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
+### [D]0174 glDrawElements(3450)
+
+UIR.DrawChain / UIR.ImmediateRenderer / Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+
+VS: [Universal_Render_Pipeline_Lit__Shader_1533](Universal_Render_Pipeline_Lit__Shader_1533.html) PS: [Universal_Render_Pipeline_Lit__Shader_1534](Universal_Render_Pipeline_Lit__Shader_1534.html) 
+
+![c0: TempBuffer_772_897x418 `(897X418 R11G11B10_FLOAT)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0174_c0.png" border="2")![z: TempBuffer_772_897x418 `(897X418 D24S8)`](../src/logo.png class="lazyload" data-src="TempBuffer_772_897x418--0174_z.png" border="2")
+
+--------
+
+![t0: Texture_889 `(32X32 R16G16B16A16_FLOAT)`](../src/logo.png class="lazyload" data-src="Texture_889.png" border="2")![t1: ConstructionLight_Albedo `(512X512 BC1_SRGB)`](../src/logo.png class="lazyload" data-src="ConstructionLight_Albedo.png" border="2")![t2: ConstructionLight_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="ConstructionLight_MetallicOcculusionSmoothness.png" border="2")![t3: ConstructionLight_MetallicOcculusionSmoothness `(512X512 BC3_SRGB)`](../src/logo.png class="lazyload" data-src="ConstructionLight_MetallicOcculusionSmoothness.png" border="2")![t4: TempBuffer_770_2048x1024 `(2048X1024 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_770_2048x1024.png" border="2")![t5: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t6: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")![t7: TempBuffer_771_512x512 `(512X512 D16)`](../src/logo.png class="lazyload" data-src="TempBuffer_771_512x512.png" border="2")
+
+`event_3302 glActiveTexture`
+
+`event_3303 glBindBuffer`
+
+`event_3304 glVertexAttribPointer`
+
+`event_3305 glVertexAttribPointer`
+
+`event_3306 glVertexAttribPointer`
+
+`event_3307 glBindBufferRange`
+
+`event_3308 glBindBuffer`
+
+`event_3309 glDrawElements`
+
+
+
+--------
+
+
+
+--------
+
