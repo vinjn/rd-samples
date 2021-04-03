@@ -1,0 +1,353 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ Render_Camera / Render_Opaques / RenderLoopNewBatcher.Draw
+# analysis
+```
+Mali Offline Compiler v7.3.0 (Build 002baf)
+Copyright 2007-2020 Arm Limited, all rights reserved
+Configuration
+=============
+Hardware: Mali-G78 r1p1
+Architecture: Valhall
+Driver: r25p0-00rel0
+Shader type: OpenGL ES Fragment
+Main shader
+===========
+Work registers: 59
+Uniform registers: 58
+Stack spilling: false
+16-bit arithmetic: 20%
+                              FMA     CVT     SFU      LS       V       T    Bound
+Total instruction cycles:    2.31    0.64    1.25    6.00    2.13    1.00       LS
+Shortest path cycles:        1.49    0.33    0.75    0.00    1.75    1.00        V
+Longest path cycles:          N/A     N/A     N/A     N/A     N/A     N/A      N/A
+FMA = Arith FMA, CVT = Arith CVT, SFU = Arith SFU,
+LS = Load/Store, V = Varying, T = Texture
+Shader properties
+=================
+Has uniform computation: true
+Has side-effects: false
+Modifies coverage: false
+Uses late ZS test: false
+Uses late ZS update: false
+Reads color buffer: false
+Note: This tool shows only the shader-visible property state.
+API configuration may also impact the value of some properties.
+ 
+```
+# shader
+```glsl
+#version 320 es
+#ifdef GL_EXT_shader_texture_lod
+#extension GL_EXT_shader_texture_lod : enable
+#endif
+
+precision highp float;
+precision highp int;
+#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+#define UNITY_UNIFORM
+#else
+#define UNITY_UNIFORM uniform
+#endif
+#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+#if UNITY_SUPPORTS_UNIFORM_LOCATION
+#define UNITY_LOCATION(x) layout(location = x)
+#define UNITY_BINDING(x) layout(binding = x, std140)
+#else
+#define UNITY_LOCATION(x)
+#define UNITY_BINDING(x) layout(std140)
+#endif
+vec4 ImmCB_0[4];
+uniform 	vec4 _MainLightPosition;
+uniform 	mediump vec4 _MainLightColor;
+uniform 	mediump vec4 _AdditionalLightsCount;
+uniform 	vec4 _AdditionalLightsPosition[32];
+uniform 	mediump vec4 _AdditionalLightsColor[32];
+uniform 	mediump vec4 _AdditionalLightsAttenuation[32];
+uniform 	mediump vec4 _AdditionalLightsSpotDir[32];
+uniform 	mediump vec4 unity_FogColor;
+uniform 	mediump vec4 _MainLightShadowParams;
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+UNITY_BINDING(0) uniform UnityPerDraw {
+#endif
+	UNITY_UNIFORM vec4 hlslcc_mtx4x4unity_ObjectToWorld[4];
+	UNITY_UNIFORM vec4 hlslcc_mtx4x4unity_WorldToObject[4];
+	UNITY_UNIFORM vec4 unity_LODFade;
+	UNITY_UNIFORM mediump vec4 unity_WorldTransformParams;
+	UNITY_UNIFORM mediump vec4 unity_LightData;
+	UNITY_UNIFORM mediump vec4 unity_LightIndices[2];
+	UNITY_UNIFORM vec4 unity_ProbesOcclusion;
+	UNITY_UNIFORM mediump vec4 unity_SpecCube0_HDR;
+	UNITY_UNIFORM vec4 unity_LightmapST;
+	UNITY_UNIFORM vec4 unity_DynamicLightmapST;
+	UNITY_UNIFORM mediump vec4 unity_SHAr;
+	UNITY_UNIFORM mediump vec4 unity_SHAg;
+	UNITY_UNIFORM mediump vec4 unity_SHAb;
+	UNITY_UNIFORM mediump vec4 unity_SHBr;
+	UNITY_UNIFORM mediump vec4 unity_SHBg;
+	UNITY_UNIFORM mediump vec4 unity_SHBb;
+	UNITY_UNIFORM mediump vec4 unity_SHC;
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+};
+#endif
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+UNITY_BINDING(1) uniform UnityPerMaterial {
+#endif
+	UNITY_UNIFORM vec4 _BaseMap_ST;
+	UNITY_UNIFORM mediump vec4 _BaseColor;
+	UNITY_UNIFORM mediump vec4 _SpecColor;
+	UNITY_UNIFORM mediump vec4 _EmissionColor;
+	UNITY_UNIFORM mediump float _Cutoff;
+	UNITY_UNIFORM mediump float _Smoothness;
+	UNITY_UNIFORM mediump float _Metallic;
+	UNITY_UNIFORM mediump float _BumpScale;
+	UNITY_UNIFORM mediump float _OcclusionStrength;
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+};
+#endif
+UNITY_LOCATION(0) uniform mediump samplerCube unity_SpecCube0;
+UNITY_LOCATION(1) uniform mediump sampler2D _BaseMap;
+UNITY_LOCATION(2) uniform mediump sampler2D _EmissionMap;
+UNITY_LOCATION(3) uniform mediump sampler2D _MainLightShadowmapTexture;
+UNITY_LOCATION(4) uniform mediump sampler2DShadow hlslcc_zcmp_MainLightShadowmapTexture;
+in highp vec2 vs_TEXCOORD0;
+in mediump vec3 vs_TEXCOORD1;
+in highp vec3 vs_TEXCOORD2;
+in highp vec3 vs_TEXCOORD3;
+in highp vec3 vs_TEXCOORD4;
+in mediump vec4 vs_TEXCOORD6;
+in highp vec4 vs_TEXCOORD7;
+layout(location = 0) out mediump vec4 SV_Target0;
+float u_xlat0;
+mediump vec4 u_xlat16_0;
+mediump vec3 u_xlat16_1;
+mediump vec3 u_xlat16_2;
+vec3 u_xlat3;
+mediump float u_xlat16_4;
+mediump vec4 u_xlat16_5;
+mediump vec4 u_xlat16_6;
+mediump vec3 u_xlat16_7;
+vec3 u_xlat8;
+vec3 u_xlat9;
+mediump vec3 u_xlat16_10;
+mediump vec3 u_xlat16_11;
+float u_xlat12;
+mediump vec3 u_xlat16_16;
+mediump vec3 u_xlat16_17;
+float u_xlat24;
+mediump float u_xlat16_24;
+uint u_xlatu24;
+bool u_xlatb24;
+mediump float u_xlat16_29;
+float u_xlat36;
+uint u_xlatu36;
+mediump float u_xlat16_37;
+float u_xlat38;
+int u_xlati38;
+bool u_xlatb38;
+float u_xlat39;
+uint u_xlatu39;
+mediump float u_xlat16_41;
+mediump float u_xlat16_42;
+float u_xlat44;
+float u_xlat45;
+void main()
+{
+ImmCB_0[0] = vec4(1.0,0.0,0.0,0.0);
+ImmCB_0[1] = vec4(0.0,1.0,0.0,0.0);
+ImmCB_0[2] = vec4(0.0,0.0,1.0,0.0);
+ImmCB_0[3] = vec4(0.0,0.0,0.0,1.0);
+    u_xlat16_0 = texture(_BaseMap, vs_TEXCOORD0.xy);
+    SV_Target0.w = u_xlat16_0.w * _BaseColor.w;
+    u_xlat16_1.xyz = u_xlat16_0.xyz * _BaseColor.xyz;
+    u_xlat16_2.xyz = texture(_EmissionMap, vs_TEXCOORD0.xy).xyz;
+    u_xlat36 = dot(vs_TEXCOORD4.xyz, vs_TEXCOORD4.xyz);
+    u_xlat36 = max(u_xlat36, 1.17549435e-38);
+    u_xlat36 = inversesqrt(u_xlat36);
+    u_xlat3.xyz = vec3(u_xlat36) * vs_TEXCOORD4.xyz;
+    u_xlat16_37 = (-_Metallic) * 0.959999979 + 0.959999979;
+    u_xlat16_4 = (-u_xlat16_37) + _Smoothness;
+    u_xlat16_1.xyz = vec3(u_xlat16_37) * u_xlat16_1.xyz;
+    u_xlat16_16.xyz = u_xlat16_0.xyz * _BaseColor.xyz + vec3(-0.0399999991, -0.0399999991, -0.0399999991);
+    u_xlat16_16.xyz = vec3(vec3(_Metallic, _Metallic, _Metallic)) * u_xlat16_16.xyz + vec3(0.0399999991, 0.0399999991, 0.0399999991);
+    u_xlat16_37 = u_xlat16_4 + 1.0;
+#ifdef UNITY_ADRENO_ES3
+    u_xlat16_37 = min(max(u_xlat16_37, 0.0), 1.0);
+#else
+    u_xlat16_37 = clamp(u_xlat16_37, 0.0, 1.0);
+#endif
+    u_xlat16_4 = (-_Smoothness) + 1.0;
+    u_xlat16_5.x = u_xlat16_4 * u_xlat16_4;
+    u_xlat16_5.x = max(u_xlat16_5.x, 6.10351563e-05);
+    u_xlat0 = u_xlat16_5.x * 4.0 + 2.0;
+    u_xlat12 = u_xlat16_5.x * u_xlat16_5.x + -1.0;
+    vec3 txVec0 = vec3(vs_TEXCOORD7.xy,vs_TEXCOORD7.z);
+    u_xlat16_24 = textureLod(hlslcc_zcmp_MainLightShadowmapTexture, txVec0, 0.0);
+    u_xlat16_29 = (-_MainLightShadowParams.x) + 1.0;
+    u_xlat16_29 = u_xlat16_24 * _MainLightShadowParams.x + u_xlat16_29;
+#ifdef UNITY_ADRENO_ES3
+    u_xlatb24 = !!(0.0>=vs_TEXCOORD7.z);
+#else
+    u_xlatb24 = 0.0>=vs_TEXCOORD7.z;
+#endif
+#ifdef UNITY_ADRENO_ES3
+    u_xlatb38 = !!(vs_TEXCOORD7.z>=1.0);
+#else
+    u_xlatb38 = vs_TEXCOORD7.z>=1.0;
+#endif
+    u_xlatb24 = u_xlatb24 || u_xlatb38;
+    u_xlat16_29 = (u_xlatb24) ? 1.0 : u_xlat16_29;
+    u_xlat16_41 = dot((-u_xlat3.xyz), vs_TEXCOORD3.xyz);
+    u_xlat16_41 = u_xlat16_41 + u_xlat16_41;
+    u_xlat16_6.xyz = vs_TEXCOORD3.xyz * (-vec3(u_xlat16_41)) + (-u_xlat3.xyz);
+    u_xlat16_41 = dot(vs_TEXCOORD3.xyz, u_xlat3.xyz);
+#ifdef UNITY_ADRENO_ES3
+    u_xlat16_41 = min(max(u_xlat16_41, 0.0), 1.0);
+#else
+    u_xlat16_41 = clamp(u_xlat16_41, 0.0, 1.0);
+#endif
+    u_xlat16_5.w = (-u_xlat16_41) + 1.0;
+    u_xlat16_17.xz = u_xlat16_5.xw * u_xlat16_5.xw;
+    u_xlat16_41 = u_xlat16_17.z * u_xlat16_17.z;
+    u_xlat16_42 = (-u_xlat16_4) * 0.699999988 + 1.70000005;
+    u_xlat16_4 = u_xlat16_4 * u_xlat16_42;
+    u_xlat16_4 = u_xlat16_4 * 6.0;
+    u_xlat16_6 = textureLod(unity_SpecCube0, u_xlat16_6.xyz, u_xlat16_4);
+    u_xlat16_4 = u_xlat16_6.w + -1.0;
+    u_xlat16_4 = unity_SpecCube0_HDR.w * u_xlat16_4 + 1.0;
+    u_xlat16_4 = max(u_xlat16_4, 0.0);
+    u_xlat16_4 = log2(u_xlat16_4);
+    u_xlat16_4 = u_xlat16_4 * unity_SpecCube0_HDR.y;
+    u_xlat16_4 = exp2(u_xlat16_4);
+    u_xlat16_4 = u_xlat16_4 * unity_SpecCube0_HDR.x;
+    u_xlat16_7.xyz = u_xlat16_6.xyz * vec3(u_xlat16_4);
+    u_xlat16_4 = u_xlat16_5.x * u_xlat16_5.x + 1.0;
+    u_xlat16_4 = float(1.0) / u_xlat16_4;
+    u_xlat8.xyz = u_xlat16_7.xyz * vec3(u_xlat16_4);
+    u_xlat16_7.xyz = (-u_xlat16_16.xyz) + vec3(u_xlat16_37);
+    u_xlat16_7.xyz = vec3(u_xlat16_41) * u_xlat16_7.xyz + u_xlat16_16.xyz;
+    u_xlat8.xyz = u_xlat16_7.xyz * u_xlat8.xyz;
+    u_xlat8.xyz = vs_TEXCOORD1.xyz * u_xlat16_1.xyz + u_xlat8.xyz;
+    u_xlat16_37 = u_xlat16_29 * unity_LightData.z;
+    u_xlat16_4 = dot(vs_TEXCOORD3.xyz, _MainLightPosition.xyz);
+#ifdef UNITY_ADRENO_ES3
+    u_xlat16_4 = min(max(u_xlat16_4, 0.0), 1.0);
+#else
+    u_xlat16_4 = clamp(u_xlat16_4, 0.0, 1.0);
+#endif
+    u_xlat16_37 = u_xlat16_37 * u_xlat16_4;
+    u_xlat16_5.xzw = vec3(u_xlat16_37) * _MainLightColor.xyz;
+    u_xlat9.xyz = vs_TEXCOORD4.xyz * vec3(u_xlat36) + _MainLightPosition.xyz;
+    u_xlat24 = dot(u_xlat9.xyz, u_xlat9.xyz);
+    u_xlat24 = max(u_xlat24, 1.17549435e-38);
+    u_xlat24 = inversesqrt(u_xlat24);
+    u_xlat9.xyz = vec3(u_xlat24) * u_xlat9.xyz;
+    u_xlat24 = dot(vs_TEXCOORD3.xyz, u_xlat9.xyz);
+#ifdef UNITY_ADRENO_ES3
+    u_xlat24 = min(max(u_xlat24, 0.0), 1.0);
+#else
+    u_xlat24 = clamp(u_xlat24, 0.0, 1.0);
+#endif
+    u_xlat36 = dot(_MainLightPosition.xyz, u_xlat9.xyz);
+#ifdef UNITY_ADRENO_ES3
+    u_xlat36 = min(max(u_xlat36, 0.0), 1.0);
+#else
+    u_xlat36 = clamp(u_xlat36, 0.0, 1.0);
+#endif
+    u_xlat24 = u_xlat24 * u_xlat24;
+    u_xlat24 = u_xlat24 * u_xlat12 + 1.00001001;
+    u_xlat16_37 = u_xlat36 * u_xlat36;
+    u_xlat24 = u_xlat24 * u_xlat24;
+    u_xlat36 = max(u_xlat16_37, 0.100000001);
+    u_xlat24 = u_xlat36 * u_xlat24;
+    u_xlat24 = u_xlat0 * u_xlat24;
+    u_xlat24 = u_xlat16_17.x / u_xlat24;
+    u_xlat16_37 = u_xlat24 + -6.10351563e-05;
+    u_xlat16_37 = max(u_xlat16_37, 0.0);
+    u_xlat16_37 = min(u_xlat16_37, 100.0);
+    u_xlat16_7.xyz = vec3(u_xlat16_37) * u_xlat16_16.xyz + u_xlat16_1.xyz;
+    u_xlat16_5.xzw = u_xlat16_7.xyz * u_xlat16_5.xzw + u_xlat8.xyz;
+    u_xlat16_37 = min(_AdditionalLightsCount.x, unity_LightData.y);
+    u_xlatu24 = uint(int(u_xlat16_37));
+    u_xlat16_7.xyz = u_xlat16_5.xzw;
+    for(uint u_xlatu_loop_1 = uint(0u) ; u_xlatu_loop_1 < u_xlatu24 ; u_xlatu_loop_1++)
+    {
+        u_xlati38 = int(uint(u_xlatu_loop_1 & 3u));
+        u_xlatu39 = uint(u_xlatu_loop_1 >> 2u);
+        u_xlat16_37 = dot(unity_LightIndices[int(u_xlatu39)], ImmCB_0[u_xlati38]);
+        u_xlati38 = int(u_xlat16_37);
+        u_xlat8.xyz = (-vs_TEXCOORD2.xyz) * _AdditionalLightsPosition[u_xlati38].www + _AdditionalLightsPosition[u_xlati38].xyz;
+        u_xlat39 = dot(u_xlat8.xyz, u_xlat8.xyz);
+        u_xlat39 = max(u_xlat39, 6.10351563e-05);
+        u_xlat44 = inversesqrt(u_xlat39);
+        u_xlat9.xyz = vec3(u_xlat44) * u_xlat8.xyz;
+        u_xlat45 = float(1.0) / float(u_xlat39);
+        u_xlat39 = u_xlat39 * _AdditionalLightsAttenuation[u_xlati38].x + _AdditionalLightsAttenuation[u_xlati38].y;
+#ifdef UNITY_ADRENO_ES3
+        u_xlat39 = min(max(u_xlat39, 0.0), 1.0);
+#else
+        u_xlat39 = clamp(u_xlat39, 0.0, 1.0);
+#endif
+        u_xlat39 = u_xlat39 * u_xlat45;
+        u_xlat16_37 = dot(_AdditionalLightsSpotDir[u_xlati38].xyz, u_xlat9.xyz);
+        u_xlat16_37 = u_xlat16_37 * _AdditionalLightsAttenuation[u_xlati38].z + _AdditionalLightsAttenuation[u_xlati38].w;
+#ifdef UNITY_ADRENO_ES3
+        u_xlat16_37 = min(max(u_xlat16_37, 0.0), 1.0);
+#else
+        u_xlat16_37 = clamp(u_xlat16_37, 0.0, 1.0);
+#endif
+        u_xlat16_37 = u_xlat16_37 * u_xlat16_37;
+        u_xlat39 = u_xlat16_37 * u_xlat39;
+        u_xlat16_37 = dot(vs_TEXCOORD3.xyz, u_xlat9.xyz);
+#ifdef UNITY_ADRENO_ES3
+        u_xlat16_37 = min(max(u_xlat16_37, 0.0), 1.0);
+#else
+        u_xlat16_37 = clamp(u_xlat16_37, 0.0, 1.0);
+#endif
+        u_xlat16_37 = u_xlat16_37 * u_xlat39;
+        u_xlat16_10.xyz = vec3(u_xlat16_37) * _AdditionalLightsColor[u_xlati38].xyz;
+        u_xlat8.xyz = u_xlat8.xyz * vec3(u_xlat44) + u_xlat3.xyz;
+        u_xlat38 = dot(u_xlat8.xyz, u_xlat8.xyz);
+        u_xlat38 = max(u_xlat38, 1.17549435e-38);
+        u_xlat38 = inversesqrt(u_xlat38);
+        u_xlat8.xyz = vec3(u_xlat38) * u_xlat8.xyz;
+        u_xlat38 = dot(vs_TEXCOORD3.xyz, u_xlat8.xyz);
+#ifdef UNITY_ADRENO_ES3
+        u_xlat38 = min(max(u_xlat38, 0.0), 1.0);
+#else
+        u_xlat38 = clamp(u_xlat38, 0.0, 1.0);
+#endif
+        u_xlat39 = dot(u_xlat9.xyz, u_xlat8.xyz);
+#ifdef UNITY_ADRENO_ES3
+        u_xlat39 = min(max(u_xlat39, 0.0), 1.0);
+#else
+        u_xlat39 = clamp(u_xlat39, 0.0, 1.0);
+#endif
+        u_xlat38 = u_xlat38 * u_xlat38;
+        u_xlat38 = u_xlat38 * u_xlat12 + 1.00001001;
+        u_xlat16_37 = u_xlat39 * u_xlat39;
+        u_xlat38 = u_xlat38 * u_xlat38;
+        u_xlat39 = max(u_xlat16_37, 0.100000001);
+        u_xlat38 = u_xlat38 * u_xlat39;
+        u_xlat38 = u_xlat0 * u_xlat38;
+        u_xlat38 = u_xlat16_17.x / u_xlat38;
+        u_xlat16_37 = u_xlat38 + -6.10351563e-05;
+        u_xlat16_37 = max(u_xlat16_37, 0.0);
+        u_xlat16_37 = min(u_xlat16_37, 100.0);
+        u_xlat16_11.xyz = vec3(u_xlat16_37) * u_xlat16_16.xyz + u_xlat16_1.xyz;
+        u_xlat16_7.xyz = u_xlat16_11.xyz * u_xlat16_10.xyz + u_xlat16_7.xyz;
+    }
+    u_xlat16_1.xyz = u_xlat16_2.xyz * _EmissionColor.xyz + u_xlat16_7.xyz;
+    u_xlat16_37 = vs_TEXCOORD6.x * (-vs_TEXCOORD6.x);
+    u_xlat16_37 = exp2(u_xlat16_37);
+    u_xlat16_1.xyz = u_xlat16_1.xyz + (-unity_FogColor.xyz);
+    SV_Target0.xyz = vec3(u_xlat16_37) * u_xlat16_1.xyz + unity_FogColor.xyz;
+    return;
+}
+```
+
+

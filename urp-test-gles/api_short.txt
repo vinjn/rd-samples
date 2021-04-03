@@ -1,0 +1,208 @@
+0001 Present.SecondarySurfaces
+0002 WaitForRenderJobs
+0002 CustomRenderTextures.Update
+0002 ReflectionProbes.Update
+0002 Camera.Render
+0002 Render Camera
+    0002 Render Camera
+    0003 Create Camera Texture
+    0004 Clear Render State
+    0004 Setup Light Constants
+    0004 Set RenderTarget
+        0004 glInvalidateFramebuffer(ResourceId::357)
+    0006 Render Main Shadowmap
+        0006 Render Main Shadowmap
+        0007 ShadowLoopNewBatcher.Draw
+            0007 glDrawElements(228)
+            0008 glDrawElements(8502)
+            0009 glDrawElements(4284)
+            0010 glDrawElements(1296)
+            0011 glDrawElements(672)
+            0012 glDrawElements(1620)
+            0013 glDrawElements(1860)
+            0014 glDrawElements(132)
+            0015 glDrawElements(528)
+            0016 glDrawElements(192)
+            0017 glDrawElements(192)
+            0018 glDrawElements(1584)
+            0019 glDrawElements(10338)
+            0020 glDrawElements(4212)
+            0021 glDrawElements(1911)
+            0022 glDrawElements(312)
+            0023 glDrawElements(2820)
+            0024 glDrawElements(4896)
+            0025 glDrawElements(444)
+            0026 glDrawElements(2505)
+            0027 glDrawElements(1608)
+            0028 glDrawElements(5136)
+            0029 glDrawElements(3060)
+            0030 glDrawElements(2292)
+            0031 glDrawElements(3450)
+            0032 glDrawElements(120)
+            0033 glDrawElements(1152)
+            0034 glDrawElements(36)
+            0035 glDrawElements(1998)
+            0036 glDrawElements(528)
+            0037 glDrawElements(2160)
+        0038 Render Main Shadowmap
+        0039 Render Main Shadowmap
+    0039 Clear Render State
+    0039 Set RenderTarget
+    0039 Color Grading LUT
+        e0293 glBindFramebuffer
+        0039 glInvalidateFramebuffer(ResourceId::386)
+        0040 glDrawElements(6)
+    0041 Set RenderTarget
+        e0305 glBindFramebuffer
+        0041 glInvalidateFramebuffer(ResourceId::391)
+        0042 glClear(Color = <0.030713, 0.074214, 0.191202, 0.000000>, Depth = <1.000000>, Stencil = <0x00>)
+    0043 Render Opaques
+        0043 Render Opaques
+        0043 RenderLoopNewBatcher.Draw
+            0043 glDrawElements(1152)
+            0044 glDrawElements(2160)
+            0045 glDrawElements(528)
+            0046 glDrawElements(192)
+            0047 glDrawElements(192)
+            0048 glDrawElements(420)
+            0049 glDrawElements(264)
+            0050 glDrawElements(312)
+            0051 glDrawElements(2820)
+            0052 glDrawElements(4896)
+            0053 glDrawElements(2505)
+            0054 glDrawElements(1608)
+            0055 glDrawElements(444)
+            0056 glDrawElements(132)
+            0057 glDrawElements(3816)
+            0058 glDrawElements(924)
+            0059 glDrawElements(2640)
+            0060 glDrawElements(18)
+            0061 glDrawElements(114)
+            0062 glDrawElements(4284)
+            0063 glDrawElements(672)
+            0064 glDrawElements(1620)
+            0065 glDrawElements(8502)
+            0066 glDrawElements(1296)
+            0067 glDrawElements(228)
+            0068 glDrawElements(1860)
+            0069 glDrawElements(3450)
+            0070 glDrawElements(2292)
+            0071 glDrawElements(36)
+            0072 glDrawElements(120)
+            0073 glDrawElements(528)
+            0074 glDrawElements(1584)
+            0075 glDrawElements(4212)
+            0076 glDrawElements(10338)
+            0077 glDrawElements(1911)
+            0078 glDrawElements(1998)
+        0079 Render Opaques
+    0079 Camera.RenderSkybox
+        0079 glDrawArrays(5040)
+    0080 Render Transparents
+        0080 Render Transparents
+        0080 RenderLoopNewBatcher.Draw
+            0080 glDrawElements(726)
+            0081 glDrawElements(144)
+        0082 Render Transparents
+    0082 Set RenderTarget
+    0083 Render PostProcessing Effects
+        0083 UberPostProcess
+            0083 Bloom
+                e1168 glBindFramebuffer
+                0083 glInvalidateFramebuffer(ResourceId::483)
+                0084 glDrawElements(6)
+                e1205 glBindFramebuffer
+                0085 glInvalidateFramebuffer(ResourceId::490)
+                0086 glDrawElements(6)
+                e1226 glBindFramebuffer
+                0087 glInvalidateFramebuffer(ResourceId::496)
+                0088 glDrawElements(6)
+                e1261 glBindFramebuffer
+                0089 glInvalidateFramebuffer(ResourceId::504)
+                0090 glDrawElements(6)
+                e1282 glBindFramebuffer
+                0091 glInvalidateFramebuffer(ResourceId::507)
+                0092 glDrawElements(6)
+                e1317 glBindFramebuffer
+                0093 glInvalidateFramebuffer(ResourceId::512)
+                0094 glDrawElements(6)
+                e1338 glBindFramebuffer
+                0095 glInvalidateFramebuffer(ResourceId::515)
+                0096 glDrawElements(6)
+                e1373 glBindFramebuffer
+                0097 glInvalidateFramebuffer(ResourceId::520)
+                0098 glDrawElements(6)
+                e1394 glBindFramebuffer
+                0099 glInvalidateFramebuffer(ResourceId::523)
+                0100 glDrawElements(6)
+                e1429 glBindFramebuffer
+                0101 glInvalidateFramebuffer(ResourceId::528)
+                0102 glDrawElements(6)
+                e1450 glBindFramebuffer
+                0103 glInvalidateFramebuffer(ResourceId::531)
+                0104 glDrawElements(6)
+                e1485 glBindFramebuffer
+                0105 glInvalidateFramebuffer(ResourceId::536)
+                0106 glDrawElements(6)
+                e1506 glBindFramebuffer
+                0107 glInvalidateFramebuffer(ResourceId::539)
+                0108 glDrawElements(6)
+                e1541 glBindFramebuffer
+                0109 glInvalidateFramebuffer(ResourceId::544)
+                0110 glDrawElements(6)
+                e1562 glBindFramebuffer
+                0111 glInvalidateFramebuffer(ResourceId::547)
+                0112 glDrawElements(6)
+                e1597 glBindFramebuffer
+                0113 glInvalidateFramebuffer(ResourceId::552)
+                0114 glDrawElements(6)
+                e1618 glBindFramebuffer
+                0115 glInvalidateFramebuffer(ResourceId::555)
+                0116 glDrawElements(6)
+                e1640 glBindFramebuffer
+                0117 glInvalidateFramebuffer(ResourceId::558)
+                0118 glDrawElements(6)
+                0119 glInvalidateFramebuffer(ResourceId::558)
+                e1664 glBindFramebuffer
+                0120 glInvalidateFramebuffer(ResourceId::564)
+                0121 glDrawElements(6)
+                0122 glInvalidateFramebuffer(ResourceId::564)
+                e1687 glBindFramebuffer
+                0123 glInvalidateFramebuffer(ResourceId::567)
+                0124 glDrawElements(6)
+                0125 glInvalidateFramebuffer(ResourceId::567)
+                e1710 glBindFramebuffer
+                0126 glInvalidateFramebuffer(ResourceId::570)
+                0127 glDrawElements(6)
+                0128 glInvalidateFramebuffer(ResourceId::570)
+                e1733 glBindFramebuffer
+                0129 glInvalidateFramebuffer(ResourceId::573)
+                0130 glDrawElements(6)
+                0131 glInvalidateFramebuffer(ResourceId::573)
+                e1756 glBindFramebuffer
+                0132 glInvalidateFramebuffer(ResourceId::576)
+                0133 glDrawElements(6)
+                0134 glInvalidateFramebuffer(ResourceId::576)
+                e1779 glBindFramebuffer
+                0135 glInvalidateFramebuffer(ResourceId::579)
+                0136 glDrawElements(6)
+                0137 glInvalidateFramebuffer(ResourceId::579)
+                e1802 glBindFramebuffer
+                0138 glInvalidateFramebuffer(ResourceId::582)
+                0139 glDrawElements(6)
+            0140 glInvalidateFramebuffer(ResourceId::582)
+            e1822 glBindFramebuffer
+            0141 glInvalidateFramebuffer(ResourceId::585)
+            0142 glDrawElements(6)
+    0143 Render Final PostProcessing Pass
+        0143 glInvalidateFramebuffer(ResourceId::585)
+        e1837 glBindFramebuffer
+        0144 glInvalidateFramebuffer(ResourceId::6)
+        0145 glDrawElements(6)
+    0146 Release Resources
+    0146 Render Camera
+0146 UGUI.Rendering.RenderOverlays
+0146 GUI.Repaint
+0146 GUITexture.Draw
+    0146 glDrawElements(6)
+0147 PlayerEndOfFrame

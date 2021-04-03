@@ -1,0 +1,81 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ Render_Camera / Render_PostProcessing_Effects / UberPostProcess / Bloom
+# analysis
+```
+Mali Offline Compiler v7.3.0 (Build 002baf)
+Copyright 2007-2020 Arm Limited, all rights reserved
+Configuration
+=============
+Hardware: Mali-G78 r1p1
+Architecture: Valhall
+Driver: r25p0-00rel0
+Shader type: OpenGL ES Fragment
+Main shader
+===========
+Work registers: 18
+Uniform registers: 4
+Stack spilling: false
+16-bit arithmetic: 40%
+                              FMA     CVT     SFU      LS       V       T    Bound
+Total instruction cycles:    0.08    0.06    0.00    0.00    0.25    0.50        T
+Shortest path cycles:        0.08    0.03    0.00    0.00    0.25    0.50        T
+Longest path cycles:         0.08    0.06    0.00    0.00    0.25    0.50        T
+FMA = Arith FMA, CVT = Arith CVT, SFU = Arith SFU,
+LS = Load/Store, V = Varying, T = Texture
+Shader properties
+=================
+Has uniform computation: false
+Has side-effects: false
+Modifies coverage: false
+Uses late ZS test: false
+Uses late ZS update: false
+Reads color buffer: false
+Note: This tool shows only the shader-visible property state.
+API configuration may also impact the value of some properties.
+ 
+```
+# shader
+```glsl
+#version 320 es
+
+precision highp float;
+precision highp int;
+#define HLSLCC_ENABLE_UNIFORM_BUFFERS 1
+#if HLSLCC_ENABLE_UNIFORM_BUFFERS
+#define UNITY_UNIFORM
+#else
+#define UNITY_UNIFORM uniform
+#endif
+#define UNITY_SUPPORTS_UNIFORM_LOCATION 1
+#if UNITY_SUPPORTS_UNIFORM_LOCATION
+#define UNITY_LOCATION(x) layout(location = x)
+#define UNITY_BINDING(x) layout(binding = x, std140)
+#else
+#define UNITY_LOCATION(x)
+#define UNITY_BINDING(x) layout(std140)
+#endif
+uniform 	vec4 _Params;
+UNITY_LOCATION(0) uniform mediump sampler2D _MainTex;
+UNITY_LOCATION(1) uniform mediump sampler2D _MainTexLowMip;
+in highp vec2 vs_TEXCOORD0;
+layout(location = 0) out mediump vec4 SV_Target0;
+vec3 u_xlat0;
+mediump vec3 u_xlat10_0;
+mediump vec3 u_xlat10_1;
+void main()
+{
+    u_xlat10_0.xyz = texture(_MainTexLowMip, vs_TEXCOORD0.xy).xyz;
+    u_xlat10_1.xyz = texture(_MainTex, vs_TEXCOORD0.xy).xyz;
+    u_xlat0.xyz = u_xlat10_0.xyz + (-u_xlat10_1.xyz);
+    u_xlat0.xyz = _Params.xxx * u_xlat0.xyz + u_xlat10_1.xyz;
+    SV_Target0.xyz = u_xlat0.xyz;
+    SV_Target0.w = 1.0;
+    return;
+}
+```
+
+
