@@ -1,0 +1,76 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / SunMerge_220x108_PS
+# shader
+```glsl
+Shader hash 47256c81-d9908c76-a6de6f02-c9edf5b8
+
+vs_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[43], immediateIndexed
+      dcl_constantbuffer cb1[3], immediateIndexed
+      dcl_input v0.xyzw
+      dcl_input v1.xy
+      dcl_output o0.xyzw
+      dcl_output o1.xyzw
+      dcl_output o2.xyzw
+      dcl_output o3.xyzw
+      dcl_output o4.xyzw
+      dcl_output o5.xyzw
+      dcl_output o6.xyzw
+      dcl_output o7.xyzw
+      dcl_output_siv o8.xyzw, position
+      dcl_temps 5
+   0: mad r0.xy, v1.xyxx, cb1[1].xyxx, cb1[1].zwzz
+   1: mul r0.xy, r0.xyxx, cb1[2].zwzz
+   2: mad r1.xyzw, cb0[36].zwzw, l(0.3250, 0.0573, 0.1129, 0.3101), r0.xyxy
+   3: mov r2.xy, r1.zwzz
+   4: mad r0.zw, v0.xxxy, cb1[0].xxxy, cb1[0].zzzw
+   5: mul r0.zw, r0.zzzw, cb1[2].xxxy
+   6: mad r3.xy, r0.zwzz, l(2.0000, 2.0000, 0.0000, 0.0000), l(-1.0000, -1.0000, 0.0000, 0.0000)
+   7: mad r0.zw, r3.xxxy, l(0.0000, 0.0000, 1.0000, -1.0000), -cb0[42].xxxy
+   8: mad r4.xyzw, r0.zwzw, l(0.7578, 0.7578, 0.7891, 0.7891), cb0[42].xyxy
+   9: mad r4.xyzw, r4.xyzw, l(0.5000, -0.5000, 0.5000, -0.5000), l(0.5000, 0.5000, 0.5000, 0.5000)
+  10: mov r2.zw, r4.xxxy
+  11: mov r1.zw, r4.zzzw
+  12: mov o1.xyzw, r2.xyzw
+  13: mov o2.xyzw, r1.xyzw
+  14: mad r1.xyzw, cb0[36].zwzw, l(-0.1129, -0.3101, 0.2121, -0.2528), r0.xyxy
+  15: mov r2.xy, r1.zwzz
+  16: mad r4.xyzw, r0.zwzw, l(0.8203, 0.8203, 0.8516, 0.8516), cb0[42].xyxy
+  17: mad r4.xyzw, r4.xyzw, l(0.5000, -0.5000, 0.5000, -0.5000), l(0.5000, 0.5000, 0.5000, 0.5000)
+  18: mov r2.zw, r4.xxxy
+  19: mov r1.zw, r4.zzzw
+  20: mov o3.xyzw, r2.xyzw
+  21: mov o4.xyzw, r1.xyzw
+  22: mad r1.xyzw, cb0[36].zwzw, l(-0.2121, 0.2528, -0.3250, -0.0573), r0.xyxy
+  23: mov o0.xy, r0.xyxx
+  24: mov r2.xy, r1.zwzz
+  25: mad r4.xyzw, r0.zwzw, l(0.8828, 0.8828, 0.9141, 0.9141), cb0[42].xyxy
+  26: mad r0.xy, r0.zwzz, l(0.9453, 0.9453, 0.0000, 0.0000), cb0[42].xyxx
+  27: mad r0.xy, r0.xyxx, l(0.5000, -0.5000, 0.0000, 0.0000), l(0.5000, 0.5000, 0.0000, 0.0000)
+  28: mad r4.xyzw, r4.xyzw, l(0.5000, -0.5000, 0.5000, -0.5000), l(0.5000, 0.5000, 0.5000, 0.5000)
+  29: mov r2.zw, r4.xxxy
+  30: mov r1.zw, r4.zzzw
+  31: mov o5.xyzw, r2.xyzw
+  32: mov o6.xyzw, r1.xyzw
+  33: mov r0.zw, l(0, 0, 0, 0)
+  34: mov o7.xyzw, r0.xyzw
+  35: mov r0.z, l(1.0000)
+  36: mov r3.z, -r3.y
+  37: mul r0.w, cb0[22].z, cb0[22].y
+  38: mul r0.xy, r0.zwzz, r3.xzxx
+  39: mov o8.xy, r3.xzxx
+  40: mad r0.z, r0.w, r0.w, l(1.0000)
+  41: sqrt r0.z, r0.z
+  42: div r0.z, l(1.4142), r0.z
+  43: mul o0.zw, r0.zzzz, r0.xxxy
+  44: mov o8.zw, v0.zzzw
+  45: ret
+
+```
+
+

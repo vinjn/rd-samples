@@ -1,0 +1,28 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / Upscale_PrimaryToOutput_1100x539
+# shader
+```glsl
+Shader hash 0f3d5149-140bf68c-b5f3df7a-e71d6c5b
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[35], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear noperspective v0.xy
+      dcl_output o0.xyzw
+      dcl_temps 1
+   0: max r0.xy, v0.xyxx, cb0[34].xyxx
+   1: min r0.xy, r0.xyxx, cb0[34].zwzz
+   2: sample_l(texture2d)(float,float,float,float) r0.xyz, r0.xyxx, t0.xyzw, s0, l(0)
+   3: mov o0.xyz, r0.xyzx
+   4: mov o0.w, l(0)
+   5: ret
+
+```
+
+

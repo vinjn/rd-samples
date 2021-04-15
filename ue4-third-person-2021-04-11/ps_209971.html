@@ -1,0 +1,48 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / CompositeEditorPrimitives / EditorPrimitives / RenderViewEditorPrimitives_880x432_msaa=1 / LevelGridMaterial2_None
+# shader
+```glsl
+Shader hash 16ff2e0c-6f0a7d1c-e55b06ab-de672b5d
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[136], immediateIndexed
+      dcl_constantbuffer cb1[9], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear v2.xy
+      dcl_output o0.xyzw
+      dcl_temps 3
+   0: mul r0.xy, v2.xyxx, cb1[8].xxxx
+   1: mul r0.xy, r0.xyxx, l(0.1000, 0.1000, 0.0000, 0.0000)
+   2: sample_indexable(texture2d)(float,float,float,float) r0.xz, r0.xxxx, t0.xzyw, s0
+   3: sample_indexable(texture2d)(float,float,float,float) r0.yw, r0.yyyy, t0.zxwy, s0
+   4: max r0.xy, r0.ywyy, r0.xzxx
+   5: max r0.x, r0.y, r0.x
+   6: add r0.y, -r0.x, l(1.0000)
+   7: add r0.z, -r0.y, l(0.9700)
+   8: add o0.w, -r0.y, l(1.0000)
+   9: lt r0.y, r0.z, l(0)
+  10: discard_nz r0.y
+  11: discard_nz r0.y
+  12: mul r0.yz, v2.yyxy, l(0.0000, 350.0000, 350.0000, 0.0000)
+  13: add r0.yz, abs(r0.yyzy), l(0.0000, -0.2500, -0.2500, 0.0000)
+  14: add_sat r0.yz, -r0.yyzy, l(0.0000, 1.0000, 1.0000, 0.0000)
+  15: add r1.xyz, cb1[3].xyzx, -cb1[4].xyzx
+  16: mad r1.xyz, r0.yyyy, r1.xyzx, cb1[4].xyzx
+  17: add r2.xyz, -r1.xyzx, cb1[6].xyzx
+  18: mad r0.yzw, r0.zzzz, r2.xxyz, r1.xxyz
+  19: mul r1.xyz, r0.xxxx, r0.yzwy
+  20: mad r0.xyz, -r0.yzwy, r0.xxxx, cb1[7].xyzx
+  21: mad r0.xyz, cb1[8].yyyy, r0.xyzx, r1.xyzx
+  22: max r0.xyz, r0.xyzx, l(0, 0, 0, 0)
+  23: mul o0.xyz, r0.xyzx, cb0[135].yyyy
+  24: ret
+
+```
+
+

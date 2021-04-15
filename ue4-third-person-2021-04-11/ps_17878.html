@@ -1,0 +1,64 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / Tonemap_880x432_PS_GammaOnly=0
+# shader
+```glsl
+Shader hash 6cd58b12-0153e315-0f334aa6-c873ebd2
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[63], immediateIndexed
+      dcl_constantbuffer cb1[136], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_sampler s1, mode_default
+      dcl_sampler s2, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_resource_texture2d (float,float,float,float) t1
+      dcl_resource_texture2d (float,float,float,float) t2
+      dcl_input_ps linear noperspective v0.xy
+      dcl_input_ps linear noperspective v1.xyz
+      dcl_input_ps linear noperspective v2.zw
+      dcl_input_ps linear noperspective v3.xy
+      dcl_output o0.xyzw
+      dcl_temps 2
+   0: mul r0.xy, v1.yzyy, cb0[62].xxxx
+   1: dp2 r0.x, r0.xyxx, r0.xyxx
+   2: add r0.x, r0.x, l(1.0000)
+   3: rcp r0.x, r0.x
+   4: mul r0.x, r0.x, r0.x
+   5: sample_indexable(texture2d)(float,float,float,float) r1.xyzw, v0.xyxx, t0.xyzw, s0
+   6: mul r0.yzw, r1.xxyz, cb1[135].zzzz
+   7: mov o0.w, r1.w
+   8: mul r0.yzw, r0.yyzw, cb0[60].xxyz
+   9: sample_indexable(texture2d)(float,float,float,float) r1.xyzw, v3.xyxx, t1.xyzw, s1
+  10: mul r1.xyz, r1.xyzx, cb1[135].zzzz
+  11: mad r0.yzw, r0.yyzw, r1.wwww, r1.xxyz
+  12: mul r0.yzw, r0.yyzw, v1.xxxx
+  13: mad r0.xyz, r0.yzwy, r0.xxxx, l(0.0027, 0.0027, 0.0027, 0.0000)
+  14: log r0.xyz, r0.xyzx
+  15: mad_sat r0.xyz, r0.xyzx, l(0.0714, 0.0714, 0.0714, 0.0000), l(0.6107, 0.6107, 0.6107, 0.0000)
+  16: mad r0.yzw, r0.xxyz, l(0.0000, 0.9688, 0.9688, 0.9688), l(0.0000, 0.0156, 0.0156, 0.0156)
+  17: mad r0.w, r0.w, l(32.0000), l(-0.5000)
+  18: round_ni r1.x, r0.w
+  19: add r0.w, r0.w, -r1.x
+  20: add r0.y, r0.y, r1.x
+  21: mul r0.x, r0.y, l(0.0313)
+  22: add r1.xy, r0.xzxx, l(0.0313, 0.0000, 0.0000, 0.0000)
+  23: sample_indexable(texture2d)(float,float,float,float) r0.xyz, r0.xzxx, t2.xyzw, s2
+  24: sample_indexable(texture2d)(float,float,float,float) r1.xyz, r1.xyxx, t2.xyzw, s2
+  25: add r1.xyz, -r0.xyzx, r1.xyzx
+  26: mad r0.xyz, r0.wwww, r1.xyzx, r0.xyzx
+  27: mad r0.w, v2.w, l(543.3100), v2.z
+  28: sincos r0.w, null, r0.w
+  29: mul r0.w, r0.w, l(493013.0000)
+  30: frc r0.w, r0.w
+  31: mad r0.w, r0.w, l(0.0039), l(-0.0020)
+  32: mad o0.xyz, r0.xyzx, l(1.0500, 1.0500, 1.0500, 0.0000), r0.wwww
+  33: ret
+
+```
+
+

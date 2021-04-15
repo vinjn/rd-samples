@@ -1,0 +1,41 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / BloomSetup_220x108_PS
+# shader
+```glsl
+Shader hash 450eec7f-9aa12157-8fb10642-ce19e776
+
+vs_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[33], immediateIndexed
+      dcl_constantbuffer cb1[3], immediateIndexed
+      dcl_input v0.xyzw
+      dcl_input v1.xy
+      dcl_output o0.xy
+      dcl_output o1.xy
+      dcl_output o2.xy
+      dcl_output o3.xy
+      dcl_output_siv o4.xyzw, position
+      dcl_temps 2
+   0: mad r0.xy, v1.xyxx, cb1[1].xyxx, cb1[1].zwzz
+   1: mad r0.zw, r0.xxxy, cb1[2].zzzw, -cb0[32].zzzw
+   2: mov o0.xy, r0.zwzz
+   3: mul r0.zw, r0.xxxy, cb1[2].zzzw
+   4: mad r0.xy, r0.xyxx, cb1[2].zwzz, cb0[32].zwzz
+   5: mad r1.xyzw, cb0[32].zwzw, l(1.0000, -1.0000, -1.0000, 1.0000), r0.zwzw
+   6: mov o1.xy, r1.xyxx
+   7: mov o2.xy, r1.zwzz
+   8: mov o3.xy, r0.xyxx
+   9: mad r0.xy, v0.xyxx, cb1[0].xyxx, cb1[0].zwzz
+  10: mul r0.xy, r0.xyxx, cb1[2].xyxx
+  11: mad r0.xy, r0.xyxx, l(2.0000, 2.0000, 0.0000, 0.0000), l(-1.0000, -1.0000, 0.0000, 0.0000)
+  12: mul o4.xy, r0.xyxx, l(1.0000, -1.0000, 0.0000, 0.0000)
+  13: mov o4.zw, v0.zzzw
+  14: ret
+
+```
+
+

@@ -1,0 +1,31 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / CompositeEditorPrimitives / PopulateDepth
+# shader
+```glsl
+Shader hash ba8b8d3c-8cb00787-29942ab2-a749b8cf
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[41], immediateIndexed
+      dcl_constantbuffer cb1[153], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear noperspective v0.xy
+      dcl_output o0.xyzw
+      dcl_output oDepth
+      dcl_temps 1
+   0: mov o0.xyzw, l(0, 0, 0, 0)
+   1: mad r0.xy, -cb1[152].zwzz, cb0[34].zwzz, v0.xyxx
+   2: max r0.xy, r0.xyxx, cb0[40].xyxx
+   3: min r0.xy, r0.xyxx, cb0[40].zwzz
+   4: sample_l(texture2d)(float,float,float,float) r0.x, r0.xyxx, t0.xyzw, s0, l(0)
+   5: mov oDepth, r0.x
+   6: ret
+
+```
+
+

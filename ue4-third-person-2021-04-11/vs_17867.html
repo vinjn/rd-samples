@@ -1,0 +1,57 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / BloomUp_28x14_PS
+# shader
+```glsl
+Shader hash 4285414e-dd917a22-c4331258-d9c7ffe8
+
+vs_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[40], immediateIndexed
+      dcl_constantbuffer cb1[3], immediateIndexed
+      dcl_input v0.xyzw
+      dcl_input v1.xy
+      dcl_output o0.xyzw
+      dcl_output o1.xyzw
+      dcl_output o2.xyzw
+      dcl_output o3.xyzw
+      dcl_output o4.xyzw
+      dcl_output o5.xyzw
+      dcl_output o6.xyzw
+      dcl_output o7.xyzw
+      dcl_output_siv o8.xyzw, position
+      dcl_temps 3
+   0: mul r0.xy, cb0[34].zwzz, cb0[39].yyyy
+   1: mad r0.zw, v1.xxxy, cb1[1].xxxy, cb1[1].zzzw
+   2: mul r1.zw, r0.zzzw, cb1[2].zzzw
+   3: mad r2.xyzw, r0.xyxy, l(0.2537, 0.9673, 0.9144, 0.4048), r1.zwzw
+   4: mov o0.xyzw, r2.xyzw
+   5: mad r2.xyzw, r0.xyxy, l(0.8866, -0.4625, 0.1912, -0.9816), r1.zwzw
+   6: mov o1.xyzw, r2.xyzw
+   7: mad r2.xyzw, r0.xyxy, l(-0.6482, -0.7614, -0.9995, 0.0321), r1.zwzw
+   8: mad r1.xy, r0.xyxx, l(-0.5981, 0.8014, 0.0000, 0.0000), r1.zwzz
+   9: mov o2.xyzw, r2.xyzw
+  10: mov o3.xyzw, r1.xyzw
+  11: mul r0.xy, cb0[35].zwzz, cb0[39].zzzz
+  12: mad r2.xyzw, r0.xyxy, l(0.2537, 0.9673, 0.9144, 0.4048), r1.zwzw
+  13: mov o4.xyzw, r2.xyzw
+  14: mad r2.xyzw, r0.xyxy, l(0.8866, -0.4625, 0.1912, -0.9816), r1.zwzw
+  15: mov o5.xyzw, r2.xyzw
+  16: mad r2.xyzw, r0.xyxy, l(-0.6482, -0.7614, -0.9995, 0.0321), r1.zwzw
+  17: mad r0.xy, r0.xyxx, l(-0.5981, 0.8014, 0.0000, 0.0000), r1.zwzz
+  18: mov o6.xyzw, r2.xyzw
+  19: mov r0.zw, l(0, 0, 0, 0)
+  20: mov o7.xyzw, r0.xyzw
+  21: mad r0.xy, v0.xyxx, cb1[0].xyxx, cb1[0].zwzz
+  22: mul r0.xy, r0.xyxx, cb1[2].xyxx
+  23: mad r0.xy, r0.xyxx, l(2.0000, 2.0000, 0.0000, 0.0000), l(-1.0000, -1.0000, 0.0000, 0.0000)
+  24: mul o8.xy, r0.xyxx, l(1.0000, -1.0000, 0.0000, 0.0000)
+  25: mov o8.zw, v0.zzzw
+  26: ret
+
+```
+
+

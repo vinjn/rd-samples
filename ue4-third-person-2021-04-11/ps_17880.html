@@ -1,0 +1,175 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / EditorSelectionOutlines / OutlineColor_880x432
+# shader
+```glsl
+Shader hash 998af057-075e781b-ab1841e6-71bad7b7
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[18], immediateIndexed
+      dcl_constantbuffer cb1[153], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_sampler s1, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_resource_texture2d (uint,uint,uint,uint) t1
+      dcl_resource_texture2d (float,float,float,float) t2
+      dcl_resource_texture2d (float,float,float,float) t3
+      dcl_input_ps linear noperspective v0.xy
+      dcl_output o0.xyzw
+      dcl_temps 5
+   0: mul r0.xy, v0.xyxx, cb0[0].xyxx
+   1: ftoi r0.xy, r0.xyxx
+   2: iadd r1.xyzw, r0.xyxy, l(-2, 0, 2, 0)
+   3: mov r2.xy, r1.zwzz
+   4: mov r2.zw, l(0, 0, 0, 0)
+   5: ld_indexable(texture2d)(uint,uint,uint,uint) r2.x, r2.xyzw, t1.yxzw
+   6: mov r1.zw, l(0, 0, 0, 0)
+   7: ld_indexable(texture2d)(uint,uint,uint,uint) r1.x, r1.xyzw, t1.yxzw
+   8: iadd r3.xyzw, r0.xyxy, l(0, -2, 0, 2)
+   9: mov r4.xy, r3.zwzz
+  10: mov r4.zw, l(0, 0, 0, 0)
+  11: ld_indexable(texture2d)(uint,uint,uint,uint) r1.y, r4.xyzw, t1.xyzw
+  12: mov r3.zw, l(0, 0, 0, 0)
+  13: ld_indexable(texture2d)(uint,uint,uint,uint) r1.z, r3.xyzw, t1.xzyw
+  14: itof r2.x, r2.x
+  15: itof r2.yzw, r1.xxyz
+  16: mov_sat r2.xyzw, r2.xyzw
+  17: dp4 r1.x, r2.xyzw, l(1.0000, 1.0000, 1.0000, 1.0000)
+  18: ftoi r1.x, r1.x
+  19: ilt r1.x, l(0), r1.x
+  20: if_nz r1.x
+  21:   mad r1.xyzw, v0.xyxy, cb0[14].xyxy, cb0[14].zwzw
+  22:   sample_l(texture2d)(float,float,float,float) r2.z, r1.zwzz, t3.yzxw, s1, l(0)
+  23:   mad r3.xyzw, cb0[7].zwzw, l(-1.0000, 0.0000, 1.0000, 0.0000), r1.zwzw
+  24:   sample_l(texture2d)(float,float,float,float) r2.w, r3.xyxx, t3.yzwx, s1, l(0)
+  25:   sample_l(texture2d)(float,float,float,float) r3.x, r3.zwzz, t3.xyzw, s1, l(0)
+  26:   mad r1.xyzw, cb0[7].zwzw, l(0.0000, -1.0000, 0.0000, 1.0000), r1.xyzw
+  27:   sample_l(texture2d)(float,float,float,float) r1.x, r1.xyxx, t3.xyzw, s1, l(0)
+  28:   sample_l(texture2d)(float,float,float,float) r1.y, r1.zwzz, t3.yxzw, s1, l(0)
+  29:   add r1.z, -r2.w, r3.x
+  30:   mul r2.x, r1.z, l(0.5000)
+  31:   add r1.z, -r1.x, r1.y
+  32:   mul r2.y, r1.z, l(0.5000)
+  33:   min r1.z, r2.w, r3.x
+  34:   min r1.w, r1.y, r1.x
+  35:   min r1.z, r1.w, r1.z
+  36:   min r1.z, r1.z, r2.z
+  37:   max r1.w, r2.w, r3.x
+  38:   max r1.x, r1.y, r1.x
+  39:   max r1.x, r1.x, r1.w
+  40:   max r1.x, r1.x, r2.z
+  41:   mov r0.zw, l(0, 0, 0, 0)
+  42:   ld_indexable(texture2d)(float,float,float,float) r1.y, r0.xyww, t0.yxzw
+  43:   ld_indexable(texture2d)(uint,uint,uint,uint) r0.z, r0.xyzw, t1.xzyw
+  44:   add r3.xy, -cb1[152].zwzz, l(0.5000, 0.5000, 0.0000, 0.0000)
+  45:   mov r3.z, l(1.0000)
+  46:   dp3 r0.w, r2.xyzx, r3.xyzx
+  47:   max r0.w, r1.z, r0.w
+  48:   min r0.w, r1.x, r0.w
+  49:   ne r1.x, r1.y, l(0)
+  50:   add r1.y, -r1.y, r0.w
+  51:   mad_sat r1.y, -r1.y, l(20000.0000), l(2.0000)
+  52:   iadd r2.xyzw, r0.xyxy, l(-1, -1, 1, 1)
+  53:   mov r3.xy, r2.zwzz
+  54:   mov r3.zw, l(0, 0, 0, 0)
+  55:   ld_indexable(texture2d)(float,float,float,float) r1.z, r3.xyww, t0.yzxw
+  56:   ld_indexable(texture2d)(uint,uint,uint,uint) r1.w, r3.xyzw, t1.xzwy
+  57:   add r1.z, r0.w, -r1.z
+  58:   mad_sat r1.z, -r1.z, l(20000.0000), l(2.0000)
+  59:   ge r1.z, r1.z, l(0.5000)
+  60:   mov r2.zw, l(0, 0, 0, 0)
+  61:   ld_indexable(texture2d)(float,float,float,float) r3.x, r2.xyww, t0.xyzw
+  62:   ld_indexable(texture2d)(uint,uint,uint,uint) r2.x, r2.xyzw, t1.yxzw
+  63:   add r2.y, r0.w, -r3.x
+  64:   mad_sat r2.y, -r2.y, l(20000.0000), l(2.0000)
+  65:   ge r2.y, r2.y, l(0.5000)
+  66:   iadd r3.xyzw, r0.xyxy, l(-1, 1, 1, -1)
+  67:   mov r4.xy, r3.zwzz
+  68:   mov r4.zw, l(0, 0, 0, 0)
+  69:   ld_indexable(texture2d)(float,float,float,float) r2.z, r4.xyww, t0.yzxw
+  70:   ld_indexable(texture2d)(uint,uint,uint,uint) r2.w, r4.xyzw, t1.xzwy
+  71:   add r2.z, r0.w, -r2.z
+  72:   mad_sat r2.z, -r2.z, l(20000.0000), l(2.0000)
+  73:   ge r2.z, r2.z, l(0.5000)
+  74:   mov r3.zw, l(0, 0, 0, 0)
+  75:   ld_indexable(texture2d)(float,float,float,float) r4.x, r3.xyww, t0.xyzw
+  76:   ld_indexable(texture2d)(uint,uint,uint,uint) r3.x, r3.xyzw, t1.yxzw
+  77:   add r0.w, r0.w, -r4.x
+  78:   mad_sat r0.w, -r0.w, l(20000.0000), l(2.0000)
+  79:   ge r0.w, r0.w, l(0.5000)
+  80:   imin r4.x, r1.w, l(255)
+  81:   imax r4.y, r1.w, l(0)
+  82:   imin r1.w, r2.x, r4.x
+  83:   imax r3.y, r2.x, r4.y
+  84:   imin r1.w, r2.w, r1.w
+  85:   imax r3.y, r2.w, r3.y
+  86:   imin r1.w, r3.x, r1.w
+  87:   imax r3.y, r3.x, r3.y
+  88:   movc r3.zw, r1.zzzz, r4.xxxy, l(0, 0, 255, 0)
+  89:   imin r4.x, r2.x, r3.z
+  90:   imax r4.y, r2.x, r3.w
+  91:   movc r2.xy, r2.yyyy, r4.xyxx, r3.zwzz
+  92:   imin r4.x, r2.w, r2.x
+  93:   imax r4.y, r2.w, r2.y
+  94:   movc r2.xy, r2.zzzz, r4.xyxx, r2.xyxx
+  95:   imin r4.x, r3.x, r2.x
+  96:   imax r4.y, r3.x, r2.y
+  97:   movc r2.xy, r0.wwww, r4.xyxx, r2.xyxx
+  98:   ine r0.w, r1.w, r3.y
+  99:   ieq r1.z, r3.y, l(4)
+ 100:   xor r2.zw, r0.xxxy, l(0, 0, 2, 2)
+ 101:   imax r0.xy, r0.xyxx, -r0.xyxx
+ 102:   ushr r0.xy, r0.xyxx, l(1, 1, 0, 0)
+ 103:   ineg r3.xy, r0.xyxx
+ 104:   and r2.zw, r2.zzzw, l(0, 0, 0x80000000, 0x80000000)
+ 105:   movc r0.xy, r2.zwzz, r3.xyxx, r0.xyxx
+ 106:   iadd r0.x, r0.y, r0.x
+ 107:   and r0.y, r0.x, l(0x80000000)
+ 108:   imax r0.x, r0.x, -r0.x
+ 109:   and r0.x, r0.x, l(1)
+ 110:   ineg r1.w, r0.x
+ 111:   movc r0.x, r0.y, r1.w, r0.x
+ 112:   itof r0.x, r0.x
+ 113:   mul r0.y, r0.x, l(0.6000)
+ 114:   mad r1.w, r0.x, l(0.4800), l(0.2000)
+ 115:   ige r2.x, r2.x, l(128)
+ 116:   movc r3.xyz, r2.xxxx, cb0[16].xyzx, cb0[15].xyzx
+ 117:   mov r3.w, l(1.0000)
+ 118:   mul r4.xyzw, r1.wwww, r3.xyzw
+ 119:   movc r2.xyzw, r2.yyyy, r3.xyzw, r4.xyzw
+ 120:   and r2.xyzw, r0.wwww, r2.xyzw
+ 121:   mad r0.x, -r0.x, l(0.6000), l(1.0000)
+ 122:   mad r0.x, r1.y, r0.x, r0.y
+ 123:   mul r4.xyz, r0.xxxx, r3.xyzx
+ 124:   mov r4.w, l(1.0000)
+ 125:   add r4.xyzw, -r2.xyzw, r4.xyzw
+ 126:   mad r4.xyzw, cb0[16].wwww, r4.xyzw, r2.xyzw
+ 127:   movc r2.xyzw, r1.zzzz, r4.xyzw, r2.xyzw
+ 128:   ieq r0.y, r0.z, l(1)
+ 129:   movc r0.y, r0.y, cb0[17].x, cb0[16].w
+ 130:   mul r0.x, r0.y, r0.x
+ 131:   add r3.xyzw, -r2.xyzw, r3.xyzw
+ 132:   mad r0.xyzw, r0.xxxx, r3.xyzw, r2.xyzw
+ 133:   movc r0.xyzw, r1.xxxx, r0.xyzw, r2.xyzw
+ 134:   sample_indexable(texture2d)(float,float,float,float) r1.xyzw, v0.xyxx, t2.xyzw, s0
+ 135:   log r1.xyz, r1.xyzx
+ 136:   mul r1.xyz, r1.xyzx, l(2.2000, 2.2000, 2.2000, 0.0000)
+ 137:   exp r1.xyz, r1.xyzx
+ 138:   add r0.xyz, r0.xyzx, -r1.xyzx
+ 139:   mad r0.xyz, r0.wwww, r0.xyzx, r1.xyzx
+ 140:   log r0.xyz, r0.xyzx
+ 141:   mul r0.xyz, r0.xyzx, l(0.4545, 0.4545, 0.4545, 0.0000)
+ 142:   exp o0.xyz, r0.xyzx
+ 143:   mov o0.w, r1.w
+ 144: else
+ 145:   sample_indexable(texture2d)(float,float,float,float) o0.xyzw, v0.xyxx, t2.xyzw, s0
+ 146: endif
+ 147: ret
+
+```
+
+

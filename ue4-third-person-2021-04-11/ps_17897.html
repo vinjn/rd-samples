@@ -1,0 +1,34 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ 
+# shader
+```glsl
+Shader hash c41d9f99-541323ad-f6577cff-a7ce29b6
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[3], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear v0.xy
+      dcl_input_ps linear v1.xyzw
+      dcl_output o0.xyzw
+      dcl_temps 2
+   0: sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v0.xyxx, t0.xyzw, s0
+   1: dp4 r0.w, r0.xyzw, cb0[1].xyzw
+   2: mul r0.xyzw, r0.xyzw, v1.xyzw
+   3: mov_sat r1.xyz, r0.xyzx
+   4: log r1.xyz, r1.xyzx
+   5: mul r1.xyz, r1.xyzx, cb0[2].xxxx
+   6: exp r1.xyz, r1.xyzx
+   7: ne r1.w, cb0[2].x, l(1.0000)
+   8: movc o0.xyz, r1.wwww, r1.xyzx, r0.xyzx
+   9: mov o0.w, r0.w
+  10: ret
+
+```
+
+

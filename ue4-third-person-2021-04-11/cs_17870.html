@@ -1,0 +1,96 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / HistogramEyeAdaptation_CS
+# shader
+```glsl
+Shader hash da3d74fb-3a0518b5-4095c5a6-0fe49a53
+
+cs_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[32], immediateIndexed
+      dcl_resource_buffer (float,float,float,float) t0
+      dcl_resource_buffer (uint,uint,uint,uint) t1
+      dcl_uav_typed_buffer (float,float,float,float) u0
+      dcl_temps 4
+      dcl_thread_group 1, 1, 1
+   0: mov r0.xy, l(0, 0, 0, 0)
+   1: loop
+   2:   uge r0.z, r0.y, l(64)
+   3:   breakc_nz r0.z
+   4:   ld_indexable(buffer)(uint,uint,uint,uint) r0.z, r0.yyyy, t1.yzxw
+   5:   utof r0.z, r0.z
+   6:   add r0.x, r0.z, r0.x
+   7:   iadd r0.y, r0.y, l(1)
+   8: endloop
+   9: mul r0.y, r0.x, cb0[26].w
+  10: mul r0.x, r0.x, cb0[27].x
+  11: mov r1.y, l(1.0000)
+  12: mov r0.zw, r0.yyyx
+  13: mov r2.xy, l(0, 0, 0, 0)
+  14: mov r1.z, l(0)
+  15: loop
+  16:   uge r1.w, r1.z, l(64)
+  17:   breakc_nz r1.w
+  18:   ld_indexable(buffer)(uint,uint,uint,uint) r1.w, r1.zzzz, t1.yzwx
+  19:   utof r1.w, r1.w
+  20:   min r2.z, r0.z, r1.w
+  21:   add r1.w, r1.w, -r2.z
+  22:   add r0.z, r0.z, -r2.z
+  23:   add r2.z, r0.w, -r2.z
+  24:   min r1.w, r1.w, r2.z
+  25:   add r0.w, -r1.w, r2.z
+  26:   utof r2.z, r1.z
+  27:   mad r2.z, r2.z, l(0.0159), -cb0[29].y
+  28:   div r1.x, r2.z, cb0[29].x
+  29:   mad r2.xy, r1.xyxx, r1.wwww, r2.xyxx
+  30:   iadd r1.z, r1.z, l(1)
+  31: endloop
+  32: max r0.x, r2.y, l(0.0001)
+  33: div r0.x, r2.x, r0.x
+  34: exp r0.z, r0.x
+  35: max r1.x, r0.z, cb0[27].y
+  36: min r1.x, r1.x, cb0[27].z
+  37: mul r1.y, r1.x, l(5.5556)
+  38: ld_indexable(buffer)(float,float,float,float) r1.z, l(0, 0, 0, 0), t0.yzxw
+  39: mul r0.w, cb0[27].w, cb0[28].x
+  40: ne r1.w, r1.z, l(0)
+  41: movc r1.z, r1.w, r1.z, l(1.0000)
+  42: div r1.z, r0.w, r1.z
+  43: log r1.w, r1.y
+  44: log r1.z, r1.z
+  45: add r2.x, -r1.z, r1.w
+  46: lt r2.y, l(0), r2.x
+  47: movc r2.z, r2.y, cb0[28].z, cb0[28].w
+  48: movc r2.y, r2.y, cb0[30].y, cb0[30].z
+  49: mul r2.w, r2.z, -cb0[28].y
+  50: exp r2.w, r2.w
+  51: add r2.w, -r2.w, l(1.0000)
+  52: mul r2.w, r2.w, r2.x
+  53: mad r2.y, r2.w, r2.y, r1.z
+  54: lt r2.w, r1.z, r1.w
+  55: mad r3.x, cb0[28].y, r2.z, r1.z
+  56: min r3.x, r1.w, r3.x
+  57: mad r1.z, -cb0[28].y, r2.z, r1.z
+  58: max r1.z, r1.z, r1.w
+  59: movc r1.z, r2.w, r3.x, r1.z
+  60: lt r1.w, cb0[30].w, abs(r2.x)
+  61: movc r1.z, r1.w, r1.z, r2.y
+  62: exp r1.z, r1.z
+  63: mad r1.x, r1.x, l(5.5556), -r1.z
+  64: mad r1.x, cb0[31].y, r1.x, r1.z
+  65: mul r1.zw, cb0[27].yyyz, l(0.0000, 0.0000, 5.5556, 5.5556)
+  66: max r1.x, r1.z, r1.x
+  67: min r1.x, r1.w, r1.x
+  68: max r1.xy, r1.xyxx, l(0.0001, 0.0001, 0.0000, 0.0000)
+  69: div r1.x, l(1.0000, 1.0000, 1.0000, 1.0000), r1.x
+  70: div r1.y, l(1.0000, 1.0000, 1.0000, 1.0000), r1.y
+  71: mul r0.xy, r0.wwww, r1.xyxx
+  72: store_uav_typed u0.xyzw, l(0, 0, 0, 0), r0.xyzw
+  73: ret
+
+```
+
+

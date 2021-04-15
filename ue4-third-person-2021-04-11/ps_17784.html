@@ -1,0 +1,42 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / MobileBasePass / HelpActorMaterial_None
+# shader
+```glsl
+Shader hash e5d397bf-d3db39e7-f3efdec8-a7c82036
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[143], immediateIndexed
+      dcl_constantbuffer cb1[3], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear v2.xy
+      dcl_input_ps_siv v4.z, position
+      dcl_output o0.xyzw
+      dcl_temps 2
+   0: mul r0.x, cb0[142].z, cb1[2].x
+   1: frc r0.x, r0.x
+   2: mul r0.xy, r0.xxxx, l(16.0000, 4.0000, 0.0000, 0.0000)
+   3: round_ni r0.xy, r0.xyxx
+   4: mul r0.xy, r0.xyxx, l(0.2500, 0.2500, 0.0000, 0.0000)
+   5: mad r0.xy, v2.xyxx, l(0.2500, 0.2500, 0.0000, 0.0000), r0.xyxx
+   6: sample_b(texture2d)(float,float,float,float) r0.xyzw, r0.xyxx, t0.xyzw, s0, l(0)
+   7: add r0.w, r0.w, l(-0.3333)
+   8: lt r0.w, r0.w, l(0)
+   9: discard_nz r0.w
+  10: add r1.xyz, -r0.xyzx, l(1.0000, 1.0000, 1.0000, 0.0000)
+  11: mad r0.xyz, r1.xyzx, l(0.0000, 1.0000, 0.0000, 0.0000), r0.xyzx
+  12: add r1.xyz, -r0.xyzx, cb1[1].xyzx
+  13: mad r0.xyz, cb1[2].yyyy, r1.xyzx, r0.xyzx
+  14: max r0.xyz, r0.xyzx, l(0, 0, 0, 0)
+  15: mul o0.xyz, r0.xyzx, cb0[135].yyyy
+  16: mov o0.w, v4.z
+  17: ret
+
+```
+
+

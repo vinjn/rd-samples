@@ -1,0 +1,27 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / ShadowProjectionOnOpaque / PerObject_ThirdPersonCharacter_167 / M_UE4Man_Body_SK_Mannequin
+# shader
+```glsl
+Shader hash 838c5559-1c05eaee-500d9d48-cda1924b
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear v3.xy
+      dcl_output o0.xyzw
+      dcl_temps 1
+   0: sample_indexable(texture2d)(float,float,float,float) r0.x, v3.xyxx, t0.wxyz, s0
+   1: add r0.x, r0.x, l(-0.3330)
+   2: lt r0.x, r0.x, l(0)
+   3: discard_nz r0.x
+   4: mov o0.xyzw, l(0, 0, 0, 0)
+   5: ret
+
+```
+
+

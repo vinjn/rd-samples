@@ -1,0 +1,43 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / BloomSetup_220x108_PS
+# shader
+```glsl
+Shader hash 52c2a93a-bfbb7a34-c0b43dbd-cd11678a
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[38], immediateIndexed
+      dcl_constantbuffer cb1[136], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear v0.xy
+      dcl_input_ps linear v1.xy
+      dcl_input_ps linear v2.xy
+      dcl_input_ps linear v3.xy
+      dcl_output o0.xyzw
+      dcl_temps 2
+   0: sample_indexable(texture2d)(float,float,float,float) r0.xyz, v1.xyxx, t0.xyzw, s0
+   1: mul r0.xyz, r0.xyzx, l(0.2500, 0.2500, 0.2500, 0.0000)
+   2: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v0.xyxx, t0.xyzw, s0
+   3: mad r0.xyz, r1.xyzx, l(0.2500, 0.2500, 0.2500, 0.0000), r0.xyzx
+   4: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v2.xyxx, t0.xyzw, s0
+   5: mad r0.xyz, r1.xyzx, l(0.2500, 0.2500, 0.2500, 0.0000), r0.xyzx
+   6: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v3.xyxx, t0.xyzw, s0
+   7: mad r0.xyz, r1.xyzx, l(0.2500, 0.2500, 0.2500, 0.0000), r0.xyzx
+   8: max r0.xyz, r0.xyzx, l(0, 0, 0, 0)
+   9: mul r0.xyz, r0.xyzx, cb1[135].zzzz
+  10: dp3 r0.w, r0.xyzx, l(0.3000, 0.5900, 0.1100, 0.0000)
+  11: add r0.w, r0.w, -cb0[37].x
+  12: mul_sat r0.w, r0.w, l(0.5000)
+  13: mul r0.xyz, r0.wwww, r0.xyzx
+  14: mul o0.xyz, r0.xyzx, cb1[135].yyyy
+  15: mov o0.w, l(0)
+  16: ret
+
+```
+
+

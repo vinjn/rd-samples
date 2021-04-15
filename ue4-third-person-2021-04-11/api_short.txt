@@ -1,0 +1,174 @@
+0001 MobileSceneRender
+    0001 MobileSceneRender
+        0001 InitViews
+            0001 CopySubresourceRegion(ResourceId::17922, ResourceId::17803)
+        0003 GPUParticles_PreRender
+        0003 ShadowDepths
+            0003 Atlas0 2048x2048
+                0003 ThirdPersonExampleMap.LightSource_0
+                    0003 ClearDepthStencilView(D=1.000000)
+                    0004 PerObject ThirdPersonCharacter_167 64x39
+                        0004 M_UE4Man_Body SK_Mannequin
+                            0004 DrawIndexed(32094)
+                        0005 M_UE4Man_Body SK_Mannequin
+                            0005 DrawIndexed(72)
+                    e0134 OMSetRenderTargets
+        0007 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+        0008 ClearDepthStencilView(D=0.000000, S=00)
+        0009 Draw(4)
+        0010 MobileRenderPrePass
+        0011 MobileBasePass
+            0011 RampMaterial Bump_StaticMesh
+                0011 DrawIndexed(84)
+            0012 RampMaterial Ramp_StaticMesh
+                0012 DrawIndexed(60)
+            0013 RampMaterial LeftArm_StaticMesh
+                0013 DrawIndexed(84)
+            0014 RampMaterial Linear_Stair_StaticMesh
+                0014 DrawIndexed(360)
+            0015 RampMaterial RightArm_StaticMesh
+                0015 DrawIndexed(84)
+            0016 CubeMaterial TemplateFloor
+                0016 DrawIndexed(384)
+            0017 CubeMaterial 1M_Cube_Chamfer
+                0017 DrawIndexed(612)
+            0018 CubeMaterial 1M_Cube
+                0018 DrawIndexed(36)
+            0019 CubeMaterial 1M_Cube
+                0019 DrawIndexed(36)
+            0020 CubeMaterial 1M_Cube
+                0020 DrawIndexed(36)
+            0021 M_Sky_Panning_Clouds2 SM_SkySphere
+                0021 DrawIndexed(11904)
+            0022 M_UE4Man_Body SK_Mannequin
+                0022 DrawIndexed(32094)
+            0023 M_UE4Man_Body SK_Mannequin
+                0023 DrawIndexed(72)
+            0024 HelpActorMaterial None
+                0024 Draw(4)
+            0025 DefaultTextMaterialOpaque None
+                0025 DrawIndexed(72)
+            0027 DynamicEd
+        0027 BeginOcclusionTests
+            0027 ViewOcclusionTests 0
+                0027 GroupedQueries
+                0028 IndividualQueries
+        0028 ShadowProjectionOnOpaque
+            0028 PerObject ThirdPersonCharacter_167
+                e0420 OMSetRenderTargets
+                0028 DrawIndexed(36)
+                0029 M_UE4Man_Body SK_Mannequin
+                    0029 DrawIndexed(72)
+                0030 M_UE4Man_Body SK_Mannequin
+                    0030 DrawIndexed(32094)
+                0031 DrawIndexed(36)
+        0033 Translucency
+        0034 PostProcessing
+            0034 BloomSetup 220x108 (PS)
+                e0497 OMSetRenderTargets
+                0034 DrawIndexed(3)
+                e0522 OMSetRenderTargets
+            0036 BloomDown 110x54 (PS)
+                0036 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0037 DrawIndexed(3)
+                e0539 OMSetRenderTargets
+            0039 BloomDown 55x27 (PS)
+                0039 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0040 DrawIndexed(3)
+                e0553 OMSetRenderTargets
+            0042 BloomDown 28x14 (PS)
+                0042 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0043 DrawIndexed(3)
+                e0567 OMSetRenderTargets
+            0045 BloomDown 14x7 (PS)
+                0045 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0046 DrawIndexed(3)
+                e0581 OMSetRenderTargets
+            0048 BloomUp 28x14 (PS)
+                0048 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0049 DrawIndexed(3)
+                e0600 OMSetRenderTargets
+            0051 BloomUp 55x27 (PS)
+                0051 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0052 DrawIndexed(3)
+                e0616 OMSetRenderTargets
+            0054 BloomUp 110x54 (PS)
+                0054 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0055 DrawIndexed(3)
+                e0632 OMSetRenderTargets
+            0057 ClearBuffer(EyeAdaptationSetupBuffer Size=256bytes)
+                0057 Dispatch(1, 1, 1)
+            0059 HistogramEyeAdaptation (CS)
+                0059 Dispatch(1, 1, 1)
+            0061 SunMerge 220x108 (PS)
+                e0654 OMSetRenderTargets
+                0061 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0062 DrawIndexed(3)
+                e0672 OMSetRenderTargets
+            0064 CombineLUTS (PS)
+                0064 DrawIndexed(3)
+                e0687 OMSetRenderTargets
+            0066 Tonemap 880x432 (PS GammaOnly=0)
+                0066 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                0067 DrawIndexed(3)
+                e0711 OMSetRenderTargets
+            0069 EditorSelectionOutlines
+                0069 OutlineDepth 880x432
+                    0069 ClearDepthStencilView(D=0.000000, S=00)
+                    0070 Draw(4)
+                    0071 Draw(4)
+                    0072 Draw(4)
+                    0073 Draw(4)
+                    e0754 OMSetRenderTargets
+                0075 OutlineColor 880x432
+                    0075 DrawIndexed(3)
+                    e0779 OMSetRenderTargets
+            0077 CompositeEditorPrimitives
+                0077 PopulateDepth
+                    0077 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                    0078 ClearDepthStencilView(D=0.000000, S=00)
+                    0079 DrawIndexed(3)
+                    e0799 OMSetRenderTargets
+                0081 EditorPrimitives
+                    0081 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                    0082 RenderViewEditorPrimitives 880x432 msaa=1
+                        0082 GizmoMaterial None
+                            0082 DrawIndexed(282)
+                        0083 GizmoMaterial None
+                            0083 DrawIndexed(282)
+                        0084 GizmoMaterial None
+                            0084 DrawIndexed(282)
+                        0085 GizmoMaterial None
+                            0085 DrawIndexed(282)
+                        0086 LevelColorationUnlitMaterial None
+                            0086 DrawIndexed(48)
+                        0087 LevelColorationUnlitMaterial None
+                            0087 DrawIndexed(48)
+                        0088 LevelGridMaterial2 None
+                            0088 DrawIndexed(600)
+                        0089 Draw(136)
+                        0090 Draw(6)
+                        0091 Draw(12)
+                        0092 Draw(6)
+                        0093 Draw(6)
+                        0094 Draw(12)
+                        0095 Draw(6)
+                    0096 RenderViewEditorForegroundPrimitives 880x432 msaa=1
+                    e0955 OMSetRenderTargets
+                0097 Composite 880x432 msaa=1
+                    0097 DrawIndexed(3)
+                    e0979 OMSetRenderTargets
+            0099 Upscale (PrimaryToOutput) 1100x539
+                0099 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                0100 DrawIndexed(3)
+                e0997 OMSetRenderTargets
+        0102 RenderFinish
+            0102 ViewFamilyExtension(0)
+                0102 ViewExtension(0)
+0102 Draw(2)
+0103 DrawIndexed(6)
+0104 Draw(2)
+0105 DrawIndexed(6)
+0106 Draw(2)
+0107 DrawIndexed(6)
+e1103 OMSetRenderTargets

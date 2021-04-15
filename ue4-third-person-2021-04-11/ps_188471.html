@@ -1,0 +1,41 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / CompositeEditorPrimitives / EditorPrimitives / RenderViewEditorPrimitives_880x432_msaa=1 / GizmoMaterial_None
+# shader
+```glsl
+Shader hash add6226b-6b6a940d-f8676fa0-23d60091
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[136], immediateIndexed
+      dcl_constantbuffer cb1[5], immediateIndexed
+      dcl_input_ps linear centroid v1.xyz
+      dcl_input_ps linear v2.xyz
+      dcl_output o0.xyzw
+      dcl_temps 2
+   0: dp3 r0.x, -v2.xyzx, -v2.xyzx
+   1: rsq r0.x, r0.x
+   2: mul r0.xyz, r0.xxxx, -v2.xyzx
+   3: dp3_sat r0.x, v1.xyzx, r0.xyzx
+   4: log r0.y, r0.x
+   5: mul r0.y, r0.y, l(20.0000)
+   6: exp r0.y, r0.y
+   7: mul r0.y, r0.y, l(0.5000)
+   8: ge r0.z, l(0), r0.x
+   9: movc r0.y, r0.z, l(0), r0.y
+  10: mad r0.x, r0.x, l(0.5000), r0.y
+  11: add r0.x, r0.x, l(0.5000)
+  12: mul r0.yzw, r0.xxxx, cb1[2].xxyz
+  13: mad r1.xyz, -r0.xxxx, cb1[2].xyzx, cb1[3].xyzx
+  14: mad r0.xyz, cb1[4].xxxx, r1.xyzx, r0.yzwy
+  15: max r0.xyz, r0.xyzx, l(0, 0, 0, 0)
+  16: mul o0.xyz, r0.xyzx, cb0[135].yyyy
+  17: mov o0.w, l(1.0000)
+  18: ret
+
+```
+
+

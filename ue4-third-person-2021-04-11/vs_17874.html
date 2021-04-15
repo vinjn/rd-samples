@@ -1,0 +1,32 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / CombineLUTS_PS
+# shader
+```glsl
+Shader hash 8ccf9d53-60995938-20b51d49-3d00a9cf
+
+vs_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[3], immediateIndexed
+      dcl_input v0.xyzw
+      dcl_input v1.xy
+      dcl_output o0.xyzw
+      dcl_output_siv o1.xyzw, position
+      dcl_temps 1
+   0: mad r0.xy, v1.xyxx, cb0[1].xyxx, cb0[1].zwzz
+   1: mul o0.xy, r0.xyxx, cb0[2].zwzz
+   2: mad r0.xy, v0.xyxx, cb0[0].xyxx, cb0[0].zwzz
+   3: mul r0.xy, r0.xyxx, cb0[2].xyxx
+   4: mad r0.xy, r0.xyxx, l(2.0000, 2.0000, 0.0000, 0.0000), l(-1.0000, -1.0000, 0.0000, 0.0000)
+   5: mul r0.xy, r0.xyxx, l(1.0000, -1.0000, 0.0000, 0.0000)
+   6: mov o0.zw, r0.xxxy
+   7: mov o1.xy, r0.xyxx
+   8: mov o1.zw, v0.zzzw
+   9: ret
+
+```
+
+

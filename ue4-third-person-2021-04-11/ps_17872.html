@@ -1,0 +1,56 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / SunMerge_220x108_PS
+# shader
+```glsl
+Shader hash 7bec9aeb-da6aebda-2f3cc90d-969e6aaf
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[46], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_sampler s1, mode_default
+      dcl_sampler s2, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_resource_texture2d (float,float,float,float) t1
+      dcl_resource_texture2d (float,float,float,float) t2
+      dcl_input_ps linear v0.xy
+      dcl_input_ps linear v1.xy
+      dcl_input_ps linear v2.xy
+      dcl_input_ps linear v3.xy
+      dcl_input_ps linear v4.xy
+      dcl_input_ps linear v5.xy
+      dcl_input_ps linear v6.xy
+      dcl_output o0.xyzw
+      dcl_temps 4
+   0: sample_indexable(texture2d)(float,float,float,float) r0.xyz, v1.xyxx, t0.xyzw, s0
+   1: mul r0.xyz, r0.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000)
+   2: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v0.xyxx, t0.xyzw, s0
+   3: mad r0.xyz, r1.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000), r0.xyzx
+   4: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v2.xyxx, t0.xyzw, s0
+   5: mad r0.xyz, r1.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000), r0.xyzx
+   6: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v3.xyxx, t0.xyzw, s0
+   7: mad r0.xyz, r1.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000), r0.xyzx
+   8: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v4.xyxx, t0.xyzw, s0
+   9: mad r0.xyz, r1.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000), r0.xyzx
+  10: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v5.xyxx, t0.xyzw, s0
+  11: mad r0.xyz, r1.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000), r0.xyzx
+  12: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v6.xyxx, t0.xyzw, s0
+  13: mad r0.xyz, r1.xyzx, l(0.1429, 0.1429, 0.1429, 0.0000), r0.xyzx
+  14: mul r0.xyz, r0.xyzx, l(0.2000, 0.2000, 0.2000, 0.0000)
+  15: sample_indexable(texture2d)(float,float,float,float) r1.xyz, v0.xyxx, t2.xyzw, s2
+  16: mul r1.xyz, r1.xyzx, cb0[45].xyzx
+  17: sample_indexable(texture2d)(float,float,float,float) r2.xyz, v0.xyxx, t1.xyzw, s1
+  18: mul r3.xyz, r2.xyzx, l(0.2000, 0.2000, 0.2000, 0.0000)
+  19: mul r1.xyz, r1.xyzx, r3.xyzx
+  20: mad r0.xyz, r0.xyzx, cb0[44].xyzx, r1.xyzx
+  21: mad o0.xyz, r2.xyzx, l(0.2000, 0.2000, 0.2000, 0.0000), r0.xyzx
+  22: mov o0.w, l(1.0000)
+  23: ret
+
+```
+
+

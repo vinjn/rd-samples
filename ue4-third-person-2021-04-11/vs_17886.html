@@ -1,0 +1,36 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / CompositeEditorPrimitives / EditorPrimitives / RenderViewEditorPrimitives_880x432_msaa=1
+# shader
+```glsl
+Shader hash 35f73b89-30171729-47e61bed-1e43750a
+
+vs_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[5], immediateIndexed
+      dcl_input v0.xyzw
+      dcl_input v1.xy
+      dcl_input v2.xyzw
+      dcl_input v3.xyzw
+      dcl_output o0.xy
+      dcl_output o1.xyzw
+      dcl_output o2.xyzw
+      dcl_output_siv o3.xyzw, position
+      dcl_temps 1
+   0: mov o0.xy, v1.xyxx
+   1: mov o1.xyzw, v2.xyzw
+   2: mov o2.xyzw, v3.xyzw
+   3: mul r0.xyzw, v0.yyyy, cb0[1].xyzw
+   4: mad r0.xyzw, v0.xxxx, cb0[0].xyzw, r0.xyzw
+   5: mad r0.xyzw, v0.zzzz, cb0[2].xyzw, r0.xyzw
+   6: mad r0.xyzw, v0.wwww, cb0[3].xyzw, r0.xyzw
+   7: mul o3.y, r0.y, cb0[4].x
+   8: mov o3.xzw, r0.xxzw
+   9: ret
+
+```
+
+

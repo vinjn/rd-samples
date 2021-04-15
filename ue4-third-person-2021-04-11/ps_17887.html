@@ -1,0 +1,27 @@
+
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<link rel="stylesheet" href="../src/company-api.css">
+<script src="../src/markdeep.min.js" charset="utf-8"></script>
+# marker
+ MobileSceneRender / MobileSceneRender / PostProcessing / CompositeEditorPrimitives / EditorPrimitives / RenderViewEditorPrimitives_880x432_msaa=1
+# shader
+```glsl
+Shader hash f9a4bacd-397fc2ae-43924bf3-4c845bf7
+
+ps_5_0
+      dcl_globalFlags refactoringAllowed
+      dcl_constantbuffer cb0[2], immediateIndexed
+      dcl_sampler s0, mode_default
+      dcl_resource_texture2d (float,float,float,float) t0
+      dcl_input_ps linear v0.xy
+      dcl_input_ps linear v1.xyzw
+      dcl_output o0.xyzw
+      dcl_temps 1
+   0: sample_indexable(texture2d)(float,float,float,float) r0.xyzw, v0.xyxx, t0.xyzw, s0
+   1: dp4 r0.w, r0.xyzw, cb0[1].xyzw
+   2: mul o0.xyzw, r0.xyzw, v1.xyzw
+   3: ret
+
+```
+
+

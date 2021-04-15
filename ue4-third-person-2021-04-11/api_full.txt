@@ -1,0 +1,1192 @@
+0016 MobileSceneRender
+    0017 MobileSceneRender
+        0018 InitViews
+            0001 Map
+            0002 Map
+            0003 Map
+            0004 Map
+            0005 Unmap
+            0006 Unmap
+            0007 Unmap
+            0008 Unmap
+            0009 UpdateSubresource
+            0010 Map
+            0011 Unmap
+            0012 Map
+            0013 Unmap
+            0014 End
+            0015 End
+            0016 PushMarker
+            0017 PushMarker
+            0018 PushMarker
+            0019 Map
+            0020 Unmap
+            0021 Map
+            0022 Unmap
+            0023 Map
+            0024 Unmap
+            0025 Map
+            0026 Unmap
+            0027 Map
+            0028 Unmap
+            0029 Map
+            0030 Unmap
+            0031 Map
+            0032 Unmap
+            0033 Map
+            0034 Unmap
+            0035 Map
+            0036 Unmap
+            0037 Map
+            0038 Unmap
+            0039 Map
+            0040 Unmap
+            0041 Map
+            0042 Unmap
+            0043 Map
+            0044 Unmap
+            0045 Map
+            0046 Unmap
+            0047 Map
+            0048 Unmap
+            0049 Map
+            0050 Unmap
+            0051 Map
+            0052 Unmap
+            0053 Map
+            0054 Unmap
+            0055 Map
+            0056 Unmap
+            0057 Map
+            0058 Unmap
+            0059 Map
+            0060 Unmap
+            0061 CopySubresourceRegion
+            draw_0001 CopySubresourceRegion(ResourceId::17922, ResourceId::17803)
+            0062 Map
+            0063 Unmap
+            0064 Map
+            0065 Unmap
+            0066 Map
+            0067 Unmap
+            0068 Map
+            0069 Unmap
+            0070 Map
+            0071 Unmap
+            0072 Map
+            0073 Unmap
+            0074 Map
+            0075 Unmap
+            0076 Map
+            0077 Unmap
+            0078 Map
+            0079 Unmap
+            0080 End
+            0081 End
+            0082 End
+            0083 PopMarker
+        0084 GPUParticles_PreRender
+        0086 ShadowDepths
+            0087 Atlas0 2048x2048
+                0088 ThirdPersonExampleMap.LightSource_0
+                    0084 PushMarker
+                    0085 PopMarker
+                    0086 PushMarker
+                    0087 PushMarker
+                    0088 PushMarker
+                    0089 OMSetRenderTargets
+                    0090 RSSetViewports
+                    0091 RSSetScissorRects
+                    0092 ClearDepthStencilView
+                    draw_0003 ClearDepthStencilView(D=1.000000)
+                    0093 PerObject ThirdPersonCharacter_167 64x39
+                        0100 M_UE4Man_Body SK_Mannequin
+                            0093 PushMarker
+                            0094 Map
+                            0095 Unmap
+                            0096 Map
+                            0097 Unmap
+                            0098 RSSetViewports
+                            0099 RSSetScissorRects
+                            0100 PushMarker
+                            0101 IASetInputLayout
+                            0102 VSSetShader
+                            0103 PSSetShader
+                            0104 OMSetDepthStencilState
+                            0105 RSSetState
+                            0106 OMSetBlendState
+                            0107 IASetVertexBuffers
+                            0108 IASetVertexBuffers
+                            0109 IASetVertexBuffers
+                            0110 IASetVertexBuffers
+                            0111 IASetVertexBuffers
+                            0112 IASetVertexBuffers
+                            0113 VSSetConstantBuffers
+                            0114 VSSetConstantBuffers
+                            0115 VSSetConstantBuffers
+                            0116 VSSetConstantBuffers
+                            0117 UpdateSubresource
+                            0118 VSSetConstantBuffers
+                            0119 IASetIndexBuffer
+                            draw_0004 DrawIndexed(32094)
+                        0122 M_UE4Man_Body SK_Mannequin
+                            0121 PopMarker
+                            0122 PushMarker
+                            0123 IASetInputLayout
+                            0124 VSSetShader
+                            0125 PSSetShader
+                            0126 VSSetConstantBuffers
+                            0127 PSSetConstantBuffers
+                            0128 PSSetShaderResources
+                            0129 PSSetSamplers
+                            0130 UpdateSubresource
+                            draw_0005 DrawIndexed(72)
+                    0132 PopMarker
+                    0133 PopMarker
+                    0134 OMSetRenderTargets
+                    0135 End
+                    0136 PopMarker
+        0137 PopMarker
+        0138 PopMarker
+        0139 OMSetRenderTargets
+        0140 RSSetViewports
+        0141 RSSetScissorRects
+        0142 ClearRenderTargetView
+        draw_0007 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+        0143 ClearDepthStencilView
+        draw_0008 ClearDepthStencilView(D=0.000000, S=00)
+        0144 IASetInputLayout
+        0145 VSSetShader
+        0146 PSSetShader
+        0147 OMSetDepthStencilState
+        0148 RSSetState
+        0149 OMSetBlendState
+        0150 Map
+        0151 Unmap
+        0152 PSSetConstantBuffers
+        0153 IASetVertexBuffers
+        0154 UpdateSubresource
+        0155 IASetPrimitiveTopology
+        draw_0009 Draw(4)
+        0160 MobileRenderPrePass
+            0157 End
+            0158 End
+            0159 End
+            0160 PushMarker
+            0161 PopMarker
+        0162 MobileBasePass
+            0164 RampMaterial Bump_StaticMesh
+                0162 PushMarker
+                0163 RSSetScissorRects
+                0164 PushMarker
+                0165 IASetInputLayout
+                0166 VSSetShader
+                0167 PSSetShader
+                0168 OMSetDepthStencilState
+                0169 RSSetState
+                0170 IASetVertexBuffers
+                0171 IASetVertexBuffers
+                0172 IASetVertexBuffers
+                0173 IASetVertexBuffers
+                0174 VSSetConstantBuffers
+                0175 VSSetConstantBuffers
+                0176 VSSetConstantBuffers
+                0177 PSSetConstantBuffers
+                0178 PSSetConstantBuffers
+                0179 PSSetConstantBuffers
+                0180 PSSetConstantBuffers
+                0181 PSSetConstantBuffers
+                0182 PSSetConstantBuffers
+                0183 PSSetConstantBuffers
+                0184 PSSetShaderResources
+                0185 PSSetSamplers
+                0186 PSSetShaderResources
+                0187 PSSetSamplers
+                0188 PSSetShaderResources
+                0189 PSSetShaderResources
+                0190 PSSetSamplers
+                0191 IASetIndexBuffer
+                0192 IASetPrimitiveTopology
+                draw_0011 DrawIndexed(84)
+            0195 RampMaterial Ramp_StaticMesh
+                0194 PopMarker
+                0195 PushMarker
+                0196 IASetVertexBuffers
+                0197 IASetVertexBuffers
+                0198 IASetVertexBuffers
+                0199 IASetVertexBuffers
+                0200 VSSetConstantBuffers
+                0201 VSSetConstantBuffers
+                0202 PSSetConstantBuffers
+                0203 IASetIndexBuffer
+                draw_0012 DrawIndexed(60)
+            0206 RampMaterial LeftArm_StaticMesh
+                0205 PopMarker
+                0206 PushMarker
+                0207 IASetInputLayout
+                0208 IASetVertexBuffers
+                0209 IASetVertexBuffers
+                0210 IASetVertexBuffers
+                0211 IASetVertexBuffers
+                0212 VSSetConstantBuffers
+                0213 VSSetConstantBuffers
+                0214 PSSetConstantBuffers
+                0215 IASetIndexBuffer
+                draw_0013 DrawIndexed(84)
+            0218 RampMaterial Linear_Stair_StaticMesh
+                0217 PopMarker
+                0218 PushMarker
+                0219 IASetVertexBuffers
+                0220 IASetVertexBuffers
+                0221 IASetVertexBuffers
+                0222 IASetVertexBuffers
+                0223 VSSetConstantBuffers
+                0224 VSSetConstantBuffers
+                0225 PSSetConstantBuffers
+                0226 IASetIndexBuffer
+                draw_0014 DrawIndexed(360)
+            0229 RampMaterial RightArm_StaticMesh
+                0228 PopMarker
+                0229 PushMarker
+                0230 IASetVertexBuffers
+                0231 IASetVertexBuffers
+                0232 IASetVertexBuffers
+                0233 IASetVertexBuffers
+                0234 VSSetConstantBuffers
+                0235 VSSetConstantBuffers
+                0236 PSSetConstantBuffers
+                0237 IASetIndexBuffer
+                draw_0015 DrawIndexed(84)
+            0240 CubeMaterial TemplateFloor
+                0239 PopMarker
+                0240 PushMarker
+                0241 IASetInputLayout
+                0242 VSSetShader
+                0243 PSSetShader
+                0244 IASetVertexBuffers
+                0245 IASetVertexBuffers
+                0246 IASetVertexBuffers
+                0247 IASetVertexBuffers
+                0248 VSSetConstantBuffers
+                0249 VSSetConstantBuffers
+                0250 PSSetConstantBuffers
+                0251 PSSetConstantBuffers
+                0252 PSSetConstantBuffers
+                0253 PSSetShaderResources
+                0254 IASetIndexBuffer
+                draw_0016 DrawIndexed(384)
+            0257 CubeMaterial 1M_Cube_Chamfer
+                0256 PopMarker
+                0257 PushMarker
+                0258 IASetInputLayout
+                0259 IASetVertexBuffers
+                0260 IASetVertexBuffers
+                0261 IASetVertexBuffers
+                0262 IASetVertexBuffers
+                0263 VSSetConstantBuffers
+                0264 VSSetConstantBuffers
+                0265 PSSetConstantBuffers
+                0266 PSSetConstantBuffers
+                0267 PSSetShaderResources
+                0268 IASetIndexBuffer
+                draw_0017 DrawIndexed(612)
+            0271 CubeMaterial 1M_Cube
+                0270 PopMarker
+                0271 PushMarker
+                0272 IASetVertexBuffers
+                0273 IASetVertexBuffers
+                0274 IASetVertexBuffers
+                0275 IASetVertexBuffers
+                0276 VSSetConstantBuffers
+                0277 VSSetConstantBuffers
+                0278 PSSetConstantBuffers
+                0279 PSSetConstantBuffers
+                0280 PSSetShaderResources
+                0281 IASetIndexBuffer
+                draw_0018 DrawIndexed(36)
+            0284 CubeMaterial 1M_Cube
+                0283 PopMarker
+                0284 PushMarker
+                0285 IASetVertexBuffers
+                0286 VSSetConstantBuffers
+                0287 VSSetConstantBuffers
+                0288 PSSetConstantBuffers
+                draw_0019 DrawIndexed(36)
+            0291 CubeMaterial 1M_Cube
+                0290 PopMarker
+                0291 PushMarker
+                0292 IASetVertexBuffers
+                0293 VSSetConstantBuffers
+                0294 VSSetConstantBuffers
+                0295 PSSetConstantBuffers
+                draw_0020 DrawIndexed(36)
+            0298 M_Sky_Panning_Clouds2 SM_SkySphere
+                0297 PopMarker
+                0298 PushMarker
+                0299 IASetInputLayout
+                0300 VSSetShader
+                0301 PSSetShader
+                0302 OMSetDepthStencilState
+                0303 IASetVertexBuffers
+                0304 IASetVertexBuffers
+                0305 IASetVertexBuffers
+                0306 IASetVertexBuffers
+                0307 VSSetConstantBuffers
+                0308 PSSetConstantBuffers
+                0309 PSSetConstantBuffers
+                0310 PSSetShaderResources
+                0311 PSSetShaderResources
+                0312 PSSetShaderResources
+                0313 PSSetSamplers
+                0314 PSSetSamplers
+                0315 IASetIndexBuffer
+                draw_0021 DrawIndexed(11904)
+            0318 M_UE4Man_Body SK_Mannequin
+                0317 PopMarker
+                0318 PushMarker
+                0319 IASetInputLayout
+                0320 VSSetShader
+                0321 PSSetShader
+                0322 OMSetDepthStencilState
+                0323 IASetVertexBuffers
+                0324 IASetVertexBuffers
+                0325 IASetVertexBuffers
+                0326 IASetVertexBuffers
+                0327 VSSetConstantBuffers
+                0328 VSSetConstantBuffers
+                0329 VSSetConstantBuffers
+                0330 PSSetConstantBuffers
+                0331 PSSetConstantBuffers
+                0332 PSSetConstantBuffers
+                0333 PSSetConstantBuffers
+                0334 PSSetConstantBuffers
+                0335 PSSetConstantBuffers
+                0336 PSSetShaderResources
+                0337 PSSetSamplers
+                0338 PSSetShaderResources
+                0339 PSSetSamplers
+                0340 PSSetShaderResources
+                0341 PSSetShaderResources
+                0342 PSSetShaderResources
+                0343 PSSetShaderResources
+                0344 PSSetSamplers
+                0345 UpdateSubresource
+                0346 VSSetConstantBuffers
+                0347 IASetIndexBuffer
+                draw_0022 DrawIndexed(32094)
+            0350 M_UE4Man_Body SK_Mannequin
+                0349 PopMarker
+                0350 PushMarker
+                0351 IASetInputLayout
+                0352 VSSetShader
+                0353 PSSetShader
+                0354 VSSetConstantBuffers
+                0355 PSSetConstantBuffers
+                0356 PSSetShaderResources
+                0357 PSSetShaderResources
+                0358 UpdateSubresource
+                draw_0023 DrawIndexed(72)
+            0361 HelpActorMaterial None
+                0360 PopMarker
+                0361 PushMarker
+                0362 IASetInputLayout
+                0363 VSSetShader
+                0364 PSSetShader
+                0365 RSSetState
+                0366 IASetVertexBuffers
+                0367 IASetVertexBuffers
+                0368 IASetVertexBuffers
+                0369 IASetVertexBuffers
+                0370 IASetVertexBuffers
+                0371 VSSetConstantBuffers
+                0372 VSSetConstantBuffers
+                0373 PSSetConstantBuffers
+                0374 PSSetShaderResources
+                0375 PSSetSamplers
+                0376 IASetPrimitiveTopology
+                draw_0024 Draw(4)
+            0379 DefaultTextMaterialOpaque None
+                0378 PopMarker
+                0379 PushMarker
+                0380 IASetInputLayout
+                0381 VSSetShader
+                0382 PSSetShader
+                0383 IASetVertexBuffers
+                0384 IASetVertexBuffers
+                0385 IASetVertexBuffers
+                0386 IASetVertexBuffers
+                0387 IASetVertexBuffers
+                0388 VSSetConstantBuffers
+                0389 PSSetConstantBuffers
+                0390 PSSetConstantBuffers
+                0391 PSSetConstantBuffers
+                0392 PSSetConstantBuffers
+                0393 PSSetShaderResources
+                0394 PSSetSamplers
+                0395 PSSetShaderResources
+                0396 IASetIndexBuffer
+                0397 IASetPrimitiveTopology
+                draw_0025 DrawIndexed(72)
+                0399 End
+                0400 PopMarker
+            0401 DynamicEd
+        0404 BeginOcclusionTests
+            0405 ViewOcclusionTests 0
+                0414 GroupedQueries
+                    0401 PushMarker
+                    0402 PopMarker
+                    0403 PopMarker
+                    0404 PushMarker
+                    0405 PushMarker
+                    0406 RSSetScissorRects
+                    0407 IASetInputLayout
+                    0408 VSSetShader
+                    0409 PSSetShader
+                    0410 OMSetDepthStencilState
+                    0411 RSSetState
+                    0412 OMSetBlendState
+                    0413 VSSetConstantBuffers
+                    0414 PushMarker
+                    0415 PopMarker
+                0416 IndividualQueries
+        0424 ShadowProjectionOnOpaque
+            0428 PerObject ThirdPersonCharacter_167
+                0416 PushMarker
+                0417 PopMarker
+                0418 PopMarker
+                0419 PopMarker
+                0420 OMSetRenderTargets
+                0421 OMSetRenderTargets
+                0422 RSSetScissorRects
+                0423 End
+                0424 PushMarker
+                0425 Map
+                0426 Unmap
+                0427 RSSetScissorRects
+                0428 PushMarker
+                0429 IASetInputLayout
+                0430 VSSetShader
+                0431 OMSetDepthStencilState
+                0432 RSSetState
+                0433 OMSetBlendState
+                0434 Map
+                0435 Unmap
+                0436 IASetVertexBuffers
+                0437 UpdateSubresource
+                0438 VSSetConstantBuffers
+                0439 IASetIndexBuffer
+                draw_0028 DrawIndexed(36)
+                0441 M_UE4Man_Body SK_Mannequin
+                    0441 PushMarker
+                    0442 IASetInputLayout
+                    0443 VSSetShader
+                    0444 PSSetShader
+                    0445 OMSetDepthStencilState
+                    0446 RSSetState
+                    0447 IASetVertexBuffers
+                    0448 IASetVertexBuffers
+                    0449 IASetVertexBuffers
+                    0450 IASetVertexBuffers
+                    0451 IASetVertexBuffers
+                    0452 VSSetConstantBuffers
+                    0453 PSSetConstantBuffers
+                    0454 PSSetShaderResources
+                    0455 PSSetSamplers
+                    0456 UpdateSubresource
+                    0457 IASetIndexBuffer
+                    draw_0029 DrawIndexed(72)
+                0460 M_UE4Man_Body SK_Mannequin
+                    0459 PopMarker
+                    0460 PushMarker
+                    0461 IASetInputLayout
+                    0462 VSSetShader
+                    0463 PSSetShader
+                    0464 VSSetConstantBuffers
+                    0465 UpdateSubresource
+                    draw_0030 DrawIndexed(32094)
+                0467 PopMarker
+                0468 IASetInputLayout
+                0469 VSSetShader
+                0470 PSSetShader
+                0471 OMSetDepthStencilState
+                0472 OMSetBlendState
+                0473 PSSetConstantBuffers
+                0474 VSSetConstantBuffers
+                0475 PSSetConstantBuffers
+                0476 PSSetShaderResources
+                0477 PSSetSamplers
+                0478 Map
+                0479 Unmap
+                0480 IASetVertexBuffers
+                0481 PSSetShaderResources
+                0482 PSSetSamplers
+                0483 UpdateSubresource
+                0484 UpdateSubresource
+                0485 PSSetConstantBuffers
+                0486 IASetIndexBuffer
+                draw_0031 DrawIndexed(36)
+            0488 PopMarker
+            0489 RSSetScissorRects
+            0490 End
+            0491 End
+            0492 PopMarker
+        0493 Translucency
+            0493 PushMarker
+            0494 RSSetScissorRects
+            0495 End
+            0496 PopMarker
+        0498 PostProcessing
+            0499 BloomSetup 220x108 (PS)
+                0497 OMSetRenderTargets
+                0498 PushMarker
+                0499 PushMarker
+                0500 OMSetRenderTargets
+                0501 RSSetViewports
+                0502 RSSetScissorRects
+                0503 RSSetScissorRects
+                0504 IASetInputLayout
+                0505 VSSetShader
+                0506 PSSetShader
+                0507 OMSetDepthStencilState
+                0508 RSSetState
+                0509 OMSetBlendState
+                0510 PSSetShaderResources
+                0511 PSSetSamplers
+                0512 Map
+                0513 Unmap
+                0514 VSSetConstantBuffers
+                0515 IASetVertexBuffers
+                0516 UpdateSubresource
+                0517 VSSetConstantBuffers
+                0518 UpdateSubresource
+                0519 PSSetConstantBuffers
+                0520 IASetIndexBuffer
+                draw_0034 DrawIndexed(3)
+                0522 OMSetRenderTargets
+                0523 PopMarker
+            0524 BloomDown 110x54 (PS)
+                0524 PushMarker
+                0525 OMSetRenderTargets
+                0526 RSSetViewports
+                0527 RSSetScissorRects
+                0528 ClearRenderTargetView
+                draw_0036 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0529 RSSetScissorRects
+                0530 IASetInputLayout
+                0531 VSSetShader
+                0532 PSSetShader
+                0533 PSSetShaderResources
+                0534 Map
+                0535 Unmap
+                0536 VSSetConstantBuffers
+                0537 UpdateSubresource
+                draw_0037 DrawIndexed(3)
+                0539 OMSetRenderTargets
+                0540 PopMarker
+            0541 BloomDown 55x27 (PS)
+                0541 PushMarker
+                0542 OMSetRenderTargets
+                0543 RSSetViewports
+                0544 RSSetScissorRects
+                0545 ClearRenderTargetView
+                draw_0039 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0546 RSSetScissorRects
+                0547 PSSetShaderResources
+                0548 Map
+                0549 Unmap
+                0550 VSSetConstantBuffers
+                0551 UpdateSubresource
+                draw_0040 DrawIndexed(3)
+                0553 OMSetRenderTargets
+                0554 PopMarker
+            0555 BloomDown 28x14 (PS)
+                0555 PushMarker
+                0556 OMSetRenderTargets
+                0557 RSSetViewports
+                0558 RSSetScissorRects
+                0559 ClearRenderTargetView
+                draw_0042 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0560 RSSetScissorRects
+                0561 PSSetShaderResources
+                0562 Map
+                0563 Unmap
+                0564 VSSetConstantBuffers
+                0565 UpdateSubresource
+                draw_0043 DrawIndexed(3)
+                0567 OMSetRenderTargets
+                0568 PopMarker
+            0569 BloomDown 14x7 (PS)
+                0569 PushMarker
+                0570 OMSetRenderTargets
+                0571 RSSetViewports
+                0572 RSSetScissorRects
+                0573 ClearRenderTargetView
+                draw_0045 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0574 RSSetScissorRects
+                0575 PSSetShaderResources
+                0576 Map
+                0577 Unmap
+                0578 VSSetConstantBuffers
+                0579 UpdateSubresource
+                draw_0046 DrawIndexed(3)
+                0581 OMSetRenderTargets
+                0582 PopMarker
+            0583 BloomUp 28x14 (PS)
+                0583 PushMarker
+                0584 OMSetRenderTargets
+                0585 RSSetViewports
+                0586 RSSetScissorRects
+                0587 ClearRenderTargetView
+                draw_0048 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0588 RSSetScissorRects
+                0589 IASetInputLayout
+                0590 VSSetShader
+                0591 PSSetShader
+                0592 PSSetShaderResources
+                0593 PSSetSamplers
+                0594 Map
+                0595 Unmap
+                0596 VSSetConstantBuffers
+                0597 UpdateSubresource
+                0598 UpdateSubresource
+                draw_0049 DrawIndexed(3)
+                0600 OMSetRenderTargets
+                0601 PopMarker
+            0602 BloomUp 55x27 (PS)
+                0602 PushMarker
+                0603 OMSetRenderTargets
+                0604 RSSetViewports
+                0605 RSSetScissorRects
+                0606 ClearRenderTargetView
+                draw_0051 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0607 RSSetScissorRects
+                0608 PSSetShaderResources
+                0609 PSSetShaderResources
+                0610 Map
+                0611 Unmap
+                0612 VSSetConstantBuffers
+                0613 UpdateSubresource
+                0614 UpdateSubresource
+                draw_0052 DrawIndexed(3)
+                0616 OMSetRenderTargets
+                0617 PopMarker
+            0618 BloomUp 110x54 (PS)
+                0618 PushMarker
+                0619 OMSetRenderTargets
+                0620 RSSetViewports
+                0621 RSSetScissorRects
+                0622 ClearRenderTargetView
+                draw_0054 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0623 RSSetScissorRects
+                0624 PSSetShaderResources
+                0625 PSSetShaderResources
+                0626 Map
+                0627 Unmap
+                0628 VSSetConstantBuffers
+                0629 UpdateSubresource
+                0630 UpdateSubresource
+                draw_0055 DrawIndexed(3)
+                0632 OMSetRenderTargets
+                0633 PopMarker
+            0634 ClearBuffer(EyeAdaptationSetupBuffer Size=256bytes)
+                0634 PushMarker
+                0635 CSSetUnorderedAccessViews
+                0636 CSSetShader
+                0637 UpdateSubresource
+                0638 CSSetConstantBuffers
+                draw_0057 Dispatch(1, 1, 1)
+                0640 CSSetShader
+                0641 CSSetUnorderedAccessViews
+                0642 PopMarker
+            0643 HistogramEyeAdaptation (CS)
+                0643 PushMarker
+                0644 CSSetShaderResources
+                0645 CSSetUnorderedAccessViews
+                0646 CSSetShaderResources
+                0647 CSSetShader
+                0648 UpdateSubresource
+                draw_0059 Dispatch(1, 1, 1)
+                0650 CSSetShader
+                0651 CSSetUnorderedAccessViews
+                0652 PopMarker
+            0653 SunMerge 220x108 (PS)
+                0653 PushMarker
+                0654 OMSetRenderTargets
+                0655 RSSetViewports
+                0656 RSSetScissorRects
+                0657 ClearRenderTargetView
+                draw_0061 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 1.000000)
+                0658 RSSetScissorRects
+                0659 IASetInputLayout
+                0660 VSSetShader
+                0661 PSSetShader
+                0662 PSSetShaderResources
+                0663 PSSetShaderResources
+                0664 PSSetShaderResources
+                0665 PSSetSamplers
+                0666 Map
+                0667 Unmap
+                0668 VSSetConstantBuffers
+                0669 UpdateSubresource
+                0670 UpdateSubresource
+                draw_0062 DrawIndexed(3)
+                0672 OMSetRenderTargets
+                0673 PopMarker
+            0674 CombineLUTS (PS)
+                0674 PushMarker
+                0675 OMSetRenderTargets
+                0676 RSSetViewports
+                0677 RSSetScissorRects
+                0678 IASetInputLayout
+                0679 VSSetShader
+                0680 PSSetShader
+                0681 Map
+                0682 Unmap
+                0683 VSSetConstantBuffers
+                0684 UpdateSubresource
+                0685 PSSetConstantBuffers
+                draw_0064 DrawIndexed(3)
+                0687 OMSetRenderTargets
+                0688 PopMarker
+            0689 Tonemap 880x432 (PS GammaOnly=0)
+                0689 PushMarker
+                0690 OMSetRenderTargets
+                0691 RSSetViewports
+                0692 RSSetScissorRects
+                0693 ClearRenderTargetView
+                draw_0066 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                0694 RSSetScissorRects
+                0695 IASetInputLayout
+                0696 VSSetShader
+                0697 PSSetShader
+                0698 OMSetBlendState
+                0699 VSSetShaderResources
+                0700 PSSetShaderResources
+                0701 PSSetShaderResources
+                0702 PSSetShaderResources
+                0703 Map
+                0704 Unmap
+                0705 VSSetConstantBuffers
+                0706 UpdateSubresource
+                0707 VSSetConstantBuffers
+                0708 UpdateSubresource
+                0709 PSSetConstantBuffers
+                draw_0067 DrawIndexed(3)
+                0711 OMSetRenderTargets
+                0712 PopMarker
+            0713 EditorSelectionOutlines
+                0714 OutlineDepth 880x432
+                    0713 PushMarker
+                    0714 PushMarker
+                    0715 OMSetRenderTargets
+                    0716 RSSetScissorRects
+                    0717 ClearDepthStencilView
+                    draw_0069 ClearDepthStencilView(D=0.000000, S=00)
+                    0718 RSSetScissorRects
+                    0719 Map
+                    0720 Unmap
+                    0721 RSSetScissorRects
+                    0722 IASetInputLayout
+                    0723 VSSetShader
+                    0724 PSSetShader
+                    0725 OMSetDepthStencilState
+                    0726 OMSetBlendState
+                    0727 Map
+                    0728 Unmap
+                    0729 PSSetConstantBuffers
+                    0730 IASetVertexBuffers
+                    0731 UpdateSubresource
+                    0732 VSSetConstantBuffers
+                    0733 IASetPrimitiveTopology
+                    draw_0070 Draw(4)
+                    0735 RSSetScissorRects
+                    0736 Map
+                    0737 Unmap
+                    0738 PSSetConstantBuffers
+                    0739 UpdateSubresource
+                    draw_0071 Draw(4)
+                    0741 RSSetScissorRects
+                    0742 Map
+                    0743 Unmap
+                    0744 PSSetConstantBuffers
+                    0745 UpdateSubresource
+                    draw_0072 Draw(4)
+                    0747 RSSetScissorRects
+                    0748 Map
+                    0749 Unmap
+                    0750 PSSetConstantBuffers
+                    0751 UpdateSubresource
+                    draw_0073 Draw(4)
+                    0753 RSSetScissorRects
+                    0754 OMSetRenderTargets
+                    0755 PopMarker
+                0756 OutlineColor 880x432
+                    0756 PushMarker
+                    0757 OMSetRenderTargets
+                    0758 RSSetScissorRects
+                    0759 RSSetScissorRects
+                    0760 IASetInputLayout
+                    0761 VSSetShader
+                    0762 PSSetShader
+                    0763 OMSetDepthStencilState
+                    0764 OMSetBlendState
+                    0765 PSSetShaderResources
+                    0766 PSSetSamplers
+                    0767 PSSetShaderResources
+                    0768 PSSetSamplers
+                    0769 PSSetShaderResources
+                    0770 PSSetShaderResources
+                    0771 Map
+                    0772 Unmap
+                    0773 VSSetConstantBuffers
+                    0774 IASetVertexBuffers
+                    0775 UpdateSubresource
+                    0776 PSSetConstantBuffers
+                    0777 IASetPrimitiveTopology
+                    draw_0075 DrawIndexed(3)
+                    0779 OMSetRenderTargets
+                    0780 PopMarker
+            0782 CompositeEditorPrimitives
+                0783 PopulateDepth
+                    0781 PopMarker
+                    0782 PushMarker
+                    0783 PushMarker
+                    0784 OMSetRenderTargets
+                    0785 RSSetScissorRects
+                    0786 ClearRenderTargetView
+                    draw_0077 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                    0787 ClearDepthStencilView
+                    draw_0078 ClearDepthStencilView(D=0.000000, S=00)
+                    0788 RSSetScissorRects
+                    0789 IASetInputLayout
+                    0790 PSSetShader
+                    0791 OMSetDepthStencilState
+                    0792 PSSetShaderResources
+                    0793 Map
+                    0794 Unmap
+                    0795 VSSetConstantBuffers
+                    0796 UpdateSubresource
+                    0797 PSSetConstantBuffers
+                    draw_0079 DrawIndexed(3)
+                    0799 OMSetRenderTargets
+                    0800 PopMarker
+                0801 EditorPrimitives
+                    0801 PushMarker
+                    0802 OMSetRenderTargets
+                    0803 RSSetScissorRects
+                    0804 ClearRenderTargetView
+                    draw_0081 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                    0810 RenderViewEditorPrimitives 880x432 msaa=1
+                        0811 GizmoMaterial None
+                            0805 Map
+                            0806 Unmap
+                            0807 RSSetScissorRects
+                            0808 Map
+                            0809 Unmap
+                            0810 PushMarker
+                            0811 PushMarker
+                            0812 IASetInputLayout
+                            0813 VSSetShader
+                            0814 PSSetShader
+                            0815 OMSetDepthStencilState
+                            0816 IASetVertexBuffers
+                            0817 IASetVertexBuffers
+                            0818 IASetVertexBuffers
+                            0819 IASetVertexBuffers
+                            0820 IASetVertexBuffers
+                            0821 VSSetConstantBuffers
+                            0822 VSSetConstantBuffers
+                            0823 PSSetConstantBuffers
+                            0824 PSSetConstantBuffers
+                            0825 IASetIndexBuffer
+                            draw_0082 DrawIndexed(282)
+                        0828 GizmoMaterial None
+                            0827 PopMarker
+                            0828 PushMarker
+                            0829 IASetVertexBuffers
+                            0830 IASetVertexBuffers
+                            0831 IASetVertexBuffers
+                            0832 IASetVertexBuffers
+                            0833 IASetVertexBuffers
+                            0834 VSSetConstantBuffers
+                            0835 PSSetConstantBuffers
+                            0836 IASetIndexBuffer
+                            draw_0083 DrawIndexed(282)
+                        0839 GizmoMaterial None
+                            0838 PopMarker
+                            0839 PushMarker
+                            0840 IASetVertexBuffers
+                            0841 IASetVertexBuffers
+                            0842 IASetVertexBuffers
+                            0843 IASetVertexBuffers
+                            0844 IASetVertexBuffers
+                            0845 VSSetConstantBuffers
+                            0846 PSSetConstantBuffers
+                            0847 IASetIndexBuffer
+                            draw_0084 DrawIndexed(282)
+                        0850 GizmoMaterial None
+                            0849 PopMarker
+                            0850 PushMarker
+                            0851 IASetVertexBuffers
+                            0852 IASetVertexBuffers
+                            0853 IASetVertexBuffers
+                            0854 IASetVertexBuffers
+                            0855 IASetVertexBuffers
+                            0856 VSSetConstantBuffers
+                            0857 PSSetConstantBuffers
+                            0858 IASetIndexBuffer
+                            draw_0085 DrawIndexed(282)
+                        0861 LevelColorationUnlitMaterial None
+                            0860 PopMarker
+                            0861 PushMarker
+                            0862 IASetInputLayout
+                            0863 VSSetShader
+                            0864 PSSetShader
+                            0865 RSSetState
+                            0866 IASetVertexBuffers
+                            0867 IASetVertexBuffers
+                            0868 IASetVertexBuffers
+                            0869 IASetVertexBuffers
+                            0870 IASetVertexBuffers
+                            0871 VSSetConstantBuffers
+                            0872 PSSetConstantBuffers
+                            0873 IASetIndexBuffer
+                            0874 IASetPrimitiveTopology
+                            draw_0086 DrawIndexed(48)
+                        0877 LevelColorationUnlitMaterial None
+                            0876 PopMarker
+                            0877 PushMarker
+                            0878 IASetVertexBuffers
+                            0879 IASetVertexBuffers
+                            0880 IASetVertexBuffers
+                            0881 IASetVertexBuffers
+                            0882 IASetVertexBuffers
+                            0883 VSSetConstantBuffers
+                            0884 PSSetConstantBuffers
+                            0885 IASetIndexBuffer
+                            draw_0087 DrawIndexed(48)
+                        0888 LevelGridMaterial2 None
+                            0887 PopMarker
+                            0888 PushMarker
+                            0889 IASetInputLayout
+                            0890 VSSetShader
+                            0891 PSSetShader
+                            0892 RSSetState
+                            0893 IASetVertexBuffers
+                            0894 IASetVertexBuffers
+                            0895 IASetVertexBuffers
+                            0896 IASetVertexBuffers
+                            0897 IASetVertexBuffers
+                            0898 VSSetConstantBuffers
+                            0899 PSSetConstantBuffers
+                            0900 PSSetShaderResources
+                            0901 PSSetSamplers
+                            0902 IASetIndexBuffer
+                            0903 IASetPrimitiveTopology
+                            draw_0088 DrawIndexed(600)
+                        0905 PopMarker
+                        0906 IASetInputLayout
+                        0907 VSSetShader
+                        0908 PSSetShader
+                        0909 PSSetShaderResources
+                        0910 PSSetSamplers
+                        0911 Map
+                        0912 Unmap
+                        0913 IASetVertexBuffers
+                        0914 UpdateSubresource
+                        0915 VSSetConstantBuffers
+                        0916 UpdateSubresource
+                        0917 PSSetConstantBuffers
+                        0918 IASetPrimitiveTopology
+                        draw_0089 Draw(136)
+                        0920 IASetVertexBuffers
+                        0921 Map
+                        0922 Unmap
+                        0923 IASetInputLayout
+                        0924 PSSetShader
+                        0925 PSSetShaderResources
+                        0926 PSSetSamplers
+                        0927 IASetVertexBuffers
+                        0928 UpdateSubresource
+                        0929 UpdateSubresource
+                        0930 IASetPrimitiveTopology
+                        draw_0090 Draw(6)
+                        0932 PSSetShaderResources
+                        0933 UpdateSubresource
+                        0934 UpdateSubresource
+                        draw_0091 Draw(12)
+                        0936 PSSetShaderResources
+                        0937 UpdateSubresource
+                        0938 UpdateSubresource
+                        draw_0092 Draw(6)
+                        0940 PSSetShaderResources
+                        0941 UpdateSubresource
+                        0942 UpdateSubresource
+                        draw_0093 Draw(6)
+                        0944 PSSetShaderResources
+                        0945 UpdateSubresource
+                        0946 UpdateSubresource
+                        draw_0094 Draw(12)
+                        0948 PSSetShaderResources
+                        0949 UpdateSubresource
+                        0950 UpdateSubresource
+                        draw_0095 Draw(6)
+                    0953 RenderViewEditorForegroundPrimitives 880x432 msaa=1
+                    0952 PopMarker
+                    0953 PushMarker
+                    0954 PopMarker
+                    0955 OMSetRenderTargets
+                    0956 PopMarker
+                0957 Composite 880x432 msaa=1
+                    0957 PushMarker
+                    0958 PSSetShaderResources
+                    0959 OMSetRenderTargets
+                    0960 RSSetScissorRects
+                    0961 RSSetScissorRects
+                    0962 IASetInputLayout
+                    0963 VSSetShader
+                    0964 PSSetShader
+                    0965 OMSetDepthStencilState
+                    0966 PSSetShaderResources
+                    0967 PSSetShaderResources
+                    0968 PSSetShaderResources
+                    0969 PSSetSamplers
+                    0970 PSSetConstantBuffers
+                    0971 Map
+                    0972 Unmap
+                    0973 VSSetConstantBuffers
+                    0974 IASetVertexBuffers
+                    0975 UpdateSubresource
+                    0976 PSSetConstantBuffers
+                    0977 IASetIndexBuffer
+                    draw_0097 DrawIndexed(3)
+                    0979 OMSetRenderTargets
+                    0980 PopMarker
+            0982 Upscale (PrimaryToOutput) 1100x539
+                0981 PopMarker
+                0982 PushMarker
+                0983 OMSetRenderTargets
+                0984 RSSetViewports
+                0985 RSSetScissorRects
+                0986 ClearRenderTargetView
+                draw_0099 ClearRenderTargetView(0.000000, 0.000000, 0.000000, 0.000000)
+                0987 RSSetScissorRects
+                0988 IASetInputLayout
+                0989 PSSetShader
+                0990 PSSetShaderResources
+                0991 PSSetSamplers
+                0992 Map
+                0993 Unmap
+                0994 VSSetConstantBuffers
+                0995 UpdateSubresource
+                draw_0100 DrawIndexed(3)
+                0997 OMSetRenderTargets
+                0998 End
+                0999 End
+                1000 PopMarker
+        1002 RenderFinish
+            1003 ViewFamilyExtension(0)
+                1004 ViewExtension(0)
+1001 PopMarker
+1002 PushMarker
+1003 PushMarker
+1004 PushMarker
+1005 PopMarker
+1006 PopMarker
+1007 PopMarker
+1008 PopMarker
+1009 PopMarker
+1010 OMSetRenderTargets
+1011 RSSetScissorRects
+1012 RSSetScissorRects
+1013 IASetInputLayout
+1014 VSSetShader
+1015 PSSetShader
+1016 PSSetShaderResources
+1017 PSSetSamplers
+1018 Map
+1019 Unmap
+1020 IASetVertexBuffers
+1021 UpdateSubresource
+1022 VSSetConstantBuffers
+1023 UpdateSubresource
+1024 PSSetConstantBuffers
+1025 IASetPrimitiveTopology
+draw_0102 Draw(2)
+1027 IASetVertexBuffers
+1028 Map
+1029 Unmap
+1030 IASetInputLayout
+1031 PSSetShader
+1032 OMSetBlendState
+1033 PSSetShaderResources
+1034 PSSetSamplers
+1035 Map
+1036 Unmap
+1037 IASetVertexBuffers
+1038 UpdateSubresource
+1039 UpdateSubresource
+1040 IASetIndexBuffer
+1041 IASetPrimitiveTopology
+draw_0103 DrawIndexed(6)
+1043 IASetInputLayout
+1044 PSSetShader
+1045 OMSetBlendState
+1046 PSSetShaderResources
+1047 PSSetSamplers
+1048 IASetVertexBuffers
+1049 Map
+1050 Unmap
+1051 IASetVertexBuffers
+1052 UpdateSubresource
+1053 UpdateSubresource
+1054 IASetPrimitiveTopology
+draw_0104 Draw(2)
+1056 IASetVertexBuffers
+1057 Map
+1058 Unmap
+1059 IASetInputLayout
+1060 PSSetShader
+1061 OMSetBlendState
+1062 PSSetShaderResources
+1063 PSSetSamplers
+1064 IASetIndexBuffer
+1065 Map
+1066 Unmap
+1067 IASetVertexBuffers
+1068 UpdateSubresource
+1069 UpdateSubresource
+1070 IASetIndexBuffer
+1071 IASetPrimitiveTopology
+draw_0105 DrawIndexed(6)
+1073 IASetInputLayout
+1074 PSSetShader
+1075 OMSetBlendState
+1076 PSSetShaderResources
+1077 PSSetSamplers
+1078 IASetVertexBuffers
+1079 Map
+1080 Unmap
+1081 IASetVertexBuffers
+1082 UpdateSubresource
+1083 UpdateSubresource
+1084 IASetPrimitiveTopology
+draw_0106 Draw(2)
+1086 IASetVertexBuffers
+1087 Map
+1088 Unmap
+1089 IASetInputLayout
+1090 PSSetShader
+1091 OMSetBlendState
+1092 PSSetShaderResources
+1093 PSSetSamplers
+1094 IASetIndexBuffer
+1095 Map
+1096 Unmap
+1097 IASetVertexBuffers
+1098 UpdateSubresource
+1099 UpdateSubresource
+1100 IASetIndexBuffer
+1101 IASetPrimitiveTopology
+draw_0107 DrawIndexed(6)
+1103 OMSetRenderTargets
